@@ -17,7 +17,7 @@
 | **1.1.7** | Verify that all components comply with applicable laws and regulations. | ✓ | ✓ | ✓ |
 | **1.1.8** | Verify that a responsible disclosure policy is in place. | ✓ | ✓ | ✓ |
 
-###Connected Devices Requirements
+### Connected Devices Requirements
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
 | **1.2.1** | Verify that all connected devices within the IoT ecosystem can be uniquely identified. | ✓ | ✓ | ✓ |
