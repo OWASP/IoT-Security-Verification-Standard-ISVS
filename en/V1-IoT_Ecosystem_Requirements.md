@@ -4,7 +4,7 @@
 
 ## Security Verification Requirements
 
-###IoT Application Design Requirements
+### IoT Application Design Requirements
 
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
@@ -27,14 +27,14 @@
 | **1.2.5** | Verify that the supporting hardware of the connected devices can provide the required security features for the required security level.  | ✓ | ✓ | ✓ |
 
 
-###Management Application Requirements
+### Management Application Requirements
 
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
 | **1.3.1** | Verify that all management applications are developed with a level of security that is in line with the security criticality of the applciation. | ✓ | ✓ | ✓ |
 
 
-###Supporting Infrastructure Requirements
+### Supporting Infrastructure Requirements
 
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
