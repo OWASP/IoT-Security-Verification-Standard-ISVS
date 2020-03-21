@@ -31,7 +31,7 @@
 
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **1.3.1** | Verify that all management applications are developed with a level of security that is in line with the security criticality of the applciation. | ✓ | ✓ | ✓ |
+| **1.3.1** | Verify that all management applications are developed with a level of security that is in line with the security criticality of the application. | ✓ | ✓ | ✓ |
 
 
 ### Supporting Infrastructure Requirements
