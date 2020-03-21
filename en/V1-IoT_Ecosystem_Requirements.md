@@ -16,6 +16,8 @@
 | **1.1.6** | Verify that  security controls are never enforced on components that are in control of the end-user. I.e. enforce all security controls server side. | ✓ | ✓ | ✓ |
 | **1.1.7** | Verify that all components comply with applicable laws and regulations. | ✓ | ✓ | ✓ |
 | **1.1.8** | Verify that a responsible disclosure policy is in place. | ✓ | ✓ | ✓ |
+| **1.1.9** | Verify that end-users can be notified about security vulnerabilities affecting the IoT application. | ✓ | ✓ | ✓ |
+
 
 ### Connected Devices Requirements
 | # | Description | L1 | L2 | L3 |
@@ -38,7 +40,10 @@
 
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **1.4.1** | Verify that the supporting cloud infrastructure is securely configured. | ✓ | ✓ | ✓ |
+| **1.4.1** | Verify that the supporting infrastructure is securely configured. | ✓ | ✓ | ✓ |
+| **1.4.2** | Verify that logs are securely transmitted to central location. | ✓ | ✓ | ✓ |
+| **1.4.3** | Verify that sensitive information is not logged unless specifically required. | ✓ | ✓ | ✓ |
+| **1.4.4** | Verify that a log retention policy is defined and enforced. | ✓ | ✓ | ✓ |
 
 
 ## Requirements Mapping
