@@ -20,7 +20,7 @@ TODO: Control Objective description
 
 ## Requirements Mapping
 
-| # | ISVS-ID | ENISA | ... |
+| # | ENISA | ... |
 | --  | ---------------------- | ---------------------- |
 |**5.1**| Lorem Ipsum | ... |
 
