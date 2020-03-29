@@ -1,4 +1,4 @@
-##V8: Embedded OS & Applications Requirements
+# V8: Embedded OS & Applications Requirements
 
 ## Control Objective
 TODO: Control Objective description
