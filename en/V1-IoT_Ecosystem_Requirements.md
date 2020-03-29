@@ -17,6 +17,8 @@
 | **1.1.7** | Verify that all components comply with applicable laws and regulations. | ✓ | ✓ | ✓ |
 | **1.1.8** | Verify that a responsible disclosure policy is in place. | ✓ | ✓ | ✓ |
 | **1.1.9** | Verify that end-users can be notified about security vulnerabilities affecting the IoT application. | ✓ | ✓ | ✓ |
+| **1.1.10** | Verify GPL based firmware has its source code published and that no sensitive information is included. | ✓ | ✓ | ✓ |
+| **1.1.11** | Verify that each firmware maintains a software bill of materials cataloging third-party components, versioning, and published vulnerabilities. | ✓ | ✓ | ✓ |
 
 
 ### Connected Devices Requirements
