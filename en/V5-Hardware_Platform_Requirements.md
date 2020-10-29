@@ -1,4 +1,4 @@
-# V5: Cryptography Requirements
+# V5: Hardware Platform Requirements
 
 ## Control Objective
 
