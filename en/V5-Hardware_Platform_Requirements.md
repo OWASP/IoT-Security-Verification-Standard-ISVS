@@ -4,13 +4,19 @@
 
 ## Security Verification Requirements
 
+### Design
+
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **5.1** | Verify cryptographic secrets are unique per device. | ✓ | ✓ |   |
-| **5.2** | Verify proper use of cryptography. Only standard and strong algorithms should be used, with adequate key size and secure implementations. | ✓ | ✓ |   |
-| **5.3** | Verify that cryptographic secrets are stored leveraging available hardware components. | ✓ | ✓ |   |
-| **5.4** | Verify that the source of randomness is well configured. | ✓ | ✓ |   |
-| **5.5** | Verify that randomness is provided by dedicated hardware components. | ✓ | ✓ |   |
+| **5.1** | Verify that the platform supports disabling or protected access to debugging interfaces (e.g. JTAG, SWD). | ✓ | ✓ |   |
+| **5.2** | Verify that the platform provides code integrity protection mechanisms such as write-protecting flash. | ✓ | ✓ |   |
+| **5.3** | Verify that the platform provides memory and I/O protection capabilities to limit access so that only privileged processes can access certain memory areas. | ✓ | ✓ |   |
+| **5.4** | Verify that cryptographic functions are provided by the platform. Either directly by the MCU, a cryptographic coprocessor, or by an external TPM or SE module. | ✓ | ✓ |   |
+| **5.5** | Verify that sensitive data such as private keys and certificates can be stored securely by leveraging dedicated hardware security features. Consider making use of a Secure Element, TPM or TEE (Trusted Execution Environment). | ✓ | ✓ |   |
+| **5.6** | Verify that the platform provides support for trusted execution environments. | ✓ | ✓ |   |
+| **5.7** | Verify that the platform provides protection against physical decapsulation, side channel and glitching attacks. | ✓ | ✓ |   |
+| **5.8** | Verify descriptive silkscreens are removed from PCBs. | ✓ | ✓ |   |
+| **5.9** | Verify the use of a memory protection unit (MPU) to protect access of sensitive regions of memory. | ✓ | ✓ |   |
 
 ## Requirements Mapping
 

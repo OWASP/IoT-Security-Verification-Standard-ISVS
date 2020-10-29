@@ -25,15 +25,17 @@
 | **1.2.3** | Verify that each application in the ecosystem maintains a software bill of materials (SBOM) cataloguing third-party components, versioning, and published vulnerabilities. | ✓ | ✓ | ✓ |
 | **1.2.4** | Verify that potential areas of risk that come with the use of third-party and open-source software have been identified and that actions to mitigate such risks have been taken. | ✓ | ✓ | ✓ |
 | **1.2.5** | Verify third-party code and components are analyzed using static analysis tools to ensure backdoors are not introduced. | ✓ | ✓ | ✓ |
+| **1.2.6** | Verify debug capabilities in FPGAs are disabled. | ✓ | ✓ | ✓ |
+| **1.2.7** | Verify debug paths and traces are depopulated from production PCBs. | ✓ | ✓ | ✓ |
 
 #### TPM, SE and other secure hardware integrations
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **1.2.7** | Verify that if cryptographic material is provisioned on the SE by its manufacturer (for example, a root-of-trust certificate), verify the authenticity of provisioned material upon reception. | ✓ | ✓ | ✓ |
-| **1.2.8** | Verify that in case the SE if provisioned via a logistics chain, and if a transport security mechanism exists for the SE, ensure it is used. | ✓ | ✓ | ✓ |
-| **1.2.9** | Verify that if a transport security mechanism is used, verify it is active upon reception of the SE and that the unlocking procedure completes successfully. | ✓ | ✓ | ✓ |
-| **1.2.10** | Verify that if cryptographic material is provisioned in the SE by the host device OEM, ensure the provisioning environment is secure and that the material is removed from it after it has been transferred to the SE. | ✓ | ✓ | ✓ |
-| **1.2.11** | Verify that if cryptographic material is provisioned in the SE by the host device OEM, ensure the provisioning channel is encrypted. | ✓ | ✓ | ✓ |
+| **1.2.8** | Verify that if cryptographic material is provisioned on the SE by its manufacturer (for example, a root-of-trust certificate), verify the authenticity of provisioned material upon reception. | ✓ | ✓ | ✓ |
+| **1.2.9** | Verify that in case the SE if provisioned via a logistics chain, and if a transport security mechanism exists for the SE, ensure it is used. | ✓ | ✓ | ✓ |
+| **1.2.10** | Verify that if a transport security mechanism is used, verify it is active upon reception of the SE and that the unlocking procedure completes successfully. | ✓ | ✓ | ✓ |
+| **1.2.11** | Verify that if cryptographic material is provisioned in the SE by the host device OEM, ensure the provisioning environment is secure and that the material is removed from it after it has been transferred to the SE. | ✓ | ✓ | ✓ |
+| **1.2.12** | Verify that if cryptographic material is provisioned in the SE by the host device OEM, ensure the provisioning channel is encrypted. | ✓ | ✓ | ✓ |
 
 ### Secure Development
 
