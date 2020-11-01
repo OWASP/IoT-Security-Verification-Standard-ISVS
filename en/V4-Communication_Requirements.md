@@ -48,10 +48,5 @@
 | **4.4.2** | Verify that in case WPA is used, it is used with AES encryption (CCMP mode). | ✓ | ✓ | ✓ |
 | **4.4.2** | Verify that Wi-Fi Protected Setup (WPS) is not supported to establish Wi-Fi connections. | ✓ | ✓ | ✓ |
 
-## Requirements Mapping
-
-| # | ENISA | ... |
-| -- | ---------------------- | ---------------------- |
-|**3.1.1** | Lorem Ipsum | ... |
 
 ## References

@@ -24,13 +24,7 @@
 | **2.2.2** | Verify that IoT system accounts across users, services and devices share a common authorization framework. | ✓ | ✓ | ✓ |
 | **2.2.3** | Verify that devices enforce the concept of least privilege by limiting applications and services that run as root or administrator. | ✓ | ✓ | ✓ |
 | **2.2.4** | Verify device debug capabilities can only be accessed by allowed staff (e.g. support and engineering teams) and verify that access is monitored/logged. | ✓ | ✓ | ✓ |
-
-### Registration
-
-| # | Description | L1 | L2 | L3 |
-| --  | ---------------------- | - | - | - |
-| **2.3.1** | TODO | ✓ | ✓ | ✓ |
-
+| **2.2.4** | Verify that ownership is correctly validated upon registering or decommissioning a device or sensor to an account. | ✓ | ✓ | ✓ |
 
 ### Data Protection
 
@@ -39,8 +33,8 @@
 | **2.4.1** | Verify that sensitive information such as personal identifiable information (PII) used by the device is stored securely on the device. Protection can include encryption against data leakage, and hashing or integrity checking against unauthorized modification. | ✓ | ✓ | ✓ |
 | **2.4.2** | Verify that sensitive information maintained in memory is overwritten with zeros as soon as it is no longer required. | ✓ | ✓ | ✓ |
 | **2.4.3** | Verify that user credentials and API keys are stored within hardware backed secure storage locations. | ✓ | ✓ | ✓ |
-| **2.4.5** | Verify that in case a device is decommissioned, all sensitive information such as PII data and credentials can be removed from the device. | ✓ | ✓ | ✓ |
-| **2.4.6** | Verify that in case a device is decommissioned, it is marked as such in a centrally managed database in the ecosystem. | ✓ | ✓ | ✓ |
+| **2.4.5** | Verify that in case a device is decommissioned, or in case the owner changes, all sensitive information such as PII data and credentials can be removed from the device. | ✓ | ✓ | ✓ |
+| **2.4.6** | Verify that in case a device is decommissioned, or in case the owner changes, it is marked as such in a centrally managed database in the ecosystem. | ✓ | ✓ | ✓ |
 
 
 ### Cryptography
@@ -52,11 +46,5 @@
 | **2.5.3** | Verify proper use of cryptography. Only standard and strong algorithms should be used, with adequate key size and secure implementations. | ✓ | ✓ | ✓ |
 | **2.5.4** | Verify secure sources of randomness are provided by the operating system and/or hardware for all security needs. | ✓ | ✓ | ✓ |
 | **2.5.5** | Verify that cryptographic secrets used by the device are stored securely through leveraging dedicated hardware functionality. | ✓ | ✓ | ✓ |
-
-## Requirements Mapping
-
-| # | ENISA | ... |
-| -- | ---------------------- | ---------------------- |
-|**2.1** | Lorem Ipsum | ... |
 
 ## References

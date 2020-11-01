@@ -54,10 +54,4 @@
 | **1.3.11** | Verify packages are compiled with read-only relocation (RELRO). e.g. -Wl,-z,relro | ✓ | ✓ | ✓ |
 | **1.3.12** | Verify release builds do not contain debug code or diagnostic functionality. | ✓ | ✓ | ✓ |
 
-## Requirements Mapping
-
-| # | ENISA | ... |
-| -- | ---------------------- | ---------------------- |
-|**1.1**| Lorem Ipsum | ... |
-
 ## References

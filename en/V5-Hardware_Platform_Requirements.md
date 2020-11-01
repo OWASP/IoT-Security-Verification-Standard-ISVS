@@ -18,10 +18,4 @@
 | **5.8** | Verify descriptive silkscreens are removed from PCBs. | ✓ | ✓ |   |
 | **5.9** | Verify the use of a memory protection unit (MPU) to protect access of sensitive regions of memory. | ✓ | ✓ |   |
 
-## Requirements Mapping
-
-| # | ENISA | ... |
-| -- | ---------------------- | ---------------------- |
-|**6.1** | Lorem Ipsum | ... |
-
 ## References

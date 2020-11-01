@@ -78,10 +78,4 @@
 | **3.6.1** | Verify that loaded kernel modules are cryptographically signed and verified. | ✓ | ✓ | ✓ |
 | **3.6.2** | Verify that only required kernel modules are enabled during runtime. | ✓ | ✓ | ✓ |
 
-## Requirements Mapping
-
-| # | ENISA | ... |
-| --  | ---------------------- | ---------------------- |
-|**5.1**| Lorem Ipsum | ... |
-
 ## References
