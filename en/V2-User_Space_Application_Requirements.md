@@ -41,7 +41,6 @@
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-
 | **2.4.1** | Verify cryptographic secrets are unique per device. | ✓ | ✓ | ✓ |
 | **2.4.2** | Verify proper use of cryptography. Only standard and strong algorithms should be used, with adequate key size and secure implementations. | ✓ | ✓ | ✓ |
 | **2.4.3** | Verify secure sources of randomness are provided by the operating system and/or hardware for all security needs. | | ✓ | ✓ |
