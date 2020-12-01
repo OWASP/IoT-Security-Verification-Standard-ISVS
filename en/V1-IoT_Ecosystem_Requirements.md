@@ -51,6 +51,7 @@ For more information, see also:
 - OWASP ASVS: <https://owasp.org/www-project-application-security-verification-standard/> 
 - OWASP MASVS: <https://github.com/OWASP/owasp-masvs> 
 - OWASP Threat modelling: <https://owasp.org/www-community/Application_Threat_Modeling>
+- OWASP SCVS: <https://github.com/OWASP/Software-Component-Verification-Standard>
 - OWASP Secure SDLC Cheat Sheet: <https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets_excluded/Secure_SDLC_Cheat_Sheet.md>
 - Microsoft SDL: <https://www.microsoft.com/en-us/sdl/>
 - OWASP C-based Toolchain Hardening Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html>
