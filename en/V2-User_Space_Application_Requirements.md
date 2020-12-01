@@ -45,6 +45,13 @@
 | **2.4.2** | Verify proper use of cryptography. Only standard and strong algorithms should be used, with adequate key size and secure implementations. | ✓ | ✓ | ✓ |
 | **2.4.3** | Verify secure sources of randomness are provided by the operating system and/or hardware for all security needs. | | ✓ | ✓ |
 | **2.4.4** | Verify that cryptographic secrets used by the device are stored securely by leveraging functionality provided by dedicated security chips. | | ✓ | ✓ |
-| **2.4.5** | Verify the cryptographic libraries used are FIPS 140-2 certified or similar. | | ✓ | ✓ |
+| **2.4.5** | Verify the cryptographic libraries used are certified to be compliant with a recognized cryptographic security standard. | | ✓ | ✓ |
 
 ## References
+For more information, see also: 
+- OWASP Authentication Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html>
+- OWASP Access Control Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html>
+- OWASP Top 10 Privacy Countermeasures: <https://owasp.org/www-pdf-archive/OWASP_Top_10_Privacy_Countermeasures_v1.0.pdf>
+- NIST SP800-63B - Digital Identity Guidelines: <https://pages.nist.gov/800-63-3/sp800-63b.html> 
+- FIPS 140-2 (Security Requrements for Cryptographic Modules): <https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf>
+- ECRYPT CSA - D5.4 - Algorithms, Key Size and Protocols Report (2018): <https://www.ecrypt.eu.org/csa/documents/D5.4-FinalAlgKeySizeProt.pdf>

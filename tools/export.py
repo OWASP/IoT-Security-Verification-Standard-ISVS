@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
-''' Tool for converting the MASVS requirements to various formats.
+''' Tool for converting the ISVS requirements to various formats.
 
     Usage: ./export.py [--format <csv/xml/json>] [--lang <en>] [--out <outfile>]
 
-    By Bernhard Mueller, updated by Jeroen Beckers & Théo Rigas.
+    Original script by Bernhard Mueller, updated by Jeroen Beckers for the MASVS.
+    Updated by Théo Rigas for the ISVS.
 
     Copyright (c) 2020 OWASP Foundation
 
