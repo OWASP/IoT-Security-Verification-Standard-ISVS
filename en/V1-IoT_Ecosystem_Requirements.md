@@ -22,7 +22,7 @@
 | -- | ---------------------- | - | - | - |
 | **1.2.1** | Verify that each application in the ecosystem maintains a software bill of materials (SBOM) cataloging third-party components, versioning, and published vulnerabilities. | ✓ | ✓ | ✓ |
 | **1.2.2** | Verify that potential areas of risk that come with the use of third-party and open-source software have been identified and that actions to mitigate such risks have been taken. | ✓ | ✓ | ✓ |
-| **1.2.3** | Verify that access to debugging interfaces (e.g. JTAG, SWD) are disabled or protected before shipping the device to customers.   | | ✓ | ✓ |
+| **1.2.3** | Verify that access to debugging interfaces (e.g. JTAG, SWD) is disabled or protected before shipping the device to customers.   | | ✓ | ✓ |
 | **1.2.4** | Verify debug capabilities in FPGAs are disabled. | | ✓ | ✓ |
 | **1.2.5** | Verify that devices are provisioned with a cryptographic root of trust that is hardware-based and immutable. | | ✓ | ✓ |
 | **1.2.6** | Verify that code integrity protection mechanisms are enabled before shipping the device to customers. For example, ensure secure boot is enabled. | | ✓ | ✓ |
@@ -47,3 +47,10 @@
 | **1.3.12** | Verify release builds do not contain debug code or privileged diagnostic functionality. | ✓ | ✓ | ✓ |
 
 ## References
+For more information, see also: 
+- OWASP ASVS: <https://owasp.org/www-project-application-security-verification-standard/> 
+- OWASP MASVS: <https://github.com/OWASP/owasp-masvs> 
+- OWASP Threat modelling: <https://owasp.org/www-community/Application_Threat_Modeling>
+- OWASP Secure SDLC Cheat Sheet: <https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets_excluded/Secure_SDLC_Cheat_Sheet.md>
+- Microsoft SDL: <https://www.microsoft.com/en-us/sdl/>
+- OWASP C-based Toolchain Hardening Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html>
