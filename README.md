@@ -5,8 +5,16 @@ The OWASP Internet of Things Security Verification Standard (ISVS) provides secu
 IoT applications are often composed of many interconnected applications that together form a complex ecosystem. Securing an IoT application thus boils down to securing the ecosystem. The ISVS therefore specifies security requirements for embedded applications and the IoT ecosystem in which these reside while referring to existing industry-accepted standards as much as possible.
 
 ## How to Contribute
-The ISVS is an open source effort and we welcome contributions and feedback. The ISVS is currently in the very early stages of development. In case you are interested in contributing to this project, please reach out to the project leaders either via email or via the OWASP Slack.
+The ISVS is an open source effort and we welcome contributions and feedback. If you want to contribute additional content, or improve existing content, we suggest that you first contact us on the OWASP ISVS Slack channel: 
 
+[https://owasp.slack.com/messages/project-isvs/details/](https://owasp.slack.com/messages/project-isvs/details/)
+
+You can sign up here:
+
+[https://owasp.slack.com/join/shared_invite/zt-g398htpy-AZ40HOM1WUOZguJKbblqkw#/](https://owasp.slack.com/join/shared_invite/zt-g398htpy-AZ40HOM1WUOZguJKbblqkw#/)
+
+Before you start contributing, please check our [contribution guide](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/Contributing.md "Contribution Guide") which should get you started.
+
+## Project Leads
 * [Aaron Guzman](mailto:aaron.guzman@owasp.org)
 * [Cédric Bassem](mailto:cedric.bassem@owasp.org)
-* [OWASP Slack](https://owasp.slack.com/)
