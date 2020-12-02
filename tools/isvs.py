@@ -2,7 +2,7 @@
 
 """ ISVS document parser and converter class.
 
-    Original script by Bernhard Mueller, Jeroen Beckers. 
+    Original script by Bernhard Mueller, Jeroen Beckers for the MASVS. 
     Updated by Théo Rigas for the ISVS.
 
     Copyright (c) 2020 OWASP Foundation
@@ -70,7 +70,8 @@ class ISVS:
                         #req['category'] = match.group(2).replace(u"\u2011", "-")
                         req['L1'] = len(match.group(3).strip()) > 0
                         req['L2'] = len(match.group(4).strip()) > 0
-                        req['L3'] = len(match.group(5).strip()) > 0
+                        # [:-1] removes the last "|" from the match
+                        req['L3'] = len(match.group(5)[:-1].strip()) > 0
 
                         self.requirements.append(req)
 
