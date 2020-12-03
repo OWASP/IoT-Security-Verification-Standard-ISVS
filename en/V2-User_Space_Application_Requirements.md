@@ -54,5 +54,5 @@ For more information, see also:
 - OWASP Access Control Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html>
 - OWASP Top 10 Privacy Countermeasures: <https://owasp.org/www-pdf-archive/OWASP_Top_10_Privacy_Countermeasures_v1.0.pdf>
 - NIST SP800-63B - Digital Identity Guidelines: <https://pages.nist.gov/800-63-3/sp800-63b.html>
-- FIPS 140-2 (Security Requrements for Cryptographic Modules): <https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf>
+- FIPS 140-2 - Security Requrements for Cryptographic Modules: <https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf>
 - ECRYPT CSA - D5.4 - Algorithms, Key Size and Protocols Report (2018): <https://www.ecrypt.eu.org/csa/documents/D5.4-FinalAlgKeySizeProt.pdf>

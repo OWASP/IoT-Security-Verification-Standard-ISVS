@@ -48,16 +48,16 @@
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
 | **3.4.1** | Verify that packages and user space applications use over the air updates decoupled from firmware updates. | | ✓ | ✓ |
-|**3.4.2**| Verify that devices can be updated automatically upon a pre-defined schedule. | ✓ | ✓ | ✓ |
-|**3.4.3**| Verify that the authenticity of updates are cryptographically signed by a trusted source and verified before execution. | ✓ | ✓ | ✓ |
-|**3.4.4**| Verify that the update process is not vulnerable to time-of-check time-of-use attacks (TOCTOU). This is generally accomplished by applying the update right after the authenticity of the update is validated.  | ✓ | ✓ | ✓ |
-|**3.4.5**| Verify that updates do not modify user-configured preferences, security, and/or privacy settings without notifying the user.  | ✓ | ✓ | ✓ |
-|**3.4.6**| Verify that the device cannot be downgraded to known vulnerable versions (anti-rollback). | ✓ | ✓ | ✓ |
-|**3.4.7**| Verify that in the event of an update failure, the device reverts to a backup image or notifies the IoT ecosystem. | ✓ | ✓ | ✓ |
-|**3.4.8**| Verify that unsigned debug pre-production firmware builds can not be flashed onto devices. | ✓ | ✓ | ✓ |
-|**3.4.9**| Verify that encrypted firmware images are securely decrypted on the device. | ✓ | ✓ | ✓ |
-|**3.4.10**| Verify that the device authenticates to the  update server component prior to downloading the update.| ✓ | ✓ | ✓ |
-|**3.4.11**| Verify that firmware updates are stored encrypted server-side. | ✓ | ✓ | ✓ |
+| **3.4.2** | Verify that devices can be updated automatically upon a pre-defined schedule. | ✓ | ✓ | ✓ |
+| **3.4.3** | Verify that the authenticity of updates are cryptographically signed by a trusted source and verified before execution. | ✓ | ✓ | ✓ |
+| **3.4.4** | Verify that the update process is not vulnerable to time-of-check time-of-use attacks (TOCTOU). This is generally accomplished by applying the update right after the authenticity of the update is validated.  | ✓ | ✓ | ✓ |
+| **3.4.5** | Verify that updates do not modify user-configured preferences, security, and/or privacy settings without notifying the user.  | ✓ | ✓ | ✓ |
+| **3.4.6** | Verify that the device cannot be downgraded to known vulnerable versions (anti-rollback). | ✓ | ✓ | ✓ |
+| **3.4.7** | Verify that in the event of an update failure, the device reverts to a backup image or notifies the IoT ecosystem. | ✓ | ✓ | ✓ |
+| **3.4.8** | Verify that unsigned debug pre-production firmware builds can not be flashed onto devices. | ✓ | ✓ | ✓ |
+| **3.4.9** | Verify that encrypted firmware images are securely decrypted on the device. | ✓ | ✓ | ✓ |
+| **3.4.10** | Verify that the device authenticates to the  update server component prior to downloading the update.| ✓ | ✓ | ✓ |
+| **3.4.11** | Verify that firmware updates are stored encrypted server-side. | ✓ | ✓ | ✓ |
 
 ### Security chip integrations
 
@@ -76,3 +76,9 @@
 | **3.6.2** | Verify that only required kernel modules are enabled during runtime. | ✓ | ✓ | ✓ |
 
 ## References
+For more information, see also: 
+- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
+- CIS Benchmarks: <https://www.cisecurity.org/cis-benchmarks/>
+- TGC Guidance for Secure Update of Software and Firmware on Embedded Systems: <https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf>
+- U-Boot documentation - Signature: <https://github.com/u-boot/u-boot/blob/master/doc/uImage.FIT/signature.txt>
+- GSMA - IoT Security Guidelines for Endpoint Systems: <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
