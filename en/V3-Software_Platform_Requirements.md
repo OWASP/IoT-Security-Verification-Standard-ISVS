@@ -24,14 +24,15 @@
 | --  | ---------------------- | - | - | - |
 | **3.2.1** | Verify that the embedded operating system is configured according to industry best practices, benchmarks, and uses secure defaults. | ✓ | ✓ | ✓ |
 | **3.2.2** | Verify that all network services exposed by the device on every network interface are necessary services and unnecessary services are removed or disabled. | ✓ | ✓ | ✓ |
-| **3.2.3** | Verify that the OS kernel and software components are up to date and do not contain known vulnerabilities. | ✓ | ✓ | ✓ |
-| **3.2.4** | Verify that persistent filesystem storage volumes are encrypted. | | ✓ | ✓ |
-| **3.2.5** | Verify that applications running on the device use the security features of the underlying operating system or kernel. Including cryptography, key storage, random number generation, authentication and authorization, logging, communications security. | | ✓ | ✓ |
-| **3.2.6** | Verify that memory protection controls such as Address Space Layout Randomization (ASLR) and Data Execution Prevention (DEP) are enabled by the embedded operating system. | | ✓ | ✓ |
-| **3.2.7** | Verify hardware level memory protection is used and privilege levels are enforced. | | ✓ | ✓ |
-| **3.2.8** | Verify the embedded OS provides protection against unauthorized access to RAM (e.g. RAM scrambling). | | | ✓ |
-| **3.2.9** | Verify that an Integrity Measurement Architecture (IMA) is in use and appropriately configured. | | | ✓ |
-| **3.2.10** | Verify that that third-party applications and services are configured to execute within a containerized runtime environment (e.g. LXC, Docker, etc.). | | | ✓ |
+| **3.2.3** | Verify that the device does not make use of of legacy or insecure protocols such as Telnet and FTP. | ✓ | ✓ | ✓ |
+| **3.2.4** | Verify that the OS kernel and software components are up to date and do not contain known vulnerabilities. | ✓ | ✓ | ✓ |
+| **3.2.5** | Verify that persistent filesystem storage volumes are encrypted. | | ✓ | ✓ |
+| **3.2.6** | Verify that applications running on the device use the security features of the underlying operating system or kernel. Including cryptography, key storage, random number generation, authentication and authorization, logging, communications security. | | ✓ | ✓ |
+| **3.2.7** | Verify that memory protection controls such as Address Space Layout Randomization (ASLR) and Data Execution Prevention (DEP) are enabled by the embedded operating system. | | ✓ | ✓ |
+| **3.2.8** | Verify hardware level memory protection is used and privilege levels are enforced. | | ✓ | ✓ |
+| **3.2.9** | Verify the embedded OS provides protection against unauthorized access to RAM (e.g. RAM scrambling). | | | ✓ |
+| **3.2.10** | Verify that an Integrity Measurement Architecture (IMA) is in use and appropriately configured. | | | ✓ |
+| **3.2.11** | Verify that that third-party applications and services are configured to execute within a containerized runtime environment (e.g. LXC, Docker, etc.). | | | ✓ |
 
 #### Linux
 
@@ -76,7 +77,7 @@
 | **3.6.2** | Verify that only required kernel modules are enabled during runtime. | ✓ | ✓ | ✓ |
 
 ## References
-For more information, see also: 
+For more information, see also:
 - ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
 - CIS Benchmarks: <https://www.cisecurity.org/cis-benchmarks/>
 - TGC Guidance for Secure Update of Software and Firmware on Embedded Systems: <https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf>
