@@ -1,4 +1,4 @@
-root: ./en/
+root: ./en
 structure:  
-    readme: ./cover.md
-    summary: ./SUMMARY.md
+    readme: cover.md
+    summary: SUMMARY.md
