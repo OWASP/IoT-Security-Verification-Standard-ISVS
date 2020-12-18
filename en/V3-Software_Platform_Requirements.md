@@ -11,7 +11,7 @@
 | **3.1.1** | Verify that the bootloader does not allow code to be loaded from arbitrary locations. Locations include both storage (SD, USB, etc.) and network locations (over TCP/IP). | ✓ | ✓ | ✓ |
 | **3.1.2** | Verify bootloader configurations are immutable in production releases. | | ✓ | ✓ |
 | **3.1.3** | Verify that communication interfaces such as, USB, UART, and other variants are disabled or adequately protected during every stage of the device's boot process. | | ✓ | ✓ |
-| **3.1.4** | Verify that the authenticity of the first stage bootloader is verified by a trusted component of which the configuration cannot be altered. e.g. Secure Boot/Trusted Boot | | ✓ | ✓ |
+| **3.1.4** | Verify that the authenticity of the first stage bootloader is verified by a trusted component of which the configuration in read-only memory (ROM) cannot be altered. e.g. CPU Based Secure Boot/Trusted Boot | | ✓ | ✓ |
 | **3.1.5** | Verify that the authenticity of next bootloader stages or application code is cryptographically verified during every step of the boot process. | | ✓ | ✓ |
 | **3.1.6** | Verify that bootloader stages do not contain sensitive information (e.g. private keys or passwords logged to the console) as part of device start-up.  | | ✓ | ✓ |
 | **3.1.7** | Verify that firmware is stored in an encrypted volume at rest. | | ✓ | ✓ |
