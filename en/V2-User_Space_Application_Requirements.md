@@ -2,6 +2,12 @@
 
 ## Control Objective
 
+The purpose of the controls listed in this section is to ensure the authenticity,  authorization of IoT system users and machines, sensitive data protection by using the best security practices, like strong unique secure identity, user role segregation, sensitive data and credentials protection and fair private information treatment, concept of least privilege, and best cryptography algorithms.  
+
+Authentication is the act of establishing, or confirming, someone (or something) as authentic and that claims made by a person or about a device are correct, resistant to impersonation, and prevent recovery or interception of passwords.
+
+Authorization is the act of establishing, or confirming  someone (or something) as authoritative of specifying access rights to resources or satisfying the access policy. Resources include files of data or code, device peripherals. 
+
 ## Security Verification Requirements
 
 ### Identification & Authentication

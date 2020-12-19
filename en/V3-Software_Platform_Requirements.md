@@ -2,6 +2,12 @@
 
 ## Control Objective
 
+The bootloader is the first code during the device boot process the firmware vendor usually has influence on. Its security is very important for the entire device execution. The device can be completely compromised and hijacked, if the bootloader code is vulnerable. The vendor should insure the best practices are implemented for the bootloader became secure: not allowing image loading from other locations but the device storage, verify the signatures of the loaded code,  disallow memory, shell, or other debug access during boot.
+
+The Operating system, and its kernel in particular, are the central and the most important parts of the code, they are designed to concentrate the security-related operations and it should be configured using the best security practices for operating system and kernel hardening. 
+
+Linux operating system is one of the most popular in IoT. It has many features that can be defined for the security enhancement, like isolation support by namespaces and cgroups and additional kernel security modules for access controls.
+
 ## Security Verification Requirements
 
 ### Bootloader

@@ -2,6 +2,14 @@
 
 ## Control Objective
 
+System security design, performed prior to the development, continuously supporting system development and all phases of its life-cycle,  is one of the fundamentals of the secure architecture. 
+
+It insures the identification and documentation of all sensitive information and functionality that is needed for the system, enforces all the security controls on the appropriate level, notifies customers about vulnerabilities and provides secure solutions in time.
+
+Security of the supply chain is an important part of each project. The security process verifies that all security requirements for the suppliers and third-party code are implemented, i.e. their security controls are set with the appropriate security level and no debug options are left on the devices.
+
+It is important that the build process for the system software is done by a secure build environment that verifies Integrity and authenticity of all packages. The code is written using best security practices and compiled using the best security options.
+
 ## Security Verification Requirements
 
 ### Application and Ecosystem Design

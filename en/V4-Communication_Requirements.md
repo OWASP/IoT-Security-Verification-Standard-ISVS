@@ -2,6 +2,16 @@
 
 ## Control Objective
 
+Ensure that a verified application satisfies the following high level requirements:
+
+- TLS or equivalent strong encryption and authentication is always used, regardless of the sensitivity of the data being transmitted, using best security practice that include certificate-based authentication with pinning, mutual authentication for machine-to-machine communication 
+- The most recent, leading configuration advice is used to enable and order preferred algorithms and ciphers
+- Deprecated or known insecure algorithms and ciphers are disabled.
+- Best security settings configuration used for Bluetooth communication
+- Best security setting configuration used for Wi-Fi communication
+
+Leading industry advice on secure TLS, Bluetooth or Wi-Fi  configuration changes frequently. Configuration should be periodically checked to ensure that secure communications configuration is always present and effective.
+
 ## Security Verification Requirements
 
 ### General

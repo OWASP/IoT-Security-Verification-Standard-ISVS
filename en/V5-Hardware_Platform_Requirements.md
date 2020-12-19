@@ -2,6 +2,10 @@
 
 ## Control Objective
 
+The secure hardware configuration is one of the fundamentals of the embedded device security. The device code can be written and configured in the most secure way, but it cannot help as long as hardware has backdoors in a form of open debug ports or other undocumented debug features.
+
+The purpose of the controls listed in this section is to ensure that as long as hardware is available for secure configuration, it is been configured in the maximum possible secure way. This includes disabling or securing debug interfaces, setting up all existing alarms and sensors mechanism to combat tampering, use anti-cloning hardware protection, like OTP fuses, use MMU (Memory Management Unit) for secure process isolation.
+
 ## Security Verification Requirements
 
 ### Design
