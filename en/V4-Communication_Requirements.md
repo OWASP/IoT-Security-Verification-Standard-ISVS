@@ -2,15 +2,13 @@
 
 ## Control Objective
 
-Ensure that a verified application satisfies the following high level requirements:
+Devices use network communication to exchange data and receive commands with its ecosystem. So that the different parties can trust the contents of communications, they need to be protected, ensuring authenticity of the parties, integrity against malicious changes, and confidentiality against information leakage. In practice, this translates to deploying up-to-date communication protocols and configuring their security features, including cryptography. Since industry guidelines on secure TLS, Bluetooth or Wi-Fi  configuration changes frequently, configuration should be periodically reviewed to ensure that communications security is always effective.
 
-- TLS or equivalent strong encryption and authentication is always used, regardless of the sensitivity of the data being transmitted, using best security practice that include certificate-based authentication with pinning, mutual authentication for machine-to-machine communication 
-- The most recent, leading configuration advice is used to enable and order preferred algorithms and ciphers
-- Deprecated or known insecure algorithms and ciphers are disabled.
-- Best security settings configuration used for Bluetooth communication
-- Best security setting configuration used for Wi-Fi communication
-
-Leading industry advice on secure TLS, Bluetooth or Wi-Fi  configuration changes frequently. Configuration should be periodically checked to ensure that secure communications configuration is always present and effective.
+- Always use TLS or equivalent strong encryption and authentication, regardless of the sensitivity of the data being transmitted. 
+- Other security practices include certificate-based authentication with pinning and mutual authentication.
+- Use up to date configurations to enable and set the preferred order of algorithms and ciphers used for communication.
+- Disable deprecated or known insecure algorithms and ciphers.
+- Use the strongest security settings available for Bluetooth and Wi-Fi communication
 
 ## Security Verification Requirements
 

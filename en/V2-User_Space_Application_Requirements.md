@@ -2,11 +2,15 @@
 
 ## Control Objective
 
-The purpose of the controls listed in this section is to ensure the authenticity,  authorization of IoT system users and machines, sensitive data protection by using the best security practices, like strong unique secure identity, user role segregation, sensitive data and credentials protection and fair private information treatment, concept of least privilege, and best cryptography algorithms.  
+The purpose of the controls listed in this section is to ensure secure access to an IoT system by users and machines and to protect sensitive data by using security best practices. 
 
-Authentication is the act of establishing, or confirming, someone (or something) as authentic and that claims made by a person or about a device are correct, resistant to impersonation, and prevent recovery or interception of passwords.
+Authentication and authorization are necessary to secure access. Relevant controls strong unique secure identity, user role segregation, and the concept of least privilege. Authentication is the act of establishing, or confirming, the identity of someone (or something) as authentic, as a basis to believe that claims made by a person or about a device are correct and resistant to impersonation. Additional necessary controls include preventing recovery or interception of authentication credentials such as passwords. Authorization is the act of establishing, or confirming  someone (or something) has access rights to resources or actions satisfying the secure access policy. 
 
-Authorization is the act of establishing, or confirming  someone (or something) as authoritative of specifying access rights to resources or satisfying the access policy. Resources include files of data or code, device peripherals. 
+Protection for sensitive data, including credentials, and fair treatment of private information, are necessary to ensure secure use of system resources, including any files containing data or code, and the contents of memories.
+
+Many of the controls in this standard are implemented by cryptography. Therefore additional controls are necessary to select the right cryptographic primitives and configure them with secure credential storage.
+
+
 
 ## Security Verification Requirements
 

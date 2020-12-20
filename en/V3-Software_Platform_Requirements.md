@@ -2,11 +2,11 @@
 
 ## Control Objective
 
-The bootloader is the first code during the device boot process the firmware vendor usually has influence on. Its security is very important for the entire device execution. The device can be completely compromised and hijacked, if the bootloader code is vulnerable. The vendor should insure the best practices are implemented for the bootloader became secure: not allowing image loading from other locations but the device storage, verify the signatures of the loaded code,  disallow memory, shell, or other debug access during boot.
+The bootloader is the first piece of code to run during the device's boot process. The firmware vendor is responsible for configuring it correctly, otherwise its vulnerabilities can undermine the security of the entire device, leading to compromise and device hijacking. Controls in this section ensure boot trustworthiness by verifying cryptographic signatures on the loaded code, not allowing loading images loading from external locations, and disallowing memory, shell, and other debug access during boot.
 
-The Operating system, and its kernel in particular, are the central and the most important parts of the code, they are designed to concentrate the security-related operations and it should be configured using the best security practices for operating system and kernel hardening. 
+The operating system and its kernel in particular are central for device security, as they run in privileged mode and implement critical device functionality, including many security primitives. This necessitates best security practices for operating system and kernel configuration and hardening. 
 
-Linux operating system is one of the most popular in IoT. It has many features that can be defined for the security enhancement, like isolation support by namespaces and cgroups and additional kernel security modules for access controls.
+The Linux operating system is one of the most popular in IoT. It has many features from first-line security to defense-in-depth, including the isolation mechanisms supported by namespaces and cgroups, and additional kernel security modules for access controls.
 
 ## Security Verification Requirements
 
