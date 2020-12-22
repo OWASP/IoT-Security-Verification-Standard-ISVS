@@ -2,7 +2,7 @@
 
 ## Control Objective
 
-Devices use network communication to exchange data and receive commands with its ecosystem. So that the different parties can trust the contents of communications, they need to be protected, ensuring authenticity of the parties, integrity against malicious changes, and confidentiality against information leakage. In practice, this translates to deploying up-to-date communication protocols and configuring their security features, including cryptography. Since industry guidelines on secure TLS, Bluetooth or Wi-Fi  configuration changes frequently, configuration should be periodically reviewed to ensure that communications security is always effective.
+Devices use network communication to exchange data and receive commands within their ecosystem. So that the different parties can trust the contents of communications, they need to be protected, ensuring the authenticity of parties, integrity against malicious changes, and confidentiality against information leakage. In practice, this translates to deploying up-to-date communication protocols and configuring their security features, including cryptography. Since industry guidelines on secure TLS, Bluetooth, and Wi-Fi change frequently, configurations should be periodically reviewed to ensure that communications security is always effective.
 
 - Always use TLS or equivalent strong encryption and authentication, regardless of the sensitivity of the data being transmitted. 
 - Other security practices include certificate-based authentication with pinning and mutual authentication.

@@ -4,7 +4,9 @@
 
 Hardware is more difficult and more costly to compromise and subvert than software. Therefore hardware security can provide a robust foundation for embedded device security. On the other hand, hardware that contains backdoors or undocumented debug features can completely compromise the security of the entire device. 
 
-The purpose of the controls listed in this section is to ensure that as long as hardware is available for secure configuration, it is been configured in the most secure way possible. This includes disabling or securing debug interfaces, setting up all existing alarms and sensors mechanisms to combat tampering, using anti-cloning hardware protection such as OTP fuses, and the use of the MMU (Memory Management Unit) for secure process isolation.
+The purpose of the controls listed in this chapter is to ensure that as long as hardware is available for secure configuration, it is been configured in the most secure way possible. This includes disabling or securing debug interfaces, setting up all existing alarms and sensor mechanisms to combat tampering, using anti-cloning hardware protection such as OTP fuses, and the use of the MMU (Memory Management Unit) for secure process isolation.
+
+This chapter provides the requirements for the hardware platform, to guarantee secure configuration. For example, 3.1.4 discusses correctly configuring secure boot. 5.1.2 requires that the platform support this. 5.1.1 requires that the platform supports disabling debug interface. 1.2.4 requires that it is done so in production.
 
 ## Security Verification Requirements
 
