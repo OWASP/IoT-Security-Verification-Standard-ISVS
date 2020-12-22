@@ -10,8 +10,6 @@ Protection of sensitive data including credentials, and fair treatment of privat
 
 Many controls in this chapter are implemented through cryptography. Therefore additional controls are necessary to select the right cryptographic primitives and configure them with secure credential storage.
 
-
-
 ## Security Verification Requirements
 
 ### Identification & Authentication
