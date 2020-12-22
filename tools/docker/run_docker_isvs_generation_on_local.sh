@@ -6,7 +6,7 @@ set -euo pipefail
 
 if [ -z ${1+x} ]
 then
-      VERSION="DEMO"
+      VERSION="BETA"
 else
       VERSION=$1
 fi
@@ -20,7 +20,7 @@ echo "Version = ${VERSION}"
 
 # For now, we are using the local dockerfile
 #only use this when you are updating the docker tooling
-export IMG="owasp/isvs-docgenerator:latest2"
+export IMG="owasp/isvs-docgenerator:latest9"
 if [[ "$(docker images -q $IMG 2> /dev/null)" == "" ]]; then
    docker build --tag $IMG tools/docker/
 fi
