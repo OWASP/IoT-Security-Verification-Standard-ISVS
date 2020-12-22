@@ -28,10 +28,10 @@ To ensure the security of all software produced, the build process for the syste
 ### Supply Chain
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **1.2.1** | Verify that each application in the ecosystem maintains a software bill of materials (SBOM) cataloging third-party components, versioning, and published vulnerabilities. | ✓ | ✓ | ✓ |
+| **1.2.1** | Verify that each application (including firmware) in the ecosystem maintains a software bill of materials (SBOM) cataloging third-party components, versioning, and published vulnerabilities. | ✓ | ✓ | ✓ |
 | **1.2.2** | Verify that potential areas of risk that come with the use of third-party and open-source software have been identified and that actions to mitigate such risks have been taken. | ✓ | ✓ | ✓ |
 | **1.2.3** | Verify the device is released with firmware and configuration appropriate for a release build (as opposed to debug versions). | ✓ | ✓ | ✓ |
-| **1.2.4** | Verify that access to debugging interfaces (e.g. JTAG, SWD) is disabled or protected before shipping the device to customers.   | | ✓ | ✓ |
+| **1.2.4** | Verify that access to debugging interfaces (e.g. JTAG, SWD) is disabled or protected before shipping the device. Processors may refer to this as code protection, read back protection, CodeGuard, or access port protection. | | ✓ | ✓ |
 | **1.2.5** | Verify debug capabilities in FPGAs are disabled. | | ✓ | ✓ |
 | **1.2.6** | Verify that devices are provisioned with a cryptographic root of trust that is hardware-based and immutable. | | ✓ | ✓ |
 | **1.2.7** | Verify that code integrity protection mechanisms are enabled and locked in hardware before shipping the device to customers. For example, ensure secure boot is enabled and the boot configuration locked. | | ✓ | ✓ |
@@ -44,7 +44,7 @@ To ensure the security of all software produced, the build process for the syste
 | -- | ---------------------- | - | - | - |
 | **1.3.1** | Verify that each application in the ecosystem is built using a secure and repeatable build environment. | ✓ | ✓ | ✓ |
 | **1.3.2** | Verify GPL based firmware has its source code published and that no sensitive or proprietary information is accidentally included in the process. | ✓ | ✓ | ✓ |
-| **1.3.3** | Verify that C/C++ code are using safe C libraries. | | ✓ | ✓ |
+| **1.3.3** | Verify that use of banned C/C++ functions (i.e. memcpy, strcpy, etc.) are replaced with safe equivalents functions (e.g. Safe C). | | ✓ | ✓ |
 | **1.3.4** | Verify packages are downloaded and built from trusted sources. | ✓ | ✓ | ✓ |
 | **1.3.5** | Verify build pipelines only perform builds of source code maintained in version control systems. | ✓ | ✓ | ✓ |
 | **1.3.6** | Verify that compilers, version control clients, development utilities, and software development kits are analyzed and monitored for tampering, trojans, or malicious code | ✓ | ✓ | ✓ |
@@ -56,6 +56,7 @@ To ensure the security of all software produced, the build process for the syste
 | **1.3.12** | Verify release builds do not contain debug code or privileged diagnostic functionality. | ✓ | ✓ | ✓ |
 | **1.3.13** | Verify that debug and release firmware images are signed using different keys. | | ✓ | ✓ |
 | **1.3.14** | Verify that debug information does not contain sensitive information, such as PII, credentials or cryptographic material. | ✓ | ✓ | ✓ |
+| **1.3.15** | Verify that embedded applications are not susceptible to OS command injection by performing input validation and escaping of parameters within firmware code, shell command wrappers, and scripts. | ✓ | ✓ | ✓ |
 
 ## References
 For more information, see also:
