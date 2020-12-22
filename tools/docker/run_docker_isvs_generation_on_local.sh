@@ -20,7 +20,7 @@ echo "Version = ${VERSION}"
 
 # For now, we are using the local dockerfile
 #only use this when you are updating the docker tooling
-export IMG="owasp/isvs-docgenerator:latest9"
+export IMG="owasp/isvs-docgenerator:latest"
 if [[ "$(docker images -q $IMG 2> /dev/null)" == "" ]]; then
    docker build --tag $IMG tools/docker/
 fi
