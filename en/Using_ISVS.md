@@ -2,6 +2,8 @@
 
 The OWASP Internet of Things Security Verification Standard (ISVS) aims to establish levels of confidence in the security of IoT applications by providing requirements and best practices for connected devices.
 
+IoT applications are often composed of many interconnected applications that together form a complex ecosystem. Securing an IoT application thus boils down to securing the ecosystem. The ISVS, therefore, specifies security requirements for embedded applications and the IoT ecosystem in which these reside while referring to existing industry-accepted standards as much as possible.
+
 ## The ISVS security model
 
 The security control requirements provided by the ISVS can be represented as a stack. At the bottom, requirements for the hardware platform ([V5](V5-Hardware_Platform_Requirements.md)) are provided. Throughout the ISVS, the hardware platform is regarded as the different hardware components that make up the foundations for your connected device. On top of the hardware platform are the Software Platform ([V3](V3-Software_Platform_Requirements.md)) and the Communication ([V4](V4-Communication_Requirements.md)) requirements that make use of the hardware platform to enable rich application development. Requirements for these applications are provided in the user space applications requirements layer ([V2](V2-User_Space_Application_Requirements.md)). Finally, the IoT Ecosystem chapter provides a series of requirements that form the glue between the connected device and the surrounding ecosystem ([V1](V1-IoT_Ecosystem_Requirements.md)).  
