@@ -9,7 +9,7 @@
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
 | **4.1.1** | Verify that communication with other components in the IoT ecosystem (including sensors, gateway and supporting cloud) occurs over a secure channel in which the confidentiality and integrity of data is guaranteed and in which protection against replay attacks is built in the communication protocol. | ✓ | ✓ | ✓ |
-| **4.1.2** | Verify that in case TLS is used that its securely configured. | ✓ | ✓ | ✓ |
+| **4.1.2** | Verify that in case TLS is used, that its securely configured with FIPS-based cipher suites (or equivalent). | ✓ | ✓ | ✓ |
 | **4.1.3** | Verify that in case TLS is used, the device cryptographically verifies the X.509 certificate. | ✓ | ✓ | ✓ |
 | **4.1.4** | Verify that for availability critical applications, either protection or detection of jamming is provided.  | | ✓ | ✓ |
 | **4.1.6** | Verify that device's TLS implementation uses its own certificate store, pins to the endpoint certificate or public key, and disallows connections from endpoints with different certificates or key, even if signed by a trusted CA. | | ✓ | ✓ |

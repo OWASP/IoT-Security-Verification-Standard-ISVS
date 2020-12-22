@@ -58,3 +58,4 @@ For more information, see also:
 - OWASP Secure SDLC Cheat Sheet: <https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets_excluded/Secure_SDLC_Cheat_Sheet.md>
 - Microsoft SDL: <https://www.microsoft.com/en-us/sdl/>
 - OWASP C-based Toolchain Hardening Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html>
+- OWASP Embedded Application Security: <https://owasp.org/www-project-embedded-application-security/>
