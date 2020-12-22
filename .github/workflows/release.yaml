@@ -33,10 +33,8 @@ jobs:
         uses: softprops/action-gh-release@91409e712cf565ce9eff10c87a8d1b11b81757ae
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          #body_path: tools/RECENT_CHANGES.TXT
           files: |
             OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}-en.epub
-           # OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}-en.mobi
             OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}-en.pdf
             OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}-en_WIP_.docx
             OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.csv
