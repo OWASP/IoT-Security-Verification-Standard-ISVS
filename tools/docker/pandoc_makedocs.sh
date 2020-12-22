@@ -19,11 +19,11 @@ OUTPUT_BASE_NAME="OWASP_ISVS-${VERSION}"
 #CHAPTERS="${FOLDER}/V*.md ${FOLDER}/CHANGELOG.md"
 #CHAPTERS="${FOLDER}/V*.md"
 # Hack below to have V10 after V9
-CHAPTERS="$(ls ${FOLDER}/V*.md | sort -V)"
+CHAPTERS="${FOLDER}/0x01-Frontispiece.md ${FOLDER}/Using_ISVS.md $(ls ${FOLDER}/V*.md | sort -V) ${FOLDER}/Appendix_A-Glossary.md"
 echo $CHAPTERS
 
 # Use per-language tmp files for the cover and the first page
-# Replace the placeholder {{MASVS-VERSION}} with the given VERSION and {{MASVS-LANGUAGE}} with the given LANGUAGETEXT
+# Replace the placeholder {{ISVS-VERSION}} with the given VERSION and {{ISVS-LANGUAGE}} with the given LANGUAGETEXT
 sed -e "s/{{ISVS-VERSION}}/$VERSION/g" -e "s/{{ISVS-LANGUAGE}}/$LANGUAGETEXT/g" ./tools/docker/cover.tex > tmp_cover-$LANGUAGE.tex
 sed -e "s/{{ISVS-VERSION}}/$VERSION/g" ./tools/docker/first_page.tex > tmp_first_page-$LANGUAGE.tex
 
@@ -89,7 +89,7 @@ pandoc --resource-path=.:${FOLDER} \
     --metadata title="OWASP IoT Security Verification Standard" \
     --metadata lang="${LANGUAGE}" \
     --metadata author="Aaron Guzman, Cédric Bassem" \
-    --epub-cover-image=cover.jpg \
+    --epub-cover-image="${FOLDER}/images/cover.jpg" \
     -o ${OUTPUT_BASE_NAME}-${LANGUAGE}.epub $CHAPTERS 
 
 pandoc --resource-path=.:${FOLDER} \
@@ -99,7 +99,8 @@ pandoc --resource-path=.:${FOLDER} \
     --reference-doc tools/custom-reference.docx \
     -o ${OUTPUT_BASE_NAME}-${LANGUAGE}_WIP_.docx $CHAPTERS 
 
-kindlegen ${OUTPUT_BASE_NAME}-${LANGUAGE}.epub
+# Kinglegen is no longer available from Amazon ...
+# kindlegen ${OUTPUT_BASE_NAME}-${LANGUAGE}.epub
 
 rm tmp_first_page-$LANGUAGE.tex
 rm tmp_cover-$LANGUAGE.tex

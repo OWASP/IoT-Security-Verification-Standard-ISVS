@@ -29,6 +29,7 @@ This chapter provides the requirements for the hardware platform, to guarantee s
 For more information, see also: 
 - Common Weakness Enumeration (CWE) Hardware Design: <https://cwe.mitre.org/data/definitions/1194.html>
 - IoT Security - Physical and Hardware Security: <https://www.embedded.com/iot-security-physical-and-hardware-security/>
-- IETF RFC 8576 - IoT Security: State of the Art and Challenges (5.10 Reverse Engineering Considerations):  <https://tools.ietf.org/html/rfc8576>
+- IETF RFC 8576 - IoT Security: State of the Art and Challenges (5.10 Reverse Engineering Considerations): <https://tools.ietf.org/html/rfc8576>
 - ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
 - GSMA - IoT Security Guidelines for Endpoint Systems <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
+- NSA Hardware and Firmware Security Guidance: <https://github.com/nsacyber/Hardware-and-Firmware-Security-Guidance>

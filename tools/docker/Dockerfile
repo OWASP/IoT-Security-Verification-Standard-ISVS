@@ -6,11 +6,12 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends curl xfonts-75dpi xfonts-base fonts-noto-cjk texlive-lang-arabic && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf ~/.cache/pip
-    
+
+# NOTE: kindlegen is no longer available, will need to find workaround...    
 #Install kindlegen in order to be able to create MOBI files.
-RUN curl http://kindlegen.s3.amazonaws.com/kindlegen_linux_2.6_i386_v2_9.tar.gz --output kindlegen_install.tar.gz && \
-    tar xvfz kindlegen_install.tar.gz && \
-    mv kindlegen /usr/local/bin/ && rm kindlegen_install.tar.gz
+#RUN curl http://kindlegen.s3.amazonaws.com/kindlegen_linux_2.6_i386_v2_9.tar.gz --output kindlegen_install.tar.gz && \
+#    tar xvfz kindlegen_install.tar.gz && \
+#    mv kindlegen /usr/local/bin/ && rm kindlegen_install.tar.gz
 
 # Install new engine for Persian commnications.
 RUN  wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb && \

@@ -1,0 +1,45 @@
+on:
+  push:
+    # Sequence of patterns matched against refs/GITHUB_REFs
+    tags:
+    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+name: Upload Release Asset
+jobs:
+  build:
+    name: Upload Release Asset
+    if: github.actor == 'cbassem' || github.actor == 'scriptingxss'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+      - name: Build the Docker image
+        run: docker build ./tools/docker --tag isvs-generator:latest
+      - name: Generate python scripts (csv)
+        run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format csv --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.csv'
+      - name: Generate python scripts (json)
+        run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format json --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.json'
+      - name: Generate python scripts (xml)
+        run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format xml --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.xml'
+
+      - name: Generate English docs
+        run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc isvs-generator:latest '/pandoc_makedocs.sh en ${{ steps.get_version.outputs.VERSION }}'
+      - name: Release
+        uses: softprops/action-gh-release@91409e712cf565ce9eff10c87a8d1b11b81757ae
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}-en.epub
+            OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}-en.pdf
+            OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}-en_WIP_.docx
+            OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.csv
+            OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.json
+            OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
