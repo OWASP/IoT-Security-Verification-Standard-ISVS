@@ -2,6 +2,14 @@
 
 ## Control Objective
 
+System security design performed prior to the development, and a security process which continuously supports system development and is integrated into all phases of its life-cycle,  are necessary fundamentals for creating a secure product architecture and implementation.
+
+A secure development process ensures the identification and documentation of all sensitive information and functionality which are needed for the system, enforces all the security controls on the appropriate level, and ensures that end-users and customers are notified about vulnerabilities and that security solutions are delivered on time.
+
+The supply chain has vital importance for the security of the every project. A secure development process verifies that all security requirements for the suppliers and third-party code are implemented, so that their security controls are set with the appropriate security level, and no development-time features are left on the completed devices, exposing them to vulnerabilities.
+
+To ensure the security of all software produced, the build process for the system software must be done in a secure build environment that verifies the integrity and authenticity of all components. The code must be written using best security practices and compiled using the best security options available.
+
 ## Security Verification Requirements
 
 ### Application and Ecosystem Design
