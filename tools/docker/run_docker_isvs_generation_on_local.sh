@@ -6,7 +6,7 @@ set -euo pipefail
 
 if [ -z ${1+x} ]
 then
-      VERSION="LOCAL_SNAPSHOT"
+      VERSION="LOCAL"
 else
       VERSION=$1
 fi
