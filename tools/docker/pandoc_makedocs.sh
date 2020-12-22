@@ -99,7 +99,8 @@ pandoc --resource-path=.:${FOLDER} \
     --reference-doc tools/custom-reference.docx \
     -o ${OUTPUT_BASE_NAME}-${LANGUAGE}_WIP_.docx $CHAPTERS 
 
-kindlegen ${OUTPUT_BASE_NAME}-${LANGUAGE}.epub
+# Kinglegen is no longer available from Amazon ...
+# kindlegen ${OUTPUT_BASE_NAME}-${LANGUAGE}.epub
 
 rm tmp_first_page-$LANGUAGE.tex
 rm tmp_cover-$LANGUAGE.tex
