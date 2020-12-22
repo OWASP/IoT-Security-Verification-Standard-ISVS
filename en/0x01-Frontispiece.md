@@ -8,7 +8,7 @@ The OWASP Internet of Things Security Verification Standard (ISVS) is a communit
 
 ![license](./images/license.png)
 
-Copyright © 2021 The OWASP Foundation. 
+Copyright © 2021 The OWASP Foundation.
 
 This document is released under the [Creative Commons Attribution ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/). For any reuse or distribution, you must make clear to others the license terms of this work.
 
@@ -21,14 +21,10 @@ Version 1.0, 22 January 2021
 
 ## Contributors and Reviewers
 
-- Théo
+- Théo Rigas
 - Leo Dorrendorf
 - Anna Schnaiderman
 
 The IoT Security Verification Standard is built upon the hard work of volunteers and contributors. The project originated as part of an appendix by the [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/) and was decided the topic of IoT needed its own standard.
 
-If a credit is missing from the credit list above, please contact the project leaders: aaron.guzman@owasp.org & cedric.bassem@owasp.org or log a ticket at GitHub to be recognized in future updates. 
-
-<div style="page-break-after: always; visibility: hidden">
-\newpage
-</div>
+If a credit is missing from the credit list above, please contact the project leaders: aaron.guzman@owasp.org & cedric.bassem@owasp.org or log a ticket at GitHub to be recognized in future updates.
