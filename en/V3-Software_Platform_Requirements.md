@@ -2,6 +2,12 @@
 
 ## Control Objective
 
+The bootloader is the first piece of code to run during the device's boot process. The firmware vendor is responsible for configuring it correctly, otherwise its vulnerabilities can undermine the security of the entire device, leading to compromise and device hijacking. Controls in this chapter ensure boot trustworthiness by verifying cryptographic signatures on the loaded code, not allowing loading images loading from external locations, and disallowing memory, shell, and other debug access during boot.
+
+The operating system, and its kernel in particular, are central for device security, as they run in privileged mode and implement critical device functionality, including many security primitives. This necessitates best security practices for operating system and kernel configuration and hardening. 
+
+The Linux operating system is one of the most popular in IoT. It has many features from first-line security to defense-in-depth, including the isolation mechanisms supported by namespaces and cgroups, and additional kernel security modules for access controls.
+
 ## Security Verification Requirements
 
 ### Bootloader
@@ -67,7 +73,7 @@
 | **3.5.1** | Verify that encryption is used on the bus between the security chip and other hardware components. | | ✓ | ✓ |
 | **3.5.2** | Verify that keys (either secret or private) used to enable encryption on the serial bus are properly secured on the host.| | ✓ | ✓ |
 | **3.5.3** | Verify any default vendor keys used in bus encryption are replaced in production builds. | | ✓ | ✓ |
-| **3.5.4** | Verify that deprecated insecure ciphers and hash functions (e.g.. 3DES, SHA1) in new applications are not used, even if provided by the hardware security chip. | | ✓ | ✓ |
+| **3.5.4** | Verify that deprecated insecure ciphers and hash functions (e.g. 3DES, MD5, SHA1) in new applications are not used, even if provided by the hardware security chip. | | ✓ | ✓ |
 
 ### Kernel space application requirements
 

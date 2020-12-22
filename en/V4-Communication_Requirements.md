@@ -2,17 +2,26 @@
 
 ## Control Objective
 
+Devices use network communication to exchange data and receive commands within their ecosystem. So that the different parties can trust the contents of communications, they need to be protected, ensuring the authenticity of parties, integrity against malicious changes, and confidentiality against information leakage. In practice, this translates to deploying up-to-date communication protocols and configuring their security features, including cryptography. Since industry guidelines on secure TLS, Bluetooth, and Wi-Fi change frequently, configurations should be periodically reviewed to ensure that communications security is always effective.
+
+- Always use TLS or equivalent strong encryption and authentication, regardless of the sensitivity of the data being transmitted. 
+- Other security practices include certificate-based authentication with pinning and mutual authentication.
+- Use up to date configurations to enable and set the preferred order of algorithms and ciphers used for communication.
+- Disable deprecated or known insecure algorithms and ciphers.
+- Use the strongest security settings available for Bluetooth and Wi-Fi communication.
+
 ## Security Verification Requirements
 
 ### General
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-| **4.1.1** | Verify that communication with other components in the IoT ecosystem (including sensors, gateway and supporting cloud) occurs over a secure channel in which the confidentiality and integrity of data is guaranteed and in which protection against replay attacks is built in the communication protocol. | ✓ | ✓ | ✓ |
+| **4.1.1** | Verify that communication with other components in the IoT ecosystem (including sensors, gateway and supporting cloud) occurs over a secure channel in which the confidentiality and integrity of data is guaranteed and in which protection against replay attacks is built into the communication protocol. | ✓ | ✓ | ✓ |
 | **4.1.2** | Verify that in case TLS is used, that its securely configured with FIPS-based cipher suites (or equivalent). | ✓ | ✓ | ✓ |
 | **4.1.3** | Verify that in case TLS is used, the device cryptographically verifies the X.509 certificate. | ✓ | ✓ | ✓ |
 | **4.1.4** | Verify that for availability critical applications, either protection or detection of jamming is provided.  | | ✓ | ✓ |
 | **4.1.6** | Verify that device's TLS implementation uses its own certificate store, pins to the endpoint certificate or public key, and disallows connections from endpoints with different certificates or key, even if signed by a trusted CA. | | ✓ | ✓ |
+| **4.1.7** | Verify that inter-chip communication is encrypted (e.g. Main board to daughter board communication). | | | ✓ |
 
 ### Machine-to-Machine
 
@@ -47,7 +56,7 @@
 
 ## References
 For more information, see also: 
-- OWASP Transport Layer Protection Cheat Sheet : <https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html>
+- OWASP Transport Layer Protection Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html>
 - NIST SP800-52r2 - Guidelines for the Selection, Configuration, and Use of TLS Implementations: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf>
 - IETF RFC 7525 - Recommendations for Secure Use of TLS and DTLS: <https://tools.ietf.org/html/rfc7525>
 - NIST SP800-121r2 - Guide to Bluetooth Security: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>

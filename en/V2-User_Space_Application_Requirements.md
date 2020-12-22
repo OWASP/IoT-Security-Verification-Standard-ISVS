@@ -2,6 +2,14 @@
 
 ## Control Objective
 
+The purpose of the controls listed in this chapter is to ensure secure access to an IoT system by users and machines and to protect sensitive data by using security best practices. 
+
+Authentication and authorization are necessary to secure access. Relevant controls include strong unique secure identity, user role segregation, and the concept of least privilege. Authentication is the act of establishing, or confirming, the identity of someone (or something) as authentic, as a basis to believe that claims made by a person or about a device are correct and resistant to impersonation. Additional necessary controls include preventing recovery or interception of authentication credentials such as passwords. Authorization is the act of establishing, or confirming  someone (or something) has access rights to resources or actions satisfying the secure access policy. 
+
+Protection of sensitive data including credentials, and fair treatment of private information, are necessary to ensure secure use of system resources, such as files containing data or code, and the contents of memory.
+
+Many controls in this chapter are implemented through cryptography. Therefore additional controls are necessary to select the right cryptographic primitives and configure them with secure credential storage.
+
 ## Security Verification Requirements
 
 ### Identification & Authentication
