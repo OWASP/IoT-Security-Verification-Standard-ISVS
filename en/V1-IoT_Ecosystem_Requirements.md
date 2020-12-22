@@ -59,6 +59,7 @@ To ensure the security of all software produced, the build process for the syste
 
 ## References
 For more information, see also:
+
 - OWASP ASVS: <https://owasp.org/www-project-application-security-verification-standard/>
 - OWASP MASVS: <https://github.com/OWASP/owasp-masvs>
 - OWASP Threat modelling: <https://owasp.org/www-community/Application_Threat_Modeling>
