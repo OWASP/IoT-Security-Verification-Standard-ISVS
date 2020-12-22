@@ -6,10 +6,7 @@ The OWASP Internet of Things Security Verification Standard (ISVS) aims to estab
 
 The security control requirements provided by the ISVS can be represented as a stack. At the bottom, requirements for the hardware platform ([V5](V5-Hardware_Platform_Requirements.md)) are provided. Throughout the ISVS, the hardware platform is regarded as the different hardware components that make up the foundations for your connected device. On top of the hardware platform are the Software Platform ([V3](V3-Software_Platform_Requirements.md)) and the Communication ([V4](V4-Communication_Requirements.md)) requirements that make use of the hardware platform to enable rich application development. Requirements for these applications are provided in the user space applications requirements layer ([V2](V2-User_Space_Application_Requirements.md)). Finally, the IoT Ecosystem chapter provides a series of requirements that form the glue between the connected device and the surrounding ecosystem ([V1](V1-IoT_Ecosystem_Requirements.md)).  
 
-<figure class="image">
-<img src="https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/raw/dev/en/images/ISVS-Overview.png" height="500" alt="Figure 1. The different security controls of the ISVS" />
-<figcaption>Figure 1. The different security controls of the ISVS</figcaption>
-</figure>
+![](./images/ISVS-Overview-small.png)
 
 
 
@@ -32,7 +29,7 @@ The goal of level three requirements is to provide requirements for devices wher
 Examples of level three devices consist of hardware crypto wallets, smart-meters, connected vehicles, medical implants, recycle machines that trade aluminium cans for money.
 
 ## Recommended Use
-IoT applications can differ a lot from one another. Some applications make use of sensors and hubs, some don't have sensors. Some run embedded Linux, some do not. While the ISVS aims to structure and define requirements in such a way that's widely applicable as possible, not all of the requirements in the ISVS may apply to your specific device. We strongly encourage tailoring ISVS to your use case and focus on high impact requirements that are most important to your environment. This may require a risk assessment to understand the desired level of security required. 
+IoT applications can differ a lot from one another. Some applications make use of sensors and hubs, some don't have sensors. Some run embedded Linux, some do not. While the ISVS aims to structure and define requirements in such a way that's widely applicable as possible, not all of the requirements in the ISVS may apply to your specific device. We strongly encourage tailoring ISVS to your use case and focus on high impact requirements that are most important to your environment. This may require a risk assessment to understand the desired level of security required.
 
 Even though the standard is called a verification standard, its use goes much wider than providing requirements for verifying the overall security posture of connected devices. The fact that requirements are written from a verification perspective ensures that each requirement is measurable and achievable in practice. As a result, requirements can be used at different stages in a connected device's development process. Some example use cases are presented below.
 
