@@ -12,9 +12,18 @@ IoT applications are often composed of many interconnected applications that tog
 ## Peer Review Requested
 The first version of the OWASP ISVS is ready for a peer review. "Pre-release 1.0RC" can be acquired in many formats:
 
-* The [release pages](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/releases) contain PDF, Epub, Docx, CSV, JSON and XML versions of the standard;
-* Alternatively, the latest version of the main branch can also be read on [GitBook](https://owasp-isvs.gitbook.io/owasp-isvs-pr).
+* The [release pages](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/releases) contain PDF, Epub, Docx, CSV, JSON and XML versions of the standard.
+* The latest version of the main branch can be read on [GitBook](https://owasp-isvs.gitbook.io/owasp-isvs-pr).
 
+### Read Individual Sections of the ISVS Here
+* [Frontispiece](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/0x01-Frontispiece.md)
+* [Using the ISVS](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/Using_ISVS.md)
+* [V1: IoT Ecosystem Requirements](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/V1-IoT_Ecosystem_Requirements.md)
+* [V2: User Space Application Requirements](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/V2-User_Space_Application_Requirements.md)
+* [V3: Software Platform Requirements](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/V3-Software_Platform_Requirements.md)
+* [V4: Communication Requirements](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/V4-Communication_Requirements.md)
+* [V5: Hardware Platform Requirements](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/V5-Hardware_Platform_Requirements.md)
+* [Appendix A - Glossary](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/Appendix_A-Glossary.md)
 
 ## How to Contribute
 The ISVS is an open source effort and we welcome contributions and feedback. If you want to contribute additional content, improve existing content, or provide your feedback, we suggest that you do so through:
