@@ -17,10 +17,10 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 | **3.1.1** | Verify that the bootloader does not allow code to be loaded from arbitrary locations. Locations include both storage (SD, USB, etc.) and network locations (over TCP/IP). | ✓ | ✓ | ✓ |
 | **3.1.2** | Verify bootloader configurations are immutable in production releases. | | ✓ | ✓ |
 | **3.1.3** | Verify that communication interfaces such as, USB, UART, and other variants are disabled or adequately protected during every stage of the device's boot process. | | ✓ | ✓ |
-| **3.1.4** | Verify that the authenticity of the first stage bootloader is verified by a trusted component of which the configuration in read-only memory (ROM) cannot be altered. e.g. CPU Based Secure Boot/Trusted Boot | | ✓ | ✓ |
-| **3.1.5** | Verify that the authenticity of next bootloader stages or application code is cryptographically verified during every step of the boot process. | | ✓ | ✓ |
+| **3.1.4** | Verify that the authenticity of the first stage bootloader is verified by a trusted component of which the configuration in read-only memory (ROM) cannot be altered. e.g. CPU Based Secure Boot/Trusted Boot/Hardware Trust Anchor (HTA) | | ✓ | ✓ |
+| **3.1.5** | Verify that the authenticity of next bootloader stages or application code is cryptographically verified before execution of every step of the boot process. | | ✓ | ✓ |
 | **3.1.6** | Verify that bootloader stages do not contain sensitive information (e.g. private keys or passwords logged to the console) as part of device start-up.  | | ✓ | ✓ |
-| **3.1.7** | Verify that firmware is stored in an encrypted volume at rest. | | ✓ | ✓ |
+| **3.1.7** | Verify that firmware is stored in an authenticated volume at rest. | | ✓ | ✓ |
 | **3.1.8** | Verify that Direct Memory Access (DMA) is not possible during boot. For example, ensure DMA is not possible via PCI connections. | | ✓ | ✓ |
 
 
@@ -30,9 +30,9 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 | --  | ---------------------- | - | - | - |
 | **3.2.1** | Verify that the embedded operating system is configured according to industry best practices, benchmarks, and uses secure defaults. | ✓ | ✓ | ✓ |
 | **3.2.2** | Verify that all network services exposed by the device on every network interface are necessary services and unnecessary services are removed or disabled. | ✓ | ✓ | ✓ |
-| **3.2.3** | Verify that the device does not make use of of legacy or insecure protocols such as Telnet and FTP. | ✓ | ✓ | ✓ |
+| **3.2.3** | Verify that the device does not make use of of legacy or insecure protocols such as Telnet and FTP without compensating controls. | ✓ | ✓ | ✓ |
 | **3.2.4** | Verify that the OS kernel and software components are up to date and do not contain known vulnerabilities. | ✓ | ✓ | ✓ |
-| **3.2.5** | Verify that persistent filesystem storage volumes are encrypted. | | ✓ | ✓ |
+| **3.2.5** | Verify that persistent filesystem storage volumes are authenticated. | | ✓ | ✓ |
 | **3.2.6** | Verify that applications running on the device use the security features of the underlying operating system or kernel. Including cryptography, key storage, random number generation, authentication and authorization, logging, communications security. | | ✓ | ✓ |
 | **3.2.7** | Verify that memory protection controls such as Address Space Layout Randomization (ASLR) and Data Execution Prevention (DEP) are enabled by the embedded operating system. | | ✓ | ✓ |
 | **3.2.8** | Verify hardware level memory protection is used and privilege levels are enforced. | | ✓ | ✓ |
