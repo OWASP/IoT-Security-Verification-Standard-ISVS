@@ -12,10 +12,10 @@ IoT applications are often composed of many interconnected applications that tog
 ## Peer Review Requested
 The first version of the OWASP ISVS is ready for a peer review. "Pre-release 1.0RC" can be acquired in many formats:
 
-* The [release pages](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/releases) contain PDF, Epub, Docx, CSV, JSON and XML versions of the standard.
+* The [release page](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/releases) contains PDF, EPUB, Docx, CSV, JSON and XML versions of the standard.
 * The latest version of the main branch can be read on [GitBook](https://owasp-isvs.gitbook.io/owasp-isvs-pr).
 
-### Read Individual Sections of the ISVS Here
+### Read Individual Sections of the ISVS Below
 * [Frontispiece](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/0x01-Frontispiece.md)
 * [Using the ISVS](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/Using_ISVS.md)
 * [V1: IoT Ecosystem Requirements](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/V1-IoT_Ecosystem_Requirements.md)
