@@ -30,7 +30,7 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 | --  | ---------------------- | - | - | - |
 | **3.2.1** | Verify that the embedded operating system is configured according to industry best practices, benchmarks, and uses secure defaults. | ✓ | ✓ | ✓ |
 | **3.2.2** | Verify that all network services exposed by the device on every network interface are necessary services and unnecessary services are removed or disabled. | ✓ | ✓ | ✓ |
-| **3.2.3** | Verify that the device does not make use of of legacy or insecure protocols such as Telnet and FTP. | ✓ | ✓ | ✓ |
+| **3.2.3** | Verify that the device does not make use of legacy or insecure protocols such as Telnet and FTP. | ✓ | ✓ | ✓ |
 | **3.2.4** | Verify that the OS kernel and software components are up to date and do not contain known vulnerabilities. | ✓ | ✓ | ✓ |
 | **3.2.5** | Verify that persistent filesystem storage volumes are encrypted. | | ✓ | ✓ |
 | **3.2.6** | Verify that applications running on the device use the security features of the underlying operating system or kernel. Including cryptography, key storage, random number generation, authentication and authorization, logging, communications security. | | ✓ | ✓ |
