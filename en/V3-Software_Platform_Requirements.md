@@ -38,7 +38,7 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 | **3.2.8** | Verify hardware level memory protection is used and privilege levels are enforced. | | ✓ | ✓ |
 | **3.2.9** | Verify the embedded OS provides protection against unauthorized access to RAM (e.g. RAM scrambling). | | | ✓ |
 | **3.2.10** | Verify that an Integrity Measurement Architecture (IMA) is in use and appropriately configured. | | | ✓ |
-| **3.2.11** | Verify that that third-party applications and services are configured to execute within a containerized runtime environment (e.g. LXC, Docker, etc.). | | | ✓ |
+| **3.2.11** | Verify that third-party applications and services are configured to execute within a containerized runtime environment (e.g. LXC, Docker, etc.). | | | ✓ |
 
 #### Linux
 
