@@ -21,7 +21,7 @@ To ensure the security of all software produced, the build process for the syste
 | **1.1.3** | Verify that sensitive information and security critical actions have been identified and documented. | ✓ | ✓ | ✓ |
 | **1.1.4** | Verify that the location where sensitive data is stored in the ecosystem is clearly identified and separated from unprivileged storage locations. | ✓ | ✓ | ✓ |
 | **1.1.5** | Verify that security controls are enforced server-side and that data and instructions are not blindly trusted by server-side components. | ✓ | ✓ | ✓ |
-| **1.1.6** | Verify that a responsible disclosure policy has been established and that it is easily found on the company website. Ensure that the policy provides a clear overview on how vulnerabilities can be communicated securely and how they'll be followed up on. | ✓ | | |
+| **1.1.6** | Verify that a responsible disclosure policy has been established and that it is easily found on the company website. Ensure that the policy provides a clear overview on how vulnerabilities can be communicated securely and how they'll be followed up on. | ✓ | ✓ | ✓ |
 | **1.1.7** | Verify that users and relevant stakeholders are notified when vulnerabilities are identified through established communication channels (website, e-mail ...). | ✓ | ✓ | ✓ |
 
 
