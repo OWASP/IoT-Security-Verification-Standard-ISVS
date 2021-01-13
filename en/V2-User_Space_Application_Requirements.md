@@ -22,6 +22,7 @@ Many controls in this chapter are implemented through cryptography. Therefore ad
 | **2.1.4** | Verify that user, services, and device authentication schemes share a common framework centrally managed in the IoT ecosystem. | ✓ | ✓ | ✓ |
 | **2.1.5** | Verify certificate based authentication is preferred over password based authentication within the IoT ecosystem. | ✓ | ✓ | ✓ |
 | **2.1.6** | Verify good password policies are enforced throughout the IoT ecosystem by disallowing hardcoded passwords and provisioning duplicate identities or passwords across devices. | ✓ | ✓ | ✓ |
+| **2.1.7** | Verify that no undocumented or unmanageable accounts or interfaces exist on the system. | ✓ | ✓ | ✓ |
 
 
 ### Authorization
