@@ -28,7 +28,7 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-| **3.2.1** | Verify that the embedded operating system is configured according to industry best practices, benchmarks, and uses secure defaults. | ✓ | ✓ | ✓ |
+| **3.2.1** | Verify that the embedded operating system is configured according to the latest industry best practices, CIS or SCAP benchmarks (if applicable), and uses secure defaults. | ✓ | ✓ | ✓ |
 | **3.2.2** | Verify that all network services exposed by the device on every network interface are necessary services and unnecessary services are removed or disabled. | ✓ | ✓ | ✓ |
 | **3.2.3** | Verify that the device does not make use of legacy or insecure protocols such as Telnet and FTP. | ✓ | ✓ | ✓ |
 | **3.2.4** | Verify that the OS kernel and software components are up to date and do not contain known vulnerabilities. | ✓ | ✓ | ✓ |
@@ -87,6 +87,7 @@ For more information, see also:
 
 - ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
 - CIS Benchmarks: <https://www.cisecurity.org/cis-benchmarks/>
+- SCAP: <https://csrc.nist.gov/projects/security-content-automation-protocol/scap-content>
 - TGC Guidance for Secure Update of Software and Firmware on Embedded Systems: <https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf>
 - U-Boot documentation - Signature: <https://github.com/u-boot/u-boot/blob/master/doc/uImage.FIT/signature.txt>
 - GSMA - IoT Security Guidelines for Endpoint Systems: <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
