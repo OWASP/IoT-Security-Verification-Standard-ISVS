@@ -26,7 +26,7 @@ The goal of level two requirements is to provide protection against attacks that
 Examples of level two devices are smart locks, alarm systems, smart cameras, and medical devices that aggregate measurement data and send it to a physician for analysis.
 
 ### ISVS Level 3
-The goal of level three requirements is to provide requirements for devices where compromise should be avoided at all cost. Devices where there is highly sensitive information stored on the device or where compromise of the device can result in fraud. In addition to the security requirements provide by level one and two, level three requirements focus on defense-in-depth techniques that attempt to hinder reverse engineering and physical tampering efforts.
+The goal of level three requirements is to provide requirements for devices where compromise should be avoided at all cost. Devices where there is highly sensitive information stored on the device or where compromise of the device can result in fraud. In addition to the security requirements provided by level one and two, level three requirements focus on defense-in-depth techniques that attempt to hinder reverse engineering and physical tampering efforts.
 
 Examples of level three devices consist of hardware crypto wallets, smart-meters, connected vehicles, medical implants, recycle machines that trade aluminium cans for money.
 
