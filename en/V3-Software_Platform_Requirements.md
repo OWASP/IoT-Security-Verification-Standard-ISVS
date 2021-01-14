@@ -6,7 +6,7 @@ The bootloader is the first piece of code to run during the device's boot proces
 
 The operating system, and its kernel in particular, are central for device security, as they run in privileged mode and implement critical device functionality, including many security primitives. This necessitates best security practices for operating system and kernel configuration and hardening.
 
-The Linux operating system is one of the most popular in IoT. It has many features from first-line security to defense-in-depth, including the isolation mechanisms supported by namespaces and cgroups, and additional kernel security modules for access controls.
+The Linux operating system is one of the most popular in IoT. It has many features from first-line security to defense-in-depth, including the isolation mechanisms supported by namespaces and cgroups, and additional kernel security modules for access controls. Leverage these isolation mechanisms when configuring and deploying third-party applications to run within a container.
 
 ## Security Verification Requirements
 
@@ -38,7 +38,7 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 | **3.2.8** | Verify hardware level memory protection is used and privilege levels are enforced. | | ✓ | ✓ |
 | **3.2.9** | Verify the embedded OS provides protection against unauthorized access to RAM (e.g. RAM scrambling). | | | ✓ |
 | **3.2.10** | Verify that an Integrity Measurement Architecture (IMA) is in use and appropriately configured. | | | ✓ |
-| **3.2.11** | Verify that third-party applications and services are configured to execute within a containerized runtime environment (e.g. LXC, Docker, etc.). | | | ✓ |
+| **3.2.11** | Verify that third-party applications are configured to execute within a containerized runtime environment (e.g. Linux containers, Docker, etc.) that is hardened to ensure proper isolation from the host operating system. | | | ✓ |
 
 #### Linux
 
@@ -90,3 +90,6 @@ For more information, see also:
 - TGC Guidance for Secure Update of Software and Firmware on Embedded Systems: <https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf>
 - U-Boot documentation - Signature: <https://github.com/u-boot/u-boot/blob/master/doc/uImage.FIT/signature.txt>
 - GSMA - IoT Security Guidelines for Endpoint Systems: <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
+- OWASP Docker Top 10: <https://owasp.org/www-project-docker-top-10/>
+- Linux Containers Security (LXC): <https://linuxcontainers.org/lxc/security/>
+- Linux Containers Security (LXD): <https://linuxcontainers.org/lxd/docs/master/security>
