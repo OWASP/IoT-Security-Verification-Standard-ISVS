@@ -21,7 +21,7 @@ To ensure the security of all software produced, the build process for the syste
 | **1.1.3** | Verify the use of threat modeling as part of each product introduction design (i.e. new and mature) and security-relevant feature changes to identify likely threats and facilitate appropriate risk responses to guide security testing. | ✓ | ✓ | ✓ |
 | **1.1.4** | Verify that the location where sensitive data is stored in the ecosystem is clearly identified and separated from unprivileged storage locations. | ✓ | ✓ | ✓ |
 | **1.1.5** | Verify that security controls are enforced server-side and that data and instructions are not blindly trusted by server-side components. | ✓ | ✓ | ✓ |
-| **1.1.6** | Verify that a responsible disclosure policy has been established and that it is easily found on the company website. Ensure that the policy provides a clear overview on how vulnerabilities can be communicated securely and how they'll be followed up on. | ✓ | | |
+| **1.1.6** | Verify that a responsible disclosure policy has been established and that it is easily found on the company website. Ensure that the policy provides a clear overview on how vulnerabilities can be communicated securely and how they'll be followed up on. | ✓ | ✓ | ✓ |
 | **1.1.7** | Verify that users and relevant stakeholders are notified when vulnerabilities are identified through established communication channels (website, e-mail ...). | ✓ | ✓ | ✓ |
 
 
@@ -65,6 +65,7 @@ For more information, see also:
 - OWASP MASVS: <https://github.com/OWASP/owasp-masvs>
 - OWASP Threat modelling: <https://owasp.org/www-community/Application_Threat_Modeling>
 - OWASP SCVS: <https://github.com/OWASP/Software-Component-Verification-Standard>
+- OWASP Software Assurance Maturity Model: <https://owaspsamm.org/>
 - OWASP Secure SDLC Cheat Sheet: <https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets_excluded/Secure_SDLC_Cheat_Sheet.md>
 - Microsoft SDL: <https://www.microsoft.com/en-us/sdl/>
 - OWASP C-based Toolchain Hardening Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html>
