@@ -31,7 +31,7 @@ The goal of level three requirements is to provide requirements for devices wher
 Examples of level three devices consist of hardware crypto wallets, smart-meters, connected vehicles, medical implants, recycle machines that trade aluminium cans for money.
 
 ## Recommended Use
-IoT applications can differ a lot from one another. Some applications make use of sensors and hubs, some don't have sensors. Some run embedded Linux, some do not. While the ISVS aims to structure and define requirements in such a way that's widely applicable as possible, not all of the requirements in the ISVS may apply to your specific device. We strongly encourage tailoring ISVS to your use case and focus on high impact requirements that are most important to your environment. This may require a risk assessment to understand the desired level of security required.
+IoT applications can differ a lot from one another. Some applications make use of sensors and hubs, some don't have sensors. Some run embedded Linux, some do not. While the ISVS aims to structure and define requirements in a way that's applicable as widely as possible, not all of the requirements in the ISVS may apply to your specific device. We strongly encourage tailoring ISVS to your use case and focus on high impact requirements that are most important to your environment. This may require a risk assessment to understand the desired level of security required.
 
 Even though the standard is called a verification standard, its use goes much wider than providing requirements for verifying the overall security posture of connected devices. The fact that requirements are written from a verification perspective ensures that each requirement is measurable and achievable in practice. As a result, requirements can be used at different stages in a connected device's development process. Some example use cases are presented below.
 
@@ -43,4 +43,4 @@ Even though the standard is called a verification standard, its use goes much wi
 
 
 ## Document Structure
-The subsequent chapters of this standard provide an overview of the different requirements categories described above. Each requirement category has a dedicated chapter in which the requirements are listed together with references to relevant standards. Definitions on the different words used throughout the standard are provided in [Appendix A - Glossary](Appendix_A-Glossary.md)
+The subsequent chapters of this standard provide an overview of the different requirement categories described above. Each requirement category has a dedicated chapter in which the requirements are listed together with references to relevant standards. Definitions of the different words used throughout the standard are provided in [Appendix A - Glossary](Appendix_A-Glossary.md)

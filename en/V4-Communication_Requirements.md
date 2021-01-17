@@ -17,18 +17,18 @@ Devices use network communication to exchange data and receive commands within t
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
 | **4.1.1** | Verify that communication with other components in the IoT ecosystem (including sensors, gateway and supporting cloud) occurs over a secure channel in which the confidentiality and integrity of data is guaranteed and in which protection against replay attacks is built into the communication protocol. | ✓ | ✓ | ✓ |
-| **4.1.2** | Verify that in case TLS is used, that its securely configured with FIPS-based cipher suites (or equivalent). | ✓ | ✓ | ✓ |
+| **4.1.2** | Verify that in case TLS is used, its configured to only use FIPS-compliant cipher suites (or equivalent). | ✓ | ✓ | ✓ |
 | **4.1.3** | Verify that in case TLS is used, the device cryptographically verifies the X.509 certificate. | ✓ | ✓ | ✓ |
-| **4.1.4** | Verify that for availability critical applications, either protection or detection of jamming is provided.  | | ✓ | ✓ |
-| **4.1.6** | Verify that device's TLS implementation uses its own certificate store, pins to the endpoint certificate or public key, and disallows connections from endpoints with different certificates or key, even if signed by a trusted CA. | | ✓ | ✓ |
-| **4.1.7** | Verify that inter-chip communication is encrypted (e.g. Main board to daughter board communication). | | | ✓ |
+| **4.1.4** | Verify that either protection or detection of jamming is provided for availability-critical applications.  | | ✓ | ✓ |
+| **4.1.6** | Verify that the device's TLS implementation uses its own certificate store, pins to the endpoint's certificate or public key, and disallows connections to endpoints with different certificates or keys, even if signed by a trusted CA. | | ✓ | ✓ |
+| **4.1.7** | Verify that inter-chip communication is encrypted (e.g. main board to daughter board communication). | | | ✓ |
 
 ### Machine-to-Machine
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
 | **4.2.1** | Verify that unencrypted communication is limited to data and instructions that are not of a sensitive nature.  | ✓ | ✓ | ✓ |
-| **4.2.2** | Verify that if shared secrets are used to cryptographically secure communication, that the same key is not hardcoded in each device or sensor.  | ✓ | ✓ | ✓ |
+| **4.2.2** | Verify that if shared secrets are used to cryptographically secure communication, the same key is not hardcoded in each device or sensor.  | ✓ | ✓ | ✓ |
 | **4.2.3** | Verify MQTT brokers only allow authorized IoT devices to subscribe and publish message topics. | ✓ | ✓ | ✓ |
 | **4.2.7** | Verify certificates are favored over native username and passwords to authenticate MQTT transactions. | ✓ | ✓ | ✓ |
 
@@ -37,10 +37,10 @@ Devices use network communication to exchange data and receive commands within t
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
 | **4.3.1** | Verify that pairing and discovery is blocked in Bluetooth devices except when necessary. | ✓ | ✓ | ✓ |
-| **4.3.2** | Verify that PIN or PassKey codes are not easily guessable. For example, verify PIN codes are not ‘0000’or ‘1234’. | ✓ | ✓ | ✓ |
-| **4.3.3** | Verify devices that support for old versions of Bluetooth with simple modes of authentication require a PIN to pair devices. | ✓ | ✓ | ✓ |
+| **4.3.2** | Verify that PIN or PassKey codes are not easily guessable (e.g. don't use 0000 or 1234). | ✓ | ✓ | ✓ |
+| **4.3.3** | Verify that devices using old versions of Bluetooth with simple modes of authentication enabled require a PIN for pairing. | ✓ | ✓ | ✓ |
 | **4.3.4** | Verify that for modern versions of Bluetooth, at least 6 digits are required for Secure Simple Pairing (SSP) authentication under all versions except “Just Works”. | ✓ | ✓ | ✓ |
-| **4.3.5** | Verify that encryption keys are the maximum allowable size. Bluetooth has configurable key size parameters for establishing a session, with configurations that allow keys of smaller size than the 16-32 byte size used by AES. | ✓ | ✓ | ✓ |
+| **4.3.5** | Verify that encryption keys leverage the maximum allowable size. Bluetooth has configurable key size parameters for session establishment, with configurations allowing key sizes smaller than the 16-32 byte size used by AES. | ✓ | ✓ | ✓ |
 | **4.3.6** | Verify the most secure Bluetooth pairing method available is used. Verify Out Of Band (OOB), Numeric Comparison, or Passkey Entry pairing methods are used depending on the communicating device's capabilities. | ✓ | ✓ | ✓ |
 | **4.3.7** | Verify the strongest Bluetooth Security Mode and Level supported by the device is used. For example, for Bluetooth 4.1 devices, Security Mode 4, Level 4 should be used to provide authenticated pairing and encryption. | ✓ | ✓ | ✓ |
 
