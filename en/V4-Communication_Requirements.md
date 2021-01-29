@@ -40,7 +40,7 @@ Devices use network communication to exchange data and receive commands within t
 | **4.3.2** | Verify that PIN or PassKey codes are not easily guessable. For example, verify PIN codes are not ‘0000’or ‘1234’. | ✓ | ✓ | ✓ |
 | **4.3.3** | Verify devices that support for old versions of Bluetooth with simple modes of authentication require a PIN to pair devices. | ✓ | ✓ | ✓ |
 | **4.3.4** | Verify that for modern versions of Bluetooth, at least 6 digits are required for Secure Simple Pairing (SSP) authentication under all versions except “Just Works”. | ✓ | ✓ | ✓ |
-| **4.3.5** | Verify that encryption keys are the maximum allowable size. Bluetooth has configurable key size parameters for establishing a session, with configurations that allow keys of smaller size than the 16-32 byte size used by AES. | ✓ | ✓ | ✓ |
+| **4.3.5** | Verify that encryption keys are the maximum size the device supports and that this size is sufficient to adequately protect the information transmitted over the Bluetooth connection. | ✓ | ✓ | ✓ |
 | **4.3.6** | Verify the most secure Bluetooth pairing method available is used. Verify Out Of Band (OOB), Numeric Comparison, or Passkey Entry pairing methods are used depending on the communicating device's capabilities. | ✓ | ✓ | ✓ |
 | **4.3.7** | Verify the strongest Bluetooth Security Mode and Level supported by the device is used. For example, for Bluetooth 4.1 devices, Security Mode 4, Level 4 should be used to provide authenticated pairing and encryption. | ✓ | ✓ | ✓ |
 
