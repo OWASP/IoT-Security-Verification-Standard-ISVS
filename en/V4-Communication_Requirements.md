@@ -28,7 +28,6 @@ Devices use network communication to exchange data and receive commands within t
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
 | **4.2.1** | Verify that unencrypted communication is limited to data and instructions that are not of a sensitive nature.  | ✓ | ✓ | ✓ |
-| **4.2.2** | Verify that if shared secrets are used to cryptographically secure communication, that the same key is not hardcoded in each device or sensor.  | ✓ | ✓ | ✓ |
 | **4.2.3** | Verify MQTT brokers only allow authorized IoT devices to subscribe and publish message topics. | ✓ | ✓ | ✓ |
 | **4.2.7** | Verify certificates are favored over native username and passwords to authenticate MQTT transactions. | ✓ | ✓ | ✓ |
 
