@@ -28,9 +28,8 @@ Devices use network communication to exchange data and receive commands within t
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
 | **4.2.1** | Verify that unencrypted communication is limited to data and instructions that are not of a sensitive nature.  | ✓ | ✓ | ✓ |
-| **4.2.2** | Verify that if shared secrets are used to cryptographically secure communication, the same key is not hardcoded in each device or sensor.  | ✓ | ✓ | ✓ |
-| **4.2.3** | Verify MQTT brokers only allow authorized IoT devices to subscribe and publish message topics. | ✓ | ✓ | ✓ |
-| **4.2.7** | Verify certificates are favored over native username and passwords to authenticate MQTT transactions. | ✓ | ✓ | ✓ |
+| **4.2.2** | Verify MQTT brokers only allow authorized IoT devices to subscribe and publish message topics. | ✓ | ✓ | ✓ |
+| **4.2.3** | Verify certificates are favored over native username and passwords to authenticate MQTT transactions. | ✓ | ✓ | ✓ |
 
 ### Bluetooth
 
@@ -40,7 +39,7 @@ Devices use network communication to exchange data and receive commands within t
 | **4.3.2** | Verify that PIN or PassKey codes are not easily guessable (e.g. don't use 0000 or 1234). | ✓ | ✓ | ✓ |
 | **4.3.3** | Verify that devices using old versions of Bluetooth with simple modes of authentication enabled require a PIN for pairing. | ✓ | ✓ | ✓ |
 | **4.3.4** | Verify that for modern versions of Bluetooth, at least 6 digits are required for Secure Simple Pairing (SSP) authentication under all versions except “Just Works”. | ✓ | ✓ | ✓ |
-| **4.3.5** | Verify that encryption keys leverage the maximum allowable size. Bluetooth has configurable key size parameters for session establishment, with configurations allowing key sizes smaller than the 16-32 byte size used by AES. | ✓ | ✓ | ✓ |
+| **4.3.5** | Verify that encryption keys are the maximum size the device supports and that this size is sufficient to adequately protect the information transmitted over the Bluetooth connection. | ✓ | ✓ | ✓ |
 | **4.3.6** | Verify the most secure Bluetooth pairing method available is used. Verify Out Of Band (OOB), Numeric Comparison, or Passkey Entry pairing methods are used depending on the communicating device's capabilities. | ✓ | ✓ | ✓ |
 | **4.3.7** | Verify the strongest Bluetooth Security Mode and Level supported by the device is used. For example, for Bluetooth 4.1 devices, Security Mode 4, Level 4 should be used to provide authenticated pairing and encryption. | ✓ | ✓ | ✓ |
 
