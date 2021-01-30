@@ -2,7 +2,7 @@
 
 ## Control Objective
 
-System security design performed prior to the development, and a security process which continuously supports system development and is integrated into all phases of its life-cycle,  are necessary fundamentals for creating a secure product architecture and implementation.
+System security design performed prior to the development, and a security process which continuously supports system development and is integrated into all phases of its life-cycle, are necessary fundamentals for creating a secure product architecture and implementation.
 
 A secure development process ensures the identification and documentation of all sensitive information and functionality which are needed for the system, enforces all the security controls on the appropriate level, and ensures that end-users and customers are notified about vulnerabilities and that security solutions are delivered on time.
 
@@ -48,11 +48,11 @@ To ensure the security of all software produced, the build process for the syste
 | **1.3.4** | Verify packages are downloaded and built from trusted sources. | ✓ | ✓ | ✓ |
 | **1.3.5** | Verify build pipelines only perform builds of source code maintained in version control systems. | ✓ | ✓ | ✓ |
 | **1.3.6** | Verify that compilers, version control clients, development utilities, and software development kits are analyzed and monitored for tampering, trojans, or malicious code | ✓ | ✓ | ✓ |
-| **1.3.7** | Verify packages are compiled with Object Size Checking (OSC). e.g. -D_FORTIFY_SOURCE=2 | | ✓ | ✓ |
-| **1.3.8** | Verify packages are compiled with No eXecute (NX) or Data Execution Protection (DEP). e.g. -z,noexecstack | | ✓ | ✓ |
-| **1.3.9** | Verify packages are compiled with Position Independent Executable (PIE). e.g. -fPIE | | ✓ | ✓ |
-| **1.3.10** | Verify packages are compiled with Stack Smashing Protector (SSP). e.g. -fstack-protector-all | | ✓ | ✓ |
-| **1.3.11** | Verify packages are compiled with read-only relocation (RELRO). e.g. -Wl,-z,relro | | ✓ | ✓ |
+| **1.3.7** | Verify packages are compiled with Object Size Checking (OSC) (e.g. -D_FORTIFY_SOURCE=2). | | ✓ | ✓ |
+| **1.3.8** | Verify packages are compiled with No eXecute (NX) or Data Execution Protection (DEP) (e.g. -z,noexecstack). | | ✓ | ✓ |
+| **1.3.9** | Verify packages are compiled with Position Independent Executable (PIE) (e.g. -fPIE). | | ✓ | ✓ |
+| **1.3.10** | Verify packages are compiled with Stack Smashing Protector (SSP) (e.g. -fstack-protector-all). | | ✓ | ✓ |
+| **1.3.11** | Verify packages are compiled with read-only relocation (RELRO) (e.g. -Wl,-z,relro). | | ✓ | ✓ |
 | **1.3.12** | Verify release builds do not contain debug code or privileged diagnostic functionality. | ✓ | ✓ | ✓ |
 | **1.3.13** | Verify that debug and release firmware images are signed using different keys. | | ✓ | ✓ |
 | **1.3.14** | Verify that debug information does not contain sensitive information, such as PII, credentials or cryptographic material. | ✓ | ✓ | ✓ |
@@ -63,7 +63,7 @@ For more information, see also:
 
 - OWASP ASVS: <https://owasp.org/www-project-application-security-verification-standard/>
 - OWASP MASVS: <https://github.com/OWASP/owasp-masvs>
-- OWASP Threat modelling: <https://owasp.org/www-community/Application_Threat_Modeling>
+- OWASP Threat Modeling: <https://owasp.org/www-community/Application_Threat_Modeling>
 - OWASP SCVS: <https://github.com/OWASP/Software-Component-Verification-Standard>
 - OWASP Software Assurance Maturity Model: <https://owaspsamm.org/>
 - OWASP Secure SDLC Cheat Sheet: <https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets_excluded/Secure_SDLC_Cheat_Sheet.md>
