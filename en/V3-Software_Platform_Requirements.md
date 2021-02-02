@@ -14,7 +14,7 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-| **3.1.1** | Verify that the bootloader does not allow code to be loaded from arbitrary locations. Locations include both storage (SD, USB, etc.) and network locations (over TCP/IP). | ✓ | ✓ | ✓ |
+| **3.1.1** | Verify that the bootloader does not allow code loaded from arbitrary locations including both local storage (e.g. SD, USB, etc.) and network locations (e.g. NFS, TFTP, etc.). | | ✓ | ✓ |
 | **3.1.2** | Verify bootloader configurations are immutable in production releases. | | ✓ | ✓ |
 | **3.1.3** | Verify that communication interfaces such as, USB, UART, and other variants are disabled or adequately protected during every stage of the device's boot process. | | ✓ | ✓ |
 | **3.1.4** | Verify that the authenticity of the first stage bootloader is verified by a trusted component of which the configuration in read-only memory (ROM) cannot be altered (e.g. CPU Based Secure Boot/Trusted Boot). | | ✓ | ✓ |
