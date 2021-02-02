@@ -8,7 +8,7 @@ Devices use network communication to exchange data and receive commands within t
 - Other security practices include certificate-based authentication with pinning and mutual authentication.
 - Use up to date configurations to enable and set the preferred order of algorithms and ciphers used for communication.
 - Disable deprecated or known insecure algorithms and ciphers.
-- Use the strongest security settings available for Bluetooth and Wi-Fi communication.
+- Use the strongest security settings available for wired and wireless communication protocols.
 
 ## Security Verification Requirements
 
