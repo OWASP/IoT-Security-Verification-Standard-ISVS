@@ -2,7 +2,7 @@
 
 ## Control Objective
 
-Hardware is more difficult and more costly to compromise and subvert than software. Therefore hardware security can provide a robust foundation for embedded device security. On the other hand, hardware that contains backdoors or undocumented debug features can completely compromise the security of the entire device.
+Hardware is more difficult and costly to compromise and subvert than software. Therefore hardware security can provide a robust foundation for embedded device security. On the other hand, hardware that contains backdoors or undocumented debug features can completely compromise the security of the entire device even if adequate security measures have been taken on the other layers of the stack.
 
 The purpose of the controls listed in this chapter is to ensure that as long as hardware is available for secure configuration, it is been configured in the most secure way possible. This includes disabling or securing debug interfaces, setting up all existing alarms and sensor mechanisms to combat tampering, using anti-cloning hardware protection such as OTP fuses, and the use of the MMU (Memory Management Unit) for secure process isolation.
 
