@@ -28,18 +28,17 @@ Many controls in this chapter are implemented through cryptography. Therefore ad
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-| **2.2.1** | Verify that sensitive information such as personal identifiable information (PII) and API keys are stored securely using encryption to protect from data leakage, and leverage integrity checking to protect against unauthorized modification. | ✓ | ✓ | ✓ |
-| **2.2.2** | Verify that IoT system accounts across users, services and devices share a common authorization framework. | ✓ | ✓ | ✓ |
-| **2.2.3** | Verify that devices enforce the concept of least privilege by limiting applications and services that run as root or administrator. | ✓ | ✓ | ✓ |
-| **2.2.4** | Verify that ownership is validated upon registration and as part of decommissioning when devices move across accounts (e.g. device reselling, leasing, and renting).  | ✓ | ✓ | ✓ |
-| **2.2.5** | Verify device debug capabilities can only be accessed by approved staff (e.g. support and engineering teams) and verify that access is monitored/logged. | | ✓ | ✓ |
+| **2.2.1** | Verify that IoT system accounts across users, services and devices share a common authorization framework. | ✓ | ✓ | ✓ |
+| **2.2.2** | Verify that devices enforce the concept of least privilege by limiting applications and services that run as root or administrator. | ✓ | ✓ | ✓ |
+| **2.2.3** | Verify that ownership is validated upon registration and as part of decommissioning when devices move across accounts (e.g. device reselling, leasing, and renting).  | ✓ | ✓ | ✓ |
+| **2.2.4** | Verify device debug capabilities can only be accessed by approved staff (e.g. support and engineering teams) and verify that access is monitored/logged. | | ✓ | ✓ |
 
 
 ### Data Protection
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-| **2.3.1** | Verify that sensitive information such as personal identifiable information (PII) used by the device is stored securely on the device. Protection can include encryption against data leakage, and hashing or integrity checking against unauthorized modification. | ✓ | ✓ | ✓ |
+| **2.3.1** | Verify that sensitive information such as personal identifiable information (PII) and user account credentials are stored securely using strong encryption to protect from data leakage and integrity checking to protect against unauthorized modification. | ✓ | ✓ | ✓ |
 | **2.3.2** | Verify that in case a device is decommissioned, or the owner changes, all sensitive information such as PII data and credentials can be removed from the device. | ✓ | ✓ | ✓ |
 | **2.3.3** | Verify that in case a device is decommissioned, or the owner changes, it is marked as such in a centrally managed database in the ecosystem for audit purposes. | ✓ | ✓ | ✓ |
 | **2.3.4** | Verify that sensitive information maintained in memory is overwritten with zeros as soon as it is no longer required. | | ✓ | ✓ |
