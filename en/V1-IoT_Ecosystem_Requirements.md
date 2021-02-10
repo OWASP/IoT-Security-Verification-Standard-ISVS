@@ -64,10 +64,10 @@ To ensure the security of all software produced, the build process for the syste
 | -- | ---------------------- | - | - | - |
 | **1.4.1** | Verify that devices can collect logs about events with security implications, such as successful and failed authentication attempts, access to debugging functionality etc. | | ✓ | ✓ |
 | **1.4.2** | Verify that collected logs have adequate granularity to enable actionable insights and alerts. They should include, at a minimum, the type of event, timestamp, source, outcome and identify of involved actors. | | ✓ | ✓ |
-| **1.4.3** | Verify that devices contain or are synchronized with a reliable time source, to ensure tha validity of log timestamps. | | ✓ | ✓ |
+| **1.4.3** | Verify that devices contain or are synchronized with a reliable time source, to ensure the validity of log timestamps. | | ✓ | ✓ |
 | **1.4.4** | Verify that collected logs do not include sensitive information, such as PII, credentials and cryptographic keys. | | ✓ | ✓ |
-| **1.4.5** | Verify that collected logs can be securely retrieved from the devices over an online collection, either periodically or on-demand. | ✓ | ✓ | ✓ |
-| **1.4.6** | Verify that collected logs are preserved for the amount of time required by organizational policies and that they are safely deleted when the retention period is over | | ✓ | ✓ |
+| **1.4.5** | Verify that collected logs can be securely retrieved from the devices over an online collection, either periodically or on-demand. | | ✓ | ✓ |
+| **1.4.6** | Verify that collected logs are preserved for the amount of time required by organizational policies and that they are safely deleted when the retention period is over. | | ✓ | ✓ |
 | **1.4.7** | Verify that the confidentiality, integrity and authenticity of collected logs is appropriately protected, both on the devices that created them and on other systems that store or process them. | | ✓ | ✓ |
 
 ## References
