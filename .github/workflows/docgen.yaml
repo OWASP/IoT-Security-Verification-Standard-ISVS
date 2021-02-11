@@ -40,7 +40,7 @@ jobs:
         path: tools/OWASP_ISVS-SNAPSHOT.xml
 
     - name: Generate English PDF
-      run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc iowaspisvs/isvs-docgenerator:latest '/pandoc_makedocs.sh en SNAPSHOT'
+      run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc owaspisvs/isvs-docgenerator:latest '/pandoc_makedocs.sh en SNAPSHOT'
     - name: Upload English PDF
       uses: actions/upload-artifact@v1
       with:
