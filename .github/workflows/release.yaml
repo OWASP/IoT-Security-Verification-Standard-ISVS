@@ -2,7 +2,7 @@ on:
   push:
     # Sequence of patterns matched against refs/GITHUB_REFs
     tags:
-    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+    - '*' # Push events to matching *, i.e. 1.0, 20.15.10
 
 name: Upload Release Asset
 jobs:
@@ -18,17 +18,17 @@ jobs:
       - name: Get the version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-      - name: Build the Docker image
-        run: docker build ./tools/docker --tag isvs-generator:latest
+      - name: Pull the Docker image
+        run: docker pull owaspisvs/isvs-docgenerator:latest
       - name: Generate python scripts (csv)
-        run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format csv --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.csv'
+        run: docker run -v ${PWD}:/documents owaspisvs/isvs-docgenerator:latest 'cd /documents/tools && python3 export.py --format csv --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.csv'
       - name: Generate python scripts (json)
-        run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format json --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.json'
+        run: docker run -v ${PWD}:/documents owaspisvs/isvs-docgenerator:latest 'cd /documents/tools && python3 export.py --format json --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.json'
       - name: Generate python scripts (xml)
-        run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format xml --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.xml'
+        run: docker run -v ${PWD}:/documents owaspisvs/isvs-docgenerator:latest 'cd /documents/tools && python3 export.py --format xml --lang en > OWASP_ISVS-${{ steps.get_version.outputs.VERSION }}.xml'
 
       - name: Generate English docs
-        run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc isvs-generator:latest '/pandoc_makedocs.sh en ${{ steps.get_version.outputs.VERSION }}'
+        run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc owaspisvs/isvs-docgenerator:latest '/pandoc_makedocs.sh en ${{ steps.get_version.outputs.VERSION }}'
       - name: Release
         uses: softprops/action-gh-release@91409e712cf565ce9eff10c87a8d1b11b81757ae
         if: startsWith(github.ref, 'refs/tags/')
