@@ -11,18 +11,18 @@ jobs:
       with:
         fetch-depth: 1
 
-    #- name: Pull the Docker image
-    #  run: docker pull owasp/masvs-docgenerator:0.2
+    - name: Pull the Docker image
+      run: docker pull owaspisvs/isvs-docgenerator:latest
     # only use below when testing new container builds
-    - name: Build the Docker image
-      run: docker build ./tools/docker --tag isvs-generator:latest
+    # - name: Build the Docker image
+    #  run: docker build ./tools/docker --tag isvs-generator:latest
 
     - name: Generate python scripts (csv)
-      run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format csv --lang en > OWASP_ISVS-SNAPSHOT.csv'
+      run: docker run -v ${PWD}:/documents owaspisvs/isvs-docgenerator:latest 'cd /documents/tools && python3 export.py --format csv --lang en > OWASP_ISVS-SNAPSHOT.csv'
     - name: Generate python scripts (json)
-      run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format json --lang en > OWASP_ISVS-SNAPSHOT.json'
+      run: docker run -v ${PWD}:/documents owaspisvs/isvs-docgenerator:latest 'cd /documents/tools && python3 export.py --format json --lang en > OWASP_ISVS-SNAPSHOT.json'
     - name: Generate python scripts (xml)
-      run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format xml --lang en > OWASP_ISVS-SNAPSHOT.xml'
+      run: docker run -v ${PWD}:/documents owaspisvs/isvs-docgenerator:latest 'cd /documents/tools && python3 export.py --format xml --lang en > OWASP_ISVS-SNAPSHOT.xml'
     - name: Upload CSV export
       uses: actions/upload-artifact@v1
       with:
@@ -40,7 +40,7 @@ jobs:
         path: tools/OWASP_ISVS-SNAPSHOT.xml
 
     - name: Generate English PDF
-      run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc isvs-generator:latest '/pandoc_makedocs.sh en SNAPSHOT'
+      run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc owaspisvs/isvs-docgenerator:latest '/pandoc_makedocs.sh en SNAPSHOT'
     - name: Upload English PDF
       uses: actions/upload-artifact@v1
       with:
