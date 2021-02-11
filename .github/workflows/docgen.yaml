@@ -11,11 +11,11 @@ jobs:
       with:
         fetch-depth: 1
 
-    #- name: Pull the Docker image
-    #  run: docker pull owasp/masvs-docgenerator:0.2
+    - name: Pull the Docker image
+      run: docker pull owaspisvs/isvs-docgenerator:latest
     # only use below when testing new container builds
-    - name: Build the Docker image
-      run: docker build ./tools/docker --tag isvs-generator:latest
+    # - name: Build the Docker image
+    #  run: docker build ./tools/docker --tag isvs-generator:latest
 
     - name: Generate python scripts (csv)
       run: docker run -v ${PWD}:/documents isvs-generator:latest 'cd /documents/tools && python3 export.py --format csv --lang en > OWASP_ISVS-SNAPSHOT.csv'
