@@ -6,7 +6,7 @@ Hardware is more difficult and costly to compromise and subvert than software. T
 
 The purpose of the controls listed in this chapter is to ensure that as long as hardware is available for secure configuration, it is been configured in the most secure way possible. This includes disabling or securing debug interfaces, setting up all existing alarms and sensor mechanisms to combat tampering, using anti-cloning hardware protection such as OTP fuses, and the use of the MMU (Memory Management Unit) for secure process isolation.
 
-This chapter provides the requirements for the hardware platform, to guarantee secure configuration. For example, 3.1.4 discusses correctly configuring Secure Boot, 5.1.2 requires the platform to support this. 5.1.1 requires that the platform supports disabling debug interfaces, 1.2.4 requires that this is applied in production.
+This chapter provides requirements for the hardware platform to guarantee secure configuration and provide layered controls to encourage resiliency. For example, 3.1.4 discusses correctly configuring Secure Boot, 5.1.2 requires the platform to support this. 5.1.1 requires that the platform supports disabling debug interfaces, 1.2.4 requires that this is applied in production.
 
 ## Security Verification Requirements
 
@@ -21,9 +21,11 @@ This chapter provides the requirements for the hardware platform, to guarantee s
 | **5.1.5** | Verify that the platform provides memory and I/O protection capabilities so that only privileged processes can access certain resources. | | ✓ | ✓ |
 | **5.1.6** | Verify that the security configuration of the platform can be locked (e.g. through burning OTP fuses).  | | ✓ | ✓ |
 | **5.1.7** | Verify that debugging headers are removed from PCBs. | | ✓  | ✓ |
-| **5.1.8** | Verify the chosen hardware has no unofficially documented debug features, such as special pin configurations that can enable or disable certain functionality. | | ✓ | ✓ |
+| **5.1.8** | Verify that hardware has no unofficially documented debug features, such as special pin configurations that can enable or disable certain functionality. | | ✓ | ✓ |
 | **5.1.9** | Verify that the platform provides protection against physical decapsulation, side channel and glitching attacks. | | | ✓ |
-| **5.1.10** | Verify descriptive silkscreens are removed from PCBs | | | ✓ |
+| **5.1.10** | Verify descriptive silkscreens are removed from PCBs. | | | ✓ |
+| **5.1.11** | Verify debug paths and traces are depopulated from production PCBs. | | | ✓ |
+
 
 ## References
 For more information, see also:
