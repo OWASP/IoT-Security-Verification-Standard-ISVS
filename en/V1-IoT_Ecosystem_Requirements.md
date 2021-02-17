@@ -35,7 +35,6 @@ To ensure the security of all software produced, the build process for the syste
 | **1.2.6** | Verify that devices are provisioned with a cryptographic root of trust that is hardware-based and immutable. | | ✓ | ✓ |
 | **1.2.7** | Verify that code integrity protection mechanisms are enabled and locked in hardware before shipping the device to customers. For example, ensure secure boot is enabled and the boot configuration locked. | | ✓ | ✓ |
 | **1.2.8** | Verify third-party code and components are analyzed using static analysis tools to ensure backdoors are not introduced. | | ✓ | ✓ |
-| **1.2.9** | Verify debug paths and traces are depopulated from production PCBs. | | | ✓ |
 
 ### Secure Development
 
