@@ -4,7 +4,7 @@
 
 System security design performed prior to the development, and a security process which continuously supports system development and is integrated into all phases of its life-cycle, are necessary fundamentals for creating a secure product architecture and implementation.
 
-A secure development process ensures the identification and documentation of all sensitive information and functionality which are needed for the system, enforces all the security controls on the appropriate level, and ensures that end-users and customers are notified about vulnerabilities and that security solutions are delivered on time.
+A secure development process ensures the identification and documentation of all sensitive information and functionality required for the system, enforces all the security controls at the appropriate level, and ensures that end-users and customers get notified about vulnerabilities and that security solutions are delivered on time. Ensure to incorporate sister OWASP verification standards as part of development processes provided in the references section below.
 
 The supply chain has vital importance for the security of the every project. A secure development process verifies that all security requirements for the suppliers and third-party code are implemented, so that their security controls are set with the appropriate security level, and no development-time features are left on the completed devices, exposing them to vulnerabilities.
 
@@ -19,10 +19,9 @@ To ensure the security of all software produced, the build process for the syste
 | **1.1.1** | Verify that all applications in the IoT ecosystem are developed with a level of security that is in line with the security criticality of the application. | ✓ | ✓ | ✓ |
 | **1.1.2** | Verify that all components and communication channels in the IoT application's ecosystem have been identified and are known to be needed. Remove or disable any that aren't necessary. | ✓ | ✓ | ✓ |
 | **1.1.3** | Verify the use of threat modeling as part of each product introduction design (i.e. new and mature) and security-relevant feature changes to identify likely threats and facilitate appropriate risk responses to guide security testing. | ✓ | ✓ | ✓ |
-| **1.1.4** | Verify that the location where sensitive data is stored in the ecosystem is clearly identified and separated from unprivileged storage locations. | ✓ | ✓ | ✓ |
-| **1.1.5** | Verify that security controls are enforced server-side and that data and instructions are not blindly trusted by server-side components. | ✓ | ✓ | ✓ |
-| **1.1.6** | Verify that a responsible disclosure policy has been established and that it is easily found on the company website. Ensure that the policy provides a clear overview on how vulnerabilities can be communicated securely and how they'll be followed up on. | ✓ | ✓ | ✓ |
-| **1.1.7** | Verify that users and relevant stakeholders are notified when vulnerabilities are identified through established communication channels (website, e-mail ...). | ✓ | ✓ | ✓ |
+| **1.1.4** | Verify that security controls are enforced server-side and that data and instructions are not blindly trusted by server-side components. | ✓ | ✓ | ✓ |
+| **1.1.5** | Verify that a responsible disclosure policy has been established and that it is easily found on the company website. Ensure that the policy provides a clear overview on how vulnerabilities can be communicated securely and how they'll be followed up on. | ✓ | ✓ | ✓ |
+| **1.1.6** | Verify that users and relevant stakeholders are informed when vulnerabilities affect products through established communication channels (website, e-mail, security advisory pages, changelogs, etc.). | ✓ | ✓ | ✓ |
 
 
 ### Supply Chain
@@ -74,9 +73,9 @@ To ensure the security of all software produced, the build process for the syste
 For more information, see also:
 
 - OWASP ASVS: <https://owasp.org/www-project-application-security-verification-standard/>
-- OWASP MASVS: <https://github.com/OWASP/owasp-masvs>
+- OWASP MASVS: <https://owasp.org/www-project-mobile-security-testing-guide/>
 - OWASP Threat Modeling: <https://owasp.org/www-community/Application_Threat_Modeling>
-- OWASP SCVS: <https://github.com/OWASP/Software-Component-Verification-Standard>
+- OWASP SCVS: <https://owasp.org/www-project-software-component-verification-standard/>
 - OWASP Software Assurance Maturity Model: <https://owaspsamm.org/>
 - OWASP Secure SDLC Cheat Sheet: <https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets_excluded/Secure_SDLC_Cheat_Sheet.md>
 - Microsoft SDL: <https://www.microsoft.com/en-us/sdl/>
