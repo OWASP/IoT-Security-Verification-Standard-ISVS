@@ -20,9 +20,13 @@ Many controls in this chapter are implemented through cryptography. Therefore ad
 | **2.1.2** | Verify that all connected devices within the IoT ecosystem can be uniquely identified including connected to the cloud, hubs, as well as to other devices (sensors). | ✓ | ✓ | ✓ |
 | **2.1.3** | Verify strong user and device authentication is enforced across the IoT ecosystem. | ✓ | ✓ | ✓ |
 | **2.1.4** | Verify that user, service, and device authentication schemes share a common framework centrally managed in the IoT ecosystem. | ✓ | ✓ | ✓ |
-| **2.1.5** | Verify certificate based authentication is preferred over password based authentication within the IoT ecosystem. | ✓ | ✓ | ✓ |
-| **2.1.6** | Verify good password policies are enforced throughout the IoT ecosystem by disallowing hardcoded passwords and duplicate identities or passwords across devices. | ✓ | ✓ | ✓ |
-
+| **2.1.5** | Verify that passwords used for user authentication are at least 12 characters long. | ✓ | ✓ | ✓ |
+| **2.1.6** | Verify that passwords used for user authentication can be changed by the user and that the password change functionality requires the user's current and new password. | ✓ | ✓ | ✓ |
+| **2.1.7** | Verify that passwords used for device authentication are sufficiently long and complex. | ✓ | ✓ | ✓ |
+| **2.1.8** | Verify that credentials used for user or device authentication can be changed. | ✓ | ✓ | ✓ |
+| **2.1.9** | Verify that no hardcoded credentials are used for user for device authentication. | ✓ | ✓ | ✓ |
+| **2.1.10** | Verify that provisioned credentials for device authentication are unique per device. | ✓ | ✓ | ✓ |
+| **2.1.11** | Verify that credentials of compromised or decommissioned devices are revoked. | ✓ | ✓ | ✓ |
 
 ### Authorization
 
