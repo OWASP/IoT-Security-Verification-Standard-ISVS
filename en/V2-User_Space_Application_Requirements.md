@@ -4,7 +4,7 @@
 
 The purpose of the controls listed in this chapter is to ensure secure access to an IoT system by users and machines and to protect sensitive data by using security best practices.
 
-Authentication and authorization are necessary to secure access. Relevant controls include strong unique secure identity, user role segregation, and the concept of least privilege. Authentication is the act of establishing, or confirming, the identity of someone (or something) as authentic, as a basis to believe that claims made by a person or about a device are correct and resistant to impersonation. Additional necessary controls include preventing recovery or interception of authentication credentials such as passwords or private keys. Authorization is the act of establishing, or confirming  someone (or something) has access rights to resources or actions satisfying the secure access policy.
+Authentication and authorization are necessary to secure access. Relevant controls include strong unique secure identity, user role segregation, and the concept of least privilege. Authentication is the act of establishing, or confirming, the identity of someone (or something) as authentic, as a basis to believe that claims made by a person or about a device are correct and resistant to impersonation. Additional necessary controls include preventing recovery or interception of authentication credentials such as passwords, API keys, and private keys. Authorization is the act of establishing, or confirming  someone (or something) has access rights to resources or actions satisfying the secure access policy.
 
 Protection of sensitive data including credentials, and fair treatment of private information, are necessary to ensure secure use of system resources, such as files containing data or code, and the contents of memory.
 
@@ -23,10 +23,10 @@ Many controls in this chapter are implemented through cryptography. Therefore ad
 | **2.1.5** | Verify that passwords used for user authentication are at least 12 characters long. | ✓ | ✓ | ✓ |
 | **2.1.6** | Verify that passwords used for user authentication can be changed by the user and that the password change functionality requires the user's current and new password. | ✓ | ✓ | ✓ |
 | **2.1.7** | Verify that passwords used for device authentication are sufficiently long and complex. | ✓ | ✓ | ✓ |
-| **2.1.8** | Verify that credentials used for user or device authentication can be changed. | ✓ | ✓ | ✓ |
-| **2.1.9** | Verify that no hardcoded credentials are used for user for device authentication. | ✓ | ✓ | ✓ |
+| **2.1.8** | Verify that default user or device credentials can be changed by authorized administrators or end-users. | ✓ | ✓ | ✓ |
+| **2.1.9** | Verify that authentication credentials for users, devices, or services are not hardcoded in firmware or ecosystem applications. | ✓ | ✓ | ✓ |
 | **2.1.10** | Verify that provisioned credentials for device authentication are unique per device. | ✓ | ✓ | ✓ |
-| **2.1.11** | Verify that credentials of compromised or decommissioned devices are revoked. | ✓ | ✓ | ✓ |
+| **2.1.11** | Verify that authentication schemes are designed to revoke credentials of compromised or decommissioned devices. | | | ✓ |
 
 ### Authorization
 
