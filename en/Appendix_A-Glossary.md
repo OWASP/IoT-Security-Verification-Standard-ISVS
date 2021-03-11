@@ -1,4 +1,5 @@
 # Glossary
+- **Credentials** - Authentication material such as username and password, public and private keys, API keys, or certificates.  
 - **Cryptographic material** -   All material, including documents, devices, or equipment that contains cryptographic information and is essential to the encryption, decryption, or authentication of communications.
 - **Device** - Endpoint device that is capable of storing, generating, and processing data. A generic IoT device will incorporate sensors, actuators and potentially a user interface.  
 - **Firmware** - Software that communicates with a device's hardware components through instructions and application interfaces.

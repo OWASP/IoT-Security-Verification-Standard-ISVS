@@ -4,7 +4,7 @@
 
 The purpose of the controls listed in this chapter is to ensure secure access to an IoT system by users and machines and to protect sensitive data by using security best practices.
 
-Authentication and authorization are necessary to secure access. Relevant controls include strong unique secure identity, user role segregation, and the concept of least privilege. Authentication is the act of establishing, or confirming, the identity of someone (or something) as authentic, as a basis to believe that claims made by a person or about a device are correct and resistant to impersonation. Additional necessary controls include preventing recovery or interception of authentication credentials such as passwords. Authorization is the act of establishing, or confirming  someone (or something) has access rights to resources or actions satisfying the secure access policy.
+Authentication and authorization are necessary to secure access. Relevant controls include strong unique secure identity, user role segregation, and the concept of least privilege. Authentication is the act of establishing, or confirming, the identity of someone (or something) as authentic, as a basis to believe that claims made by a person or about a device are correct and resistant to impersonation. Additional necessary controls include preventing recovery or interception of authentication credentials such as passwords, API keys, and private keys. Authorization is the act of establishing, or confirming  someone (or something) has access rights to resources or actions satisfying the secure access policy.
 
 Protection of sensitive data including credentials, and fair treatment of private information, are necessary to ensure secure use of system resources, such as files containing data or code, and the contents of memory.
 
@@ -20,9 +20,13 @@ Many controls in this chapter are implemented through cryptography. Therefore ad
 | **2.1.2** | Verify that all connected devices within the IoT ecosystem can be uniquely identified including connected to the cloud, hubs, as well as to other devices (sensors). | ✓ | ✓ | ✓ |
 | **2.1.3** | Verify strong user and device authentication is enforced across the IoT ecosystem. | ✓ | ✓ | ✓ |
 | **2.1.4** | Verify that user, service, and device authentication schemes share a common framework centrally managed in the IoT ecosystem. | ✓ | ✓ | ✓ |
-| **2.1.5** | Verify certificate based authentication is preferred over password based authentication within the IoT ecosystem. | ✓ | ✓ | ✓ |
-| **2.1.6** | Verify good password policies are enforced throughout the IoT ecosystem by disallowing hardcoded passwords and duplicate identities or passwords across devices. | ✓ | ✓ | ✓ |
-
+| **2.1.5** | Verify that passwords used for user authentication are at least 12 characters long. | ✓ | ✓ | ✓ |
+| **2.1.6** | Verify that passwords used for user authentication can be changed by the user and that the password change functionality requires the user's current and new password. | ✓ | ✓ | ✓ |
+| **2.1.7** | Verify that passwords used for device authentication are sufficiently long and complex. | ✓ | ✓ | ✓ |
+| **2.1.8** | Verify that default user or device credentials can be changed by authorized administrators or end-users. | ✓ | ✓ | ✓ |
+| **2.1.9** | Verify that authentication credentials for users, devices, or services are not hardcoded in firmware or ecosystem applications. | ✓ | ✓ | ✓ |
+| **2.1.10** | Verify that provisioned credentials for device authentication are unique per device. | ✓ | ✓ | ✓ |
+| **2.1.11** | Verify that authentication schemes are designed to revoke credentials of compromised or decommissioned devices. | | | ✓ |
 
 ### Authorization
 
@@ -38,7 +42,7 @@ Many controls in this chapter are implemented through cryptography. Therefore ad
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-| **2.3.1** | Verify that sensitive information such as personal identifiable information (PII) and user account credentials are stored securely using strong encryption to protect from data leakage and integrity checking to protect against unauthorized modification. | ✓ | ✓ | ✓ |
+| **2.3.1** | Verify that sensitive information such as personal identifiable information (PII) and credentials are stored securely using strong encryption to protect from data leakage and integrity checking to protect against unauthorized modification. | ✓ | ✓ | ✓ |
 | **2.3.2** | Verify that in case a device is decommissioned, or the owner changes, all sensitive information such as PII data and credentials can be removed from the device. | ✓ | ✓ | ✓ |
 | **2.3.3** | Verify that in case a device is decommissioned, or the owner changes, it is marked as such in a centrally managed database in the ecosystem for audit purposes. | ✓ | ✓ | ✓ |
 | **2.3.4** | Verify that sensitive information maintained in memory is overwritten with zeros as soon as it is no longer required. | | ✓ | ✓ |
