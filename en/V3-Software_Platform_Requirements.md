@@ -65,7 +65,7 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 | **3.4.9** | Verify that encrypted firmware images are securely decrypted on the device. |  | ✓ | ✓ |
 | **3.4.10** | Verify that the device authenticates to the update server component prior to downloading the update.| ✓ | ✓ | ✓ |
 | **3.4.11** | Verify that firmware updates are stored encrypted server-side. | | ✓ | ✓ |
-| **3.4.12** | Verify that software and firmware updates are transmitted using an encrypted communication channel. This is to protect the update process against man-in-the-middle attacks such as firmware recovery, injection of compromised update. | ✓ | ✓ | ✓ |
+| **3.4.12** | Verify that software and firmware updates are transmitted using an encrypted communication channel. | ✓ | ✓ | ✓ |
 
 ### Security chip integrations
 
