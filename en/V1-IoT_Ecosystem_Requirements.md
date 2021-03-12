@@ -29,7 +29,7 @@ To ensure the security of all software produced, the build process for the syste
 | -- | ---------------------- | - | - | - |
 | **1.2.1** | Verify that each application (including firmware) in the ecosystem maintains a software bill of materials (SBOM) cataloging third-party components, versioning, and published vulnerabilities. | ✓ | ✓ | ✓ |
 | **1.2.2** | Verify that potential areas of risk that come with the use of third-party and open-source software have been identified and that actions to mitigate such risks have been taken. | ✓ | ✓ | ✓ |
-| **1.2.3** | Verify the device is released with firmware and configuration appropriate for a release build (as opposed to debug versions). | ✓ | ✓ | ✓ |
+| **1.2.3** | Verify the device is released with firmware configured with secure defaults appropriate for a release build (as opposed to debug versions). | ✓ | ✓ | ✓ |
 | **1.2.4** | Verify that access to debugging interfaces (e.g. JTAG, SWD) is disabled or protected before shipping the device. Processors may refer to this as code protection, read back protection, CodeGuard, or access port protection. | | ✓ | ✓ |
 | **1.2.5** | Verify debug capabilities in FPGAs are disabled. | | ✓ | ✓ |
 | **1.2.6** | Verify that devices are provisioned with a cryptographic root of trust that is hardware-based and immutable. | | ✓ | ✓ |
