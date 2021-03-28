@@ -2,13 +2,15 @@
 
 ## Control Objective
 
-System security design performed prior to the development, and a security process which continuously supports system development and is integrated into all phases of its life-cycle, are necessary fundamentals for creating a secure product architecture and implementation.
+System security design performed before development, and a security process that continuously supports system development integrated into all phases of its lifecycle, are necessary fundamentals for creating secure product architecture implementations. Iterative system threat modeling provides a means to prepare for malintent and develop mitigation plans as part of product design lifecycles.
 
-A secure development process ensures the identification and documentation of all sensitive information and functionality required for the system, enforces all the security controls at the appropriate level, and ensures that end-users and customers get notified about vulnerabilities and that security solutions are delivered on time. Ensure to incorporate sister OWASP verification standards as part of development processes provided in the references section below.
+A secure development process ensures the identification and documentation of all sensitive information and functionality required for the system, enforces all the security controls at the determined level, and ensures that end-users and customers get notified about vulnerabilities and that security solutions deliver on time. Ensure to incorporate sister OWASP verification standards as part of development processes provided in the references section below.
 
-The supply chain has vital importance for the security of the every project. A secure development process verifies that all security requirements for the suppliers and third-party code are implemented, so that their security controls are set with the appropriate security level, and no development-time features are left on the completed devices, exposing them to vulnerabilities.
+The supply chain has vital importance for the security of every product. A secure development process verifies that all security requirements for suppliers and third-party code implement controls with the appropriate security level and development-time features are not left on devices, exposing them to vulnerabilities.
 
 To ensure the security of all software produced, the build process for the system software must be done in a secure build environment that verifies the integrity and authenticity of all components. The code must be written using best security practices and compiled using the best security options available.
+
+System configuration changes must employ appropriate logging and monitoring capabilities to provide audit trails for security events. Attributes detailing events aid with investigations while overly verbose logs containing sensitive information introduce security risks.
 
 ## Security Verification Requirements
 
@@ -31,10 +33,11 @@ To ensure the security of all software produced, the build process for the syste
 | **1.2.2** | Verify that potential areas of risk that come with the use of third-party and open-source software have been identified and that actions to mitigate such risks have been taken. | ✓ | ✓ | ✓ |
 | **1.2.3** | Verify the device is released with firmware configured with secure defaults appropriate for a release build (as opposed to debug versions). | ✓ | ✓ | ✓ |
 | **1.2.4** | Verify that access to debugging interfaces (e.g. JTAG, SWD) is disabled or protected before shipping the device. Processors may refer to this as code protection, read back protection, CodeGuard, or access port protection. | | ✓ | ✓ |
-| **1.2.5** | Verify debug capabilities in FPGAs are disabled. | | ✓ | ✓ |
+| **1.2.5** | Verify that debug capabilities in FPGAs are disabled on production PCBs. | | ✓ | ✓ |
 | **1.2.6** | Verify that devices are provisioned with a cryptographic root of trust that is hardware-based and immutable. | | ✓ | ✓ |
 | **1.2.7** | Verify that code integrity protection mechanisms are enabled and locked in hardware before shipping the device to customers. For example, ensure secure boot is enabled and the boot configuration locked. | | ✓ | ✓ |
 | **1.2.8** | Verify third-party code and components are analyzed using static analysis tools to ensure backdoors are not introduced. | | ✓ | ✓ |
+| **1.2.9** | Verify that all components including semiconductor drivers, SDKs, and modules (5G, LTE, Bluetooth, Wi-Fi, ZigBee) can be updated to provide security patches in alignment with the product's support or end-of-life policy. | | ✓ | ✓ |
 
 ### Secure Development
 
@@ -42,7 +45,7 @@ To ensure the security of all software produced, the build process for the syste
 | -- | ---------------------- | - | - | - |
 | **1.3.1** | Verify that each application in the ecosystem is built using a secure and repeatable build environment. | ✓ | ✓ | ✓ |
 | **1.3.2** | Verify GPL based firmware has its source code published and that no sensitive or proprietary information is accidentally included in the process. | ✓ | ✓ | ✓ |
-| **1.3.3** | Verify that use of banned C/C++ functions (i.e. memcpy, strcpy, etc.) are replaced with safe equivalents functions (e.g. Safe C). | | ✓ | ✓ |
+| **1.3.3** | Verify that use of banned C/C++ functions (memcpy, strcpy, gets, etc.) are replaced with safe equivalents functions (e.g. Safe C, Safe Strings library). | | ✓ | ✓ |
 | **1.3.4** | Verify packages are downloaded and built from trusted sources. | ✓ | ✓ | ✓ |
 | **1.3.5** | Verify build pipelines only perform builds of source code maintained in version control systems. | ✓ | ✓ | ✓ |
 | **1.3.6** | Verify that compilers, version control clients, development utilities, and software development kits are analyzed and monitored for tampering, trojans, or malicious code | ✓ | ✓ | ✓ |
@@ -80,4 +83,5 @@ For more information, see also:
 - Microsoft SDL: <https://www.microsoft.com/en-us/sdl/>
 - OWASP C-based Toolchain Hardening Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html>
 - OWASP Embedded Application Security: <https://owasp.org/www-project-embedded-application-security/>
+- Banned C Functions (Safe Strings library): <https://github.com/intel/safestringlib/wiki/SDL-List-of-Banned-Functions>
 - NIST Draft NISTIR 8259D: <https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8259D-draft.pdf>
