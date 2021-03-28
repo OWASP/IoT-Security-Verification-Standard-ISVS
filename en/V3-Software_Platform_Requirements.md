@@ -2,11 +2,15 @@
 
 ## Control Objective
 
-The bootloader is the first piece of code to run during the device's boot process. The firmware vendor is responsible for configuring it correctly, otherwise its vulnerabilities can undermine the security of the entire device, leading to compromise and device hijacking. Controls in this chapter ensure boot trustworthiness by verifying cryptographic signatures on the loaded code, not allowing loading images from external locations, and disallowing memory, shell, and other debug access during boot.
+The bootloader is the first piece of code to run during the device's boot process. The firmware manufacturer is responsible for configuring bootloaders correctly otherwise its vulnerabilities can undermine the security of the entire device, leading to compromise and device hijacking. Controls in this chapter ensure boot trustworthiness by verifying cryptographic signatures on the loaded code, not allowing loading images from external locations, and disallowing memory, shell, and other debug access during boot.
 
-The operating system, and its kernel in particular, are central for device security, as they run in privileged mode and implement critical device functionality, including many security primitives. This necessitates best security practices for operating system and kernel configuration and hardening.
+The operating system, and its kernel, in particular, are central for device security, as they run in privileged mode and implement critical device functionality, including many security primitives. This necessitates best security practices for the operating system, kernel configuration, and hardening.
 
 The Linux operating system is one of the most popular in IoT. It has many features from first-line security to defense-in-depth, including the isolation mechanisms supported by namespaces and cgroups, and additional kernel security modules for access controls. Leverage these isolation mechanisms when configuring and deploying third-party applications to run within a container.
+
+Updating and maintaining device software is crucial to product security. Update systems must employ security best practices as part of their design and implementation to ensure devices only run cryptographically signed software free of known vulnerabilities. PPatch and vulnerability management processes ensure the latest available versions deploy new builds with upstream security patches to protect end-users from compromise.
+
+Securely configuring and integrating hardware security chips into software platforms allows devices to use a cryptographically asserted identity burned into the chip at manufacturing time. Security chips add more functionality providing privileged storage locations to store keys or secrets encrypted at rest.  
 
 ## Security Verification Requirements
 
@@ -17,12 +21,11 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 | **3.1.1** | Verify that the bootloader does not allow code loaded from arbitrary locations including both local storage (e.g. SD, USB, etc.) and network locations (e.g. NFS, TFTP, etc.). | | ✓ | ✓ |
 | **3.1.2** | Verify bootloader configurations are immutable in production releases. | | ✓ | ✓ |
 | **3.1.3** | Verify that communication interfaces such as, USB, UART, and other variants are disabled or adequately protected during every stage of the device's boot process. | | ✓ | ✓ |
-| **3.1.4** | Verify that the authenticity of the first stage bootloader is verified by a trusted component of which the configuration in read-only memory (ROM) cannot be altered (e.g. CPU Based Secure Boot/Trusted Boot). | | ✓ | ✓ |
-| **3.1.5** | Verify that the authenticity of next bootloader stages or application code is cryptographically verified during every step of the boot process. | | ✓ | ✓ |
+| **3.1.4** | Verify that the authenticity of the first stage bootloader is verified by a trusted component of which the configuration in read-only memory (ROM) cannot be altered (e.g. CPU Based Secure Boot/Trusted Boot with a hardware root of trust). | | ✓ | ✓ |
+| **3.1.5** | Verify that the authenticity of bootloader stages or application code gets cryptographically verified before executing subsequent steps in the boot process. | | ✓ | ✓ |
 | **3.1.6** | Verify that bootloader stages do not contain sensitive information (e.g. private keys or passwords logged to the console) as part of device start-up.  | | ✓ | ✓ |
 | **3.1.7** | Verify that firmware is stored in an encrypted volume at rest. | | ✓ | ✓ |
 | **3.1.8** | Verify that Direct Memory Access (DMA) is not possible during boot. For example, ensure DMA is not possible via PCI connections. | | ✓ | ✓ |
-
 
 ### OS Configuration
 
@@ -35,9 +38,9 @@ The Linux operating system is one of the most popular in IoT. It has many featur
 | **3.2.5** | Verify that persistent filesystem storage volumes are encrypted. | | ✓ | ✓ |
 | **3.2.6** | Verify that applications running on the device use the security features of the underlying operating system or kernel. This includes cryptography, key storage, random number generation, authentication and authorization, logging, and communications security. | | ✓ | ✓ |
 | **3.2.7** | Verify that memory protection controls such as Address Space Layout Randomization (ASLR) and Data Execution Prevention (DEP) are enabled by the embedded operating system. | | ✓ | ✓ |
-| **3.2.8** | Verify hardware level memory protection is used and privilege levels are enforced. | | ✓ | ✓ |
+| **3.2.8** | Verify hardware level memory protection is used and privilege levels are enforced. | | | ✓ |
 | **3.2.9** | Verify the embedded OS provides protection against unauthorized access to RAM (e.g. RAM scrambling). | | | ✓ |
-| **3.2.10** | Verify that an Integrity Measurement Architecture (IMA) is in use and appropriately configured. | | | ✓ |
+| **3.2.10** | Verify that an Integrity Measurement Architecture (IMA) or similar integrity subsystem is in use and appropriately configured. | | | ✓ |
 | **3.2.11** | Verify that third-party applications are configured to execute within a containerized runtime environment (e.g. Linux containers, Docker, etc.) that is hardened to ensure proper isolation from the host operating system. | | | ✓ |
 
 #### Linux
