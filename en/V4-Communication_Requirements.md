@@ -52,6 +52,17 @@ Devices use network communication to exchange data and receive commands within t
 | **4.4.3** | Verify that in case WPA is used, it is used with AES encryption (CCMP mode). | ✓ | ✓ | ✓ |
 | **4.4.4** | Verify that Wi-Fi Protected Setup (WPS) is not used to establish Wi-Fi connections between devices. | ✓ | ✓ | ✓ |
 
+### ZigBee
+
+| # | Description | L1 | L2 | L3 |
+| --  | ---------------------- | - | - | - |
+| **4.5.1** | Verify that Secured Mode is being used. | ✓ | ✓ | ✓ |
+| **4.5.2** | Verify that ZigBee network infrastructure is protected with a Network Key. | ✓ | ✓ | ✓ |
+| **4.5.3** | Verify that the well known global trust center link key is not used. | | ✓ | ✓ |
+| **4.5.4** | Verify that secure device admission is implemneted. | | ✓ | ✓ |
+| **4.5.6** | Verify that a ZigBee coordinator has been designated. | | ✓ | ✓ |
+| **4.5.7** | Verify the Zigbee network key is loaded out-of-band. | | | ✓ |
+| **4.5.8** | Verify that MAC address filtering is employed. | | | ✓ |
 
 ## References
 For more information, see also:
@@ -61,3 +72,4 @@ For more information, see also:
 - IETF RFC 7525 - Recommendations for Secure Use of TLS and DTLS: <https://tools.ietf.org/html/rfc7525>
 - NIST SP800-121r2 - Guide to Bluetooth Security: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
 - NIST SP800-97 - Establishing Wireless Robust Security Networks: <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
+- Recommended Practices Guide For Securing ZigBee Wireless Networks in Process Control System Environments: <https://www.energy.gov/sites/prod/files/oeprod/DocumentsandMedia/Securing_ZigBee_Wireless_Networks.pdf>
