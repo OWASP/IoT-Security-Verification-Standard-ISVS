@@ -52,6 +52,18 @@ Devices use network communication to exchange data and receive commands within t
 | **4.4.3** | Verify that in case WPA is used, it is used with AES encryption (CCMP mode). | ✓ | ✓ | ✓ |
 | **4.4.4** | Verify that Wi-Fi Protected Setup (WPS) is not used to establish Wi-Fi connections between devices. | ✓ | ✓ | ✓ |
 
+### Zigbee 
+
+| # | Description | L1 | L2 | L3 |
+| --  | ---------------------- | - | - | - |
+| **4.5.1** | Verify that Zigbee version 3.0 is used for new applications. | ✓ | ✓ | ✓ |
+| **4.5.2** | Verify that a suitable Zigbee security architecture (Centralized or Distributed) is selected, depending on the application's security level requirements and threat model. The Centralized architecture generally offers higher security at the cost of flexibility. | ✓ | ✓ | ✓ |
+| **4.5.3** | Verify that the most secure way of joining the Zigbee network is used, depending on the selected security architecture. For example, for the Centralized architecture, use out-of-band install codes. For the Distributed one, use pre-configured link keys. | ✓ | ✓ | ✓ |
+| **4.5.4** | Verify that the default pre-configured global link key (ZigbeeAlliance09) is not used to join the network, except if explicitly required for compatibility reasons and if associated risks have been taken into account. | ✓ | ✓ | ✓ |
+| **4.5.5** | Verify that user interaction is required to activate pairing mode for both the joining nodes and the Zigbee Trust Center / router. Devices should automatically exit pairing mode after a pre-defined short amount of time, even if pairing is unsuccessful. | ✓ | ✓ | ✓ |
+| **4.5.6** | Verify that the network key is randomly generated (for example during the initial network setup). | ✓ | ✓ | ✓ |
+| **4.5.7** | Verify that the network key is periodically rotated. |   |   | ✓ |
+| **4.5.8** | Verify that users can obtain an overview of paired devices to validate that they are legitimate (for example, by comparing the MAC addresses of connected devices to the expected ones). |   |   | ✓ |
 
 ## References
 For more information, see also:
@@ -61,3 +73,4 @@ For more information, see also:
 - IETF RFC 7525 - Recommendations for Secure Use of TLS and DTLS: <https://tools.ietf.org/html/rfc7525>
 - NIST SP800-121r2 - Guide to Bluetooth Security: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
 - NIST SP800-97 - Establishing Wireless Robust Security Networks: <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
+- HKCERT - ZigBee Security Study: <https://www.hkcert.org/f/blog/264453/3a1c8eed-012c-4b59-9d9e-971001d66c77-DLFE-14602.pdf>
