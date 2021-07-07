@@ -52,6 +52,17 @@ Devices use network communication to exchange data and receive commands within t
 | **4.4.3** | Verify that in case WPA is used, it is used with AES encryption (CCMP mode). | ✓ | ✓ | ✓ |
 | **4.4.4** | Verify that Wi-Fi Protected Setup (WPS) is not used to establish Wi-Fi connections between devices. | ✓ | ✓ | ✓ |
 
+### LoRaWAN
+
+| # | Description | L1 | L2 | L3 |
+| --  | ---------------------- | - | - | - |
+| **4.5.1** | Verify that LoRaWAN version 1.1 is used by new applications. | ✓ | ✓ | ✓ |
+| **4.5.2** | Verify that the network, join and application servers of the LoRaWAN ecosystem are appropriately hardened according to industry best practices and benchmarks. | ✓ | ✓ | ✓ |
+| **4.5.3** | Verify that all communication between the LoRaWAN gateway and the network, join and application servers occurs over a secure channel (for example TLS or IPSec), guaranteeing at least the integrity and authenticity of the messages.  | ✓ | ✓ | ✓ |
+| **4.5.4** | Verify that root keys are unique per end device. | ✓ | ✓ | ✓ |
+| **4.5.5** | Verify that an appropriate response strategy is in place in case an end device's root keys are compromised, given that root keys cannot be remotely updated.  |   | ✓ | ✓ |
+| **4.5.6** | Verify that replay attacks are not possible using off-sequence frame counters. For example, in case end device counters are reset after a reboot, verify that old messages cannot be replayed to the gateway.  |   | ✓ | ✓ |
+| **4.5.7** | Verify that the LoRaWAN gateway is capable of detecting jamming attempts and can alert the user or system administrator in case of ongoing jamming attacks.  |   | ✓ | ✓ |
 
 ## References
 For more information, see also:
@@ -61,3 +72,4 @@ For more information, see also:
 - IETF RFC 7525 - Recommendations for Secure Use of TLS and DTLS: <https://tools.ietf.org/html/rfc7525>
 - NIST SP800-121r2 - Guide to Bluetooth Security: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
 - NIST SP800-97 - Establishing Wireless Robust Security Networks: <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
+- A systematic review of security in LoRaWAN: <https://arxiv.org/pdf/2105.00384.pdf> 
