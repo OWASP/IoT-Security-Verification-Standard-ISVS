@@ -65,6 +65,16 @@ Devices use network communication to exchange data and receive commands within t
 | **4.5.7** | Verify that the network key is periodically rotated. |   |   | ✓ |
 | **4.5.8** | Verify that users can obtain an overview of paired devices to validate that they are legitimate (for example, by comparing the MAC addresses of connected devices to the expected ones). |   |   | ✓ |
 
+### LoRaWAN
+
+| # | Description | L1 | L2 | L3 |
+| --  | ---------------------- | - | - | - |
+| **4.5.1** | Verify that LoRaWAN version 1.1 is used by new applications. | ✓ | ✓ | ✓ |
+| **4.5.2** | Verify that the network, join and application servers of the LoRaWAN ecosystem are appropriately hardened according to industry best practices and benchmarks. | ✓ | ✓ | ✓ |
+| **4.5.3** | Verify that all communication between the LoRaWAN gateway and the network, join and application servers occurs over a secure channel (for example TLS or IPsec), guaranteeing at least the integrity and authenticity of the messages.  | ✓ | ✓ | ✓ |
+| **4.5.4** | Verify that root keys are unique per end device. | ✓ | ✓ | ✓ |
+| **4.5.5** | Verify that replay attacks are not possible using off-sequence frame counters. For example, in case end device counters are reset after a reboot, verify that old messages cannot be replayed to the gateway.  |   | ✓ | ✓ |
+
 ## References
 For more information, see also:
 
@@ -74,3 +84,4 @@ For more information, see also:
 - NIST SP800-121r2 - Guide to Bluetooth Security: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
 - NIST SP800-97 - Establishing Wireless Robust Security Networks: <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
 - HKCERT - ZigBee Security Study: <https://www.hkcert.org/f/blog/264453/3a1c8eed-012c-4b59-9d9e-971001d66c77-DLFE-14602.pdf>
+- A systematic review of security in LoRaWAN: <https://arxiv.org/pdf/2105.00384.pdf> 
