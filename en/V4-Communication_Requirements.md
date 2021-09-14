@@ -58,11 +58,9 @@ Devices use network communication to exchange data and receive commands within t
 | --  | ---------------------- | - | - | - |
 | **4.5.1** | Verify that LoRaWAN version 1.1 is used by new applications. | ✓ | ✓ | ✓ |
 | **4.5.2** | Verify that the network, join and application servers of the LoRaWAN ecosystem are appropriately hardened according to industry best practices and benchmarks. | ✓ | ✓ | ✓ |
-| **4.5.3** | Verify that all communication between the LoRaWAN gateway and the network, join and application servers occurs over a secure channel (for example TLS or IPSec), guaranteeing at least the integrity and authenticity of the messages.  | ✓ | ✓ | ✓ |
+| **4.5.3** | Verify that all communication between the LoRaWAN gateway and the network, join and application servers occurs over a secure channel (for example TLS or IPsec), guaranteeing at least the integrity and authenticity of the messages.  | ✓ | ✓ | ✓ |
 | **4.5.4** | Verify that root keys are unique per end device. | ✓ | ✓ | ✓ |
-| **4.5.5** | Verify that an appropriate response strategy is in place in case an end device's root keys are compromised, given that root keys cannot be remotely updated.  |   | ✓ | ✓ |
-| **4.5.6** | Verify that replay attacks are not possible using off-sequence frame counters. For example, in case end device counters are reset after a reboot, verify that old messages cannot be replayed to the gateway.  |   | ✓ | ✓ |
-| **4.5.7** | Verify that the LoRaWAN gateway is capable of detecting jamming attempts and can alert the user or system administrator in case of ongoing jamming attacks.  |   | ✓ | ✓ |
+| **4.5.5** | Verify that replay attacks are not possible using off-sequence frame counters. For example, in case end device counters are reset after a reboot, verify that old messages cannot be replayed to the gateway.  |   | ✓ | ✓ |
 
 ## References
 For more information, see also:
