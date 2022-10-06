@@ -17,7 +17,7 @@ Devices use network communication to exchange data and receive commands within t
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
 | **4.1.1** | Verify that communication with other components in the IoT ecosystem (including sensors, gateway and supporting cloud) occurs over a secure channel in which the confidentiality and integrity of data is guaranteed and in which protection against replay attacks is built into the communication protocol. | ✓ | ✓ | ✓ |
-| **4.1.2** | Verify that in case TLS is used, its configured to only use FIPS-compliant cipher suites (or equivalent). | ✓ | ✓ | ✓ |
+| **4.1.2** | Verify using up to date TLS testing tools that only strong cipher suites are enabled, with the strongest cipher suites set as preferred | ✓ | ✓ | ✓ |
 | **4.1.3** | Verify that in case TLS is used, the device cryptographically verifies the X.509 certificate. | ✓ | ✓ | ✓ |
 | **4.1.4** | Verify that either protection or detection of jamming is provided for availability-critical applications.  | | ✓ | ✓ |
 | **4.1.6** | Verify that the device's TLS implementation uses its own certificate store, pins to the endpoint's certificate or public key, and disallows connections to endpoints with different certificates or keys, even if signed by a trusted CA. | | ✓ | ✓ |
