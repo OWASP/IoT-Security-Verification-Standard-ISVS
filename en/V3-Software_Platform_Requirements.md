@@ -20,7 +20,7 @@ Securely configuring and integrating hardware security chips into software platf
 | --  | ---------------------- | - | - | - |
 | **3.1.1** | Verify that the bootloader does not allow code loaded from arbitrary locations including both local storage (e.g. SD, USB, etc.) and network locations (e.g. NFS, TFTP, etc.). | | ✓ | ✓ |
 | **3.1.2** | Verify bootloader configurations are immutable in production releases. | | ✓ | ✓ |
-| **3.1.3** | Verify that communication interfaces such as, USB, UART, and other variants are disabled or adequately protected during every stage of the device's boot process. | | ✓ | ✓ |
+| **3.1.3** | Verify that communication interfaces such as USB, UART, and other variants are disabled or adequately protected during every stage of the device's boot process. | | ✓ | ✓ |
 | **3.1.4** | Verify that the authenticity of the first stage bootloader is verified by a trusted component of which the configuration in read-only memory (ROM) cannot be altered (e.g. CPU Based Secure Boot/Trusted Boot with a hardware root of trust). | | ✓ | ✓ |
 | **3.1.5** | Verify that the authenticity of bootloader stages or application code gets cryptographically verified before executing subsequent steps in the boot process. | | ✓ | ✓ |
 | **3.1.6** | Verify that bootloader stages do not contain sensitive information (e.g. private keys or passwords logged to the console) as part of device start-up.  | | ✓ | ✓ |
@@ -38,9 +38,9 @@ Securely configuring and integrating hardware security chips into software platf
 | **3.2.5** | Verify that persistent filesystem storage volumes are encrypted. | | ✓ | ✓ |
 | **3.2.6** | Verify that applications running on the device use the security features of the underlying operating system or kernel. This includes cryptography, key storage, random number generation, authentication and authorization, logging, and communications security. | | ✓ | ✓ |
 | **3.2.7** | Verify that memory protection controls such as Address Space Layout Randomization (ASLR) and Data Execution Prevention (DEP) are enabled by the embedded operating system. | | ✓ | ✓ |
-| **3.2.8** | Verify hardware level memory protection is used and privilege levels are enforced. | | | ✓ |
-| **3.2.9** | Verify the embedded OS provides protection against unauthorized access to RAM (e.g. RAM scrambling). | | | ✓ |
-| **3.2.10** | Verify that an Integrity Measurement Architecture (IMA) or similar integrity subsystem is in use and appropriately configured. | | | ✓ |
+| **3.2.8** | Verify that hardware level memory protection is used and privilege levels are enforced. | | | ✓ |
+| **3.2.9** | Verify that the embedded OS provides protection against unauthorized access to RAM (e.g. RAM scrambling). | | | ✓ |
+| **3.2.10** | Verify that an Integrity Measurement Architecture (IMA) or similar integrity subsystem is used and appropriately configured. | | | ✓ |
 | **3.2.11** | Verify that third-party applications are configured to execute within a containerized runtime environment (e.g. Linux containers, Docker, etc.) that is hardened to ensure proper isolation from the host operating system. | | | ✓ |
 
 #### Linux
@@ -57,7 +57,7 @@ Securely configuring and integrating hardware security chips into software platf
 
 | # | Description | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-| **3.4.1** | Verify that packages and user space applications use over the air updates decoupled from firmware updates. | | ✓ | ✓ |
+| **3.4.1** | Verify that packages and user space applications use over-the-air updates decoupled from firmware updates. | | ✓ | ✓ |
 | **3.4.2** | Verify that devices can be updated automatically upon a pre-defined schedule. | ✓ | ✓ | ✓ |
 | **3.4.3** | Verify that updates are cryptographically signed by a trusted source and their authenticity is verified before execution. | ✓ | ✓ | ✓ |
 | **3.4.4** | Verify that the update process is not vulnerable to time-of-check to time-of-use attacks (TOCTOU). This is generally accomplished by applying the update right after the authenticity of the update is validated.  | ✓ | ✓ | ✓ |
@@ -77,7 +77,7 @@ Securely configuring and integrating hardware security chips into software platf
 | **3.5.1** | Verify that encryption is used on the bus between the security chip and other hardware components. | | ✓ | ✓ |
 | **3.5.2** | Verify that keys (either secret or private) used to enable encryption on the serial bus are properly secured on the host.| | ✓ | ✓ |
 | **3.5.3** | Verify any default vendor keys used in bus encryption are replaced in production builds. | | ✓ | ✓ |
-| **3.5.4** | Verify that deprecated insecure ciphers and hash functions (e.g. 3DES, MD5, SHA1) in new applications are not used, even if provided by the hardware security chip. | | ✓ | ✓ |
+| **3.5.4** | Verify that deprecated insecure ciphers and hash functions (e.g. 3DES, MD5, SHA1 etc.) are not used in new applications, even if provided by the hardware security chip. | | ✓ | ✓ |
 
 ### Kernel space application requirements
 

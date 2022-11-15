@@ -2,7 +2,7 @@
 
 ## Control Objective
 
-Hardware is more difficult and costly to compromise and subvert than software. Therefore hardware security can provide a robust foundation for embedded device security. On the other hand, hardware that contains backdoors or undocumented debug features can completely compromise the security of the entire device even if adequate security measures have been taken on the other layers of the stack.
+Hardware is more difficult and costly to compromise and subvert than software. Therefore, hardware security can provide a robust foundation for embedded device security. On the other hand, hardware that contains backdoors or undocumented debug features can completely compromise the security of the entire device even if adequate security measures have been taken on the other layers of the stack.
 
 The purpose of the controls listed in this chapter is to ensure that as long as hardware is available for secure configuration, it is been configured in the most secure way possible. This includes disabling or securing debug interfaces, setting up all existing alarms and sensor mechanisms to combat tampering, using anti-cloning hardware protection such as OTP fuses, and the use of the MMU (Memory Management Unit) for secure process isolation.
 
@@ -14,17 +14,17 @@ This chapter provides requirements for the hardware platform to guarantee secure
 
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **5.1.1** | Verify that the platform supports disabling or protecting access to debugging interfaces (e.g. JTAG, SWD, UART). | | ✓ | ✓ |
+| **5.1.1** | Verify that the platform supports disabling or protecting access to debugging interfaces (e.g. JTAG, SWD, UART etc.). | | ✓ | ✓ |
 | **5.1.2** | Verify that the platform supports validating the authenticity of the first stage bootloader. | | ✓ | ✓ |
-| **5.1.3** | Verify that cryptographic accelerator functions are provided by the platform leveraging dedicated functionality in the main chip or external security chips. | | ✓ | ✓ |
-| **5.1.4** | Verify that sensitive data such as private keys and certificates can be stored securely by leveraging dedicated hardware security features. | | ✓ | ✓ |
+| **5.1.3** | Verify that cryptographic accelerator functions are provided by the platform, leveraging dedicated functionality in the main chip or external security chips. | | ✓ | ✓ |
+| **5.1.4** | Verify that sensitive data, such as private keys and certificates, can be stored securely by leveraging dedicated hardware security features. | | ✓ | ✓ |
 | **5.1.5** | Verify that the security configuration of the platform can be locked (e.g. through burning OTP fuses).  | | ✓ | ✓ |
 | **5.1.6** | Verify that debugging headers are removed from PCBs. | | ✓  | ✓ |
 | **5.1.7** | Verify that hardware has no unofficially documented debug features, such as special pin configurations that can enable or disable certain functionality. | | ✓ | ✓ |
 | **5.1.8** | Verify that the platform supports memory and I/O protection capabilities using a memory management unit (MMU) to isolate sensitive memory regions. | | | ✓ |
 | **5.1.9** | Verify that the platform provides protection against physical decapsulation, side channel and glitching attacks. | | | ✓ |
-| **5.1.10** | Verify descriptive silkscreens are removed from PCBs. | | | ✓ |
-| **5.1.11** | Verify debug paths and traces are depopulated from production PCBs. | | | ✓ |
+| **5.1.10** | Verify that descriptive silkscreens are removed from PCBs. | | | ✓ |
+| **5.1.11** | Verify that debug paths and traces are depopulated from production PCBs. | | | ✓ |
 | **5.1.12** | Verify that FPGA bitstreams are encrypted using strong, secure algorithms. | | | ✓ |
 
 ## References
