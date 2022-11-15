@@ -5,9 +5,11 @@
 [![Slack](https://img.shields.io/badge/chat%20on-slack-46BC99.svg)](https://owasp.slack.com/messages/project-isvs)
 
 
-The OWASP Internet of Things Security Verification Standard (ISVS) is a community effort to establish an open standard of security requirements for Internet of Things (IoT) applications. The requirements provided by the ISVS can be used at many stages during the product development life cycle including design, development, and testing of IoT applications.
+The OWASP Internet of Things Security Verification Standard (ISVS) is a community effort to establish an open standard of security requirements for Internet of Things (IoT) ecosystems. The requirements provided by the ISVS can be used at many stages during the Development Life Cycle including design, development, and testing of IoT ecosystems.
 
-IoT applications are often composed of many interconnected applications that together form a complex ecosystem. Securing an IoT application thus boils down to securing the ecosystem. The ISVS, therefore, specifies security requirements for embedded applications and the IoT ecosystem in which these reside while referring to existing industry-accepted standards as much as possible.
+IoT ecosystems are often complex collections of many interconnected systems. Some of these interconnected systems are IoT systems, containing connected devices and their components, both software and hardware. Others examples of systems in IoT ecosystems are web or mobile applications and cloud components. 
+
+The ISVS focuses on providing security requirements for IoT systems and their components: IoT hardware, software, embedded applications and communication protocols. It also provides some general requirements for the IoT ecosystems in which IoT systems reside, while referring to existing industry-accepted standards as much as possible.
 
 ## Peer Review Requested
 The first version of the OWASP ISVS is ready for a peer review. "Pre-release 1.0RC" can be acquired in the following formats:

@@ -2,11 +2,11 @@
 
 ## Control Objective
 
-System security design performed before development, and a security process that continuously supports system development integrated into all phases of its lifecycle, are necessary fundamentals for creating secure product architecture implementations. Iterative system threat modeling provides a means to prepare for malintent and develop mitigation plans as part of product design lifecycles.
+System security design performed before development, and a security process that continuously supports system development integrated into all phases of its life cycle, are necessary fundamentals for creating secure product architecture implementations. Iterative system threat modeling provides a means to prepare for malintent and develop mitigation plans as part of product design life cycles.
 
-A secure development process ensures the identification and documentation of all sensitive information and functionality required for the system, enforces all the security controls at the determined level, and ensures that end-users and customers get notified about vulnerabilities and that security solutions deliver on time. Ensure to incorporate sister OWASP verification standards as part of development processes provided in the references section below.
+A secure development process ensures the identification and documentation of all sensitive information and functionality required for an IoT ecosystem, enforces all the security controls at the determined level, and ensures that end-users and customers get notified about vulnerabilities and that security solutions deliver on time. Ensure that sister OWASP verification standards, provided in the references section below, are incorporated as part of development processes.
 
-The supply chain has vital importance for the security of every product. A secure development process verifies that all security requirements for suppliers and third-party code implement controls with the appropriate security level and development-time features are not left on devices, exposing them to vulnerabilities.
+The supply chain has vital importance for the security of every IoT product. A secure development process verifies that all security requirements for suppliers and third-party code implement controls with the appropriate security level and development-time features are not left on devices, exposing them to vulnerabilities.
 
 To ensure the security of all software produced, the build process for the system software must be done in a secure build environment that verifies the integrity and authenticity of all components. The code must be written using best security practices and compiled using the best security options available.
 
@@ -18,8 +18,8 @@ System configuration changes must employ appropriate logging and monitoring capa
 
 | # | Description | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **1.1.1** | Verify that all applications in the IoT ecosystem are developed with a level of security that is in line with the security criticality of the application. | ✓ | ✓ | ✓ |
-| **1.1.2** | Verify that all components and communication channels in the IoT application's ecosystem have been identified and are known to be needed. Remove or disable any that aren't necessary. | ✓ | ✓ | ✓ |
+| **1.1.1** | Verify that the IoT system is developed with the level of security (L1, L2, or L3) applicable to its capabilities and risks posed by the environment where it is deployed. | ✓ | ✓ | ✓ |
+| **1.1.2** | Verify that all components and communication channels in the IoT ecosystem have been identified and are known to be needed. Remove or disable any that aren't necessary. | ✓ | ✓ | ✓ |
 | **1.1.3** | Verify the use of threat modeling as part of each product introduction design (i.e. new and mature) and security-relevant feature changes to identify likely threats and facilitate appropriate risk responses to guide security testing. | ✓ | ✓ | ✓ |
 | **1.1.4** | Verify that security controls are enforced server-side and that data and instructions are not blindly trusted by server-side components. | ✓ | ✓ | ✓ |
 | **1.1.5** | Verify that a responsible disclosure policy has been established and that it is easily found on the company website. Ensure that the policy provides a clear overview on how vulnerabilities can be communicated securely and how they'll be followed up on. | ✓ | ✓ | ✓ |
