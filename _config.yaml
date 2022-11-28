@@ -1,0 +1,10 @@
+title: OWASP ISVS
+description: OWASP IoT Security Verification Standard (ISVS) web version
+remote_theme: just-the-docs/just-the-docs
+
+exclude: [README.md, tools/README.md, tools/docker/README.md, en/SUMMARY.md]
+
+url: https://owasp.org/IoT-Security-Verification-Standard-ISVS/
+
+aux_links:
+  OWASP ISVS Source: https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS
