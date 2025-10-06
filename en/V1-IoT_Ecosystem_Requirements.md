@@ -1,3 +1,9 @@
+---
+layout: default
+title: V1 - IoT Ecosystem Requirements
+nav_order: 4
+---
+
 # V1: IoT Ecosystem Requirements
 
 ## Control Objective
@@ -11,6 +17,8 @@ The supply chain has vital importance for the security of every IoT product. A s
 To ensure the security of all software produced, the build process for the system software must be done in a secure build environment that verifies the integrity and authenticity of all components. The code must be written using best security practices and compiled using the best security options available.
 
 System configuration changes must employ appropriate logging and monitoring capabilities to provide audit trails for security events. Attributes detailing events aid with investigations while overly verbose logs containing sensitive information introduce security risks.
+
+Incident response planning is essential for IoT ecosystems to effectively detect, respond to, and recover from security compromises. Organizations must establish processes for handling device credential compromises and provide mechanisms for users to validate the legitimacy of connected devices.
 
 ## Security Verification Requirements
 
@@ -71,11 +79,19 @@ System configuration changes must employ appropriate logging and monitoring capa
 | **1.4.6** | Verify that collected logs are preserved for the amount of time required by organizational policies and that they are safely deleted when the retention period is over. | | ✓ | ✓ |
 | **1.4.7** | Verify that the confidentiality, integrity and authenticity of collected logs is appropriately protected, both on the devices that created them and on other systems that store or process them. | | ✓ | ✓ |
 
+### Incident Response
+
+| # | Description | L1 | L2 | L3 |
+| -- | ---------------------- | - | - | - |
+| **1.5.1** | Verify that an incident response plan is established that addresses potential security compromises of IoT devices, including procedures for identifying, containing, and recovering from security incidents. | | ✓ | ✓ |
+| **1.5.2** | Verify that an appropriate response strategy is in place for when device credentials (especially root keys or cryptographic material that cannot be remotely updated) are compromised. | | ✓ | ✓ |
+| **1.5.3** | Verify that users or administrators can obtain an overview of connected and paired devices to validate their legitimacy (e.g., by comparing identifiers such as MAC addresses or serial numbers). | | ✓ | ✓ |
+
 ## References
 For more information, see also:
 
 - OWASP ASVS: <https://owasp.org/www-project-application-security-verification-standard/>
-- OWASP MASVS: <https://owasp.org/www-project-mobile-security-testing-guide/>
+- OWASP MASVS: <https://owasp.org/mas>
 - OWASP Threat Modeling: <https://owasp.org/www-community/Application_Threat_Modeling>
 - OWASP SCVS: <https://owasp.org/www-project-software-component-verification-standard/>
 - OWASP Software Assurance Maturity Model: <https://owaspsamm.org/>

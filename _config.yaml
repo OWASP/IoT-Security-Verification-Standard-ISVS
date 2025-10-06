@@ -1,10 +1,66 @@
-title: OWASP ISVS
-description: OWASP IoT Security Verification Standard (ISVS) web version
-remote_theme: just-the-docs/just-the-docs
+title: OWASP IoT Security Verification Standard
+description: The OWASP ISVS provides comprehensive security requirements for IoT ecosystems and their components
+remote_theme: just-the-docs/just-the-docs@v0.8.2
 
-exclude: [README.md, tools/README.md, tools/docker/README.md, en/SUMMARY.md]
+# GitHub Pages settings
+baseurl: "/IoT-Security-Verification-Standard-ISVS"
+url: "https://owasp.org"
 
-url: https://owasp.org/IoT-Security-Verification-Standard-ISVS/
+# Theme configuration
+color_scheme: light
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: true
 
+# Navigation
+nav_enabled: true
+nav_sort: case_sensitive
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Footer
+footer_content: 'Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> | Copyright © 2025 The OWASP Foundation'
+
+# Logo and branding
+logo: "/en/images/owasp_logo.png"
+
+# Auxiliary links
 aux_links:
-  OWASP ISVS Source: https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS
+  "View on GitHub": "https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS"
+  "Download Release": "https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/releases/latest"
+
+aux_links_new_tab: true
+
+# Exclude from processing
+exclude:
+  - .gitignore
+  - .gitbook.yaml
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - tools/
+  - README.md
+  - CHANGELOG.md
+  - RELEASE_NOTES.md
+  - Contributing.md
+  - License.md
+  - en/SUMMARY.md
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Kramdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

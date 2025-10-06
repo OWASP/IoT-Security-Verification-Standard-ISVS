@@ -1,3 +1,9 @@
+---
+layout: default
+title: V2 - User Space Application Requirements
+nav_order: 5
+---
+
 # V2: User Space Application Requirements
 
 ## Control Objective
@@ -8,7 +14,7 @@ Authentication and authorization are necessary to secure access. Relevant contro
 
 Protection of sensitive data, including credentials, and the fair treatment of private information are necessary to ensure secure use of system resources, such as files containing data or code, and the contents of memory.
 
-Many controls in this chapter are implemented through cryptography. Therefore, additional controls are necessary to select the right cryptographic primitives and configure them with secure credential storage.
+Many controls in this chapter are implemented through cryptography. Therefore, additional controls are necessary to select the right cryptographic primitives and configure them with secure credential storage. For Level 3 devices with operational lifetimes extending beyond 2030, cryptographic implementations must address the emerging threat of quantum computing through post-quantum cryptography (PQC) or hybrid cryptographic approaches combining classical and quantum-resistant algorithms. This ensures long-term confidentiality and authenticity protection aligned with NIST's timeline for quantum-safe cryptography migration (deprecation by 2030, full transition by 2035).
 
 ## Security Verification Requirements
 
@@ -27,6 +33,8 @@ Many controls in this chapter are implemented through cryptography. Therefore, a
 | **2.1.9** | Verify that authentication credentials for users, devices, or services are not hardcoded in firmware or ecosystem applications. | ✓ | ✓ | ✓ |
 | **2.1.10** | Verify that provisioned credentials for device authentication are unique per device. | ✓ | ✓ | ✓ |
 | **2.1.11** | Verify that authentication schemes are designed to revoke credentials of compromised or decommissioned devices. | | | ✓ |
+| **2.1.12** | Verify that authentication mechanisms have sufficient protection against brute force attacks (e.g., account lockout, rate limiting, exponential backoff, or CAPTCHA). | ✓ | ✓ | ✓ |
+| **2.1.13** | Verify that reauthentication of users and devices is required at regular intervals appropriate to the security criticality of the application or functionality. | | ✓ | ✓ |
 
 ### Authorization
 
@@ -58,6 +66,8 @@ Many controls in this chapter are implemented through cryptography. Therefore, a
 | **2.4.4** | Verify that cryptographic secrets used by the device are stored securely by leveraging functionality provided by dedicated security chips. | | ✓ | ✓ |
 | **2.4.5** | Verify that cryptographic primitives used by the device are provided by dedicated security chips. | | ✓ | ✓ |
 | **2.4.6** | Verify that the cryptographic libraries used are certified to be compliant with a recognized cryptographic security standard. | | ✓ | ✓ |
+| **2.4.7** | Verify that for devices with expected operational lifetime beyond 2030, cryptographic implementations support migration to post-quantum algorithms (ML-KEM, ML-DSA, SLH-DSA per FIPS 203/204/205) or use hybrid cryptography combining classical and post-quantum algorithms. | | | ✓ |
+| **2.4.8** | Verify that quantum-resistant or hybrid cryptographic implementations use NIST-approved PQC algorithms and are validated against recognized security standards (e.g., FIPS 203, 204, 205). | | | ✓ |
 
 ## References
 For more information, see also:
@@ -67,4 +77,8 @@ For more information, see also:
 - OWASP Top 10 Privacy Countermeasures: <https://owasp.org/www-pdf-archive/OWASP_Top_10_Privacy_Countermeasures_v1.0.pdf>
 - NIST SP800-63B - Digital Identity Guidelines: <https://pages.nist.gov/800-63-3/sp800-63b.html>
 - FIPS 140-3 - Security Requrements for Cryptographic Modules: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf
+- NIST FIPS 203 - Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.203.pdf>
+- NIST FIPS 204 - Module-Lattice-Based Digital Signature Algorithm (ML-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf>
+- NIST FIPS 205 - Stateless Hash-Based Digital Signature Algorithm (SLH-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf>
+- NIST IR 8547 - Transition to Post-Quantum Cryptography Standards: <https://csrc.nist.gov/pubs/ir/8547/ipd>
 - ECRYPT CSA - D5.4 - Algorithms, Key Size and Protocols Report (2018): <https://www.ecrypt.eu.org/csa/documents/D5.4-FinalAlgKeySizeProt.pdf>

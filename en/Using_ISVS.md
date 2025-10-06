@@ -1,6 +1,12 @@
+---
+layout: default
+title: Using the ISVS
+nav_order: 3
+---
+
 # Using the ISVS
 
-The OWASP Internet of Things Security Verification Standard (ISVS) aims to establish levels of confidence in the security of IoT ecosystems by providing requirements and best practices for the software and hardware components, as well as the communicaiton of connected devices.
+The OWASP Internet of Things Security Verification Standard (ISVS) aims to establish levels of confidence in the security of IoT ecosystems by providing requirements and best practices for the software and hardware components, as well as the communication of connected devices.
 
 IoT ecosystems are often complex collections of many interconnected systems. Some of these interconnected systems are IoT systems, containing connected devices and their components, both software and hardware. Others examples of systems in IoT ecosystems are web or mobile applications and cloud components. 
 
@@ -48,6 +54,47 @@ Even though the standard is called a verification standard, its use goes much wi
 - The requirements can be used to assess the overall security posture of a device's environment. They can help to define test cases, or they can be used by security professionals to assess the device's implementation.
 
 - The ISVS can be used as a framework to guide the agile development process in order to have a more secure product. Since most new IoT device hardware will first be developed from prototype systems or development boards, the ISVS levels focus on software and hardware security, making it easy to integrate as a part of agile security practices in organizations. The project can start by defining an end-goal ISVS level according to the project's risk assessment and then use the ISVS requirements as tickets in the development backlog. Specific features can be prioritized, and the security efforts can be easily visualized on the board. This can also be used to prioritize auditing and reviewing tasks in the organization, where a specific requirement can be a driver for implementation, review, refactor, or auditing for a specific team member and visible as "debt" in the backlog.
+
+## Handling Non-Conformities
+
+Not every security control specified in the ISVS may be applicable, feasible, or necessary for every IoT ecosystem or device. Organizations should recognize that implementing security controls involves a risk-based decision-making process that balances effort against risk reduction.
+
+### Risk-Based Decision Making
+
+When a security control cannot be implemented or when verification of a control fails, organizations should:
+
+1. **Assess the Risk**: Evaluate the potential security impact of not implementing the control or accepting the identified vulnerability. Consider factors such as:
+   - The sensitivity of data processed by the device
+   - The criticality of the device's function
+   - The threat landscape and likelihood of exploitation
+   - The potential business and safety impact of compromise
+
+2. **Document the Decision**: Maintain a clear record of which controls are not implemented and why. Documentation should include:
+   - The specific requirement(s) not met
+   - The rationale for non-implementation or acceptance
+   - The assessed risk level
+   - Any compensating controls or risk mitigation measures
+   - Approval from appropriate stakeholders
+
+3. **Implement Compensating Controls**: Where possible, implement alternative security measures that reduce risk even if they don't fully satisfy the original requirement.
+
+4. **Regular Review**: Periodically reassess accepted risks and non-conformities, especially when:
+   - The threat landscape changes
+   - New vulnerabilities are discovered
+   - The device's deployment context changes
+   - More cost-effective security solutions become available
+
+### Partial Compliance
+
+IoT systems may achieve partial compliance with the ISVS, meeting requirements at different levels across different categories. For example, a device might meet Level 3 requirements for cryptography but only Level 1 for communication protocols. Organizations should clearly communicate the specific level achieved for each category when reporting ISVS compliance.
+
+### Continuous Improvement
+
+The ISVS should be viewed as a framework for continuous security improvement rather than a one-time checklist. Organizations are encouraged to:
+- Start with baseline security requirements appropriate for their risk level
+- Progressively enhance security controls over product iterations
+- Use security verification results to inform development priorities
+- Share learnings and best practices with the broader IoT security community
 
 ## Document Structure
 The subsequent chapters of this standard provide an overview of the different requirement categories described above. Each requirement category has a dedicated chapter in which the requirements are listed together with references to relevant standards. Definitions of the different words used throughout the standard are provided in [Appendix A - Glossary](Appendix_A-Glossary.md)

@@ -11,11 +11,21 @@ IoT ecosystems are often complex collections of many interconnected systems. Som
 
 The ISVS focuses on providing security requirements for IoT systems and their components: IoT hardware, software, embedded applications and communication protocols. It also provides some general requirements for the IoT ecosystems in which IoT systems reside, while referring to existing industry-accepted standards as much as possible.
 
-## Peer Review Requested
-The first version of the OWASP ISVS is ready for a peer review. "Pre-release 1.0RC" can be acquired in the following formats:
+## Official Release
+The OWASP ISVS version 1.0 is now officially released! This standard provides comprehensive security requirements for IoT ecosystems and their components.
 
-* The [releases page](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/releases) contains PDF, EPUB, Docx, CSV, JSON and XML versions of the standard.
-* The latest version of the main branch can be read on [GitBook](https://owasp-isvs.gitbook.io/owasp-isvs-pr).
+### Documentation
+**[Official Documentation](https://owasp.org/IoT-Security-Verification-Standard-ISVS/)** - Read the standard online with full search capabilities
+
+### Download the Standard
+Version 1.0 is available in multiple formats on the [releases page](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/releases):
+
+* 📄 **PDF** - For reading and printing
+* 📱 **EPUB** - For e-readers
+* 📝 **DOCX** - For editing and customization
+* 📊 **CSV** - For spreadsheet analysis
+* 🔧 **JSON** - For programmatic use
+* 🌐 **XML** - For integration with tools
 
 ### Read Individual Sections of the ISVS Below
 * [Frontispiece](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/blob/master/en/0x01-Frontispiece.md)

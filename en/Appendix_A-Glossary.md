@@ -1,3 +1,9 @@
+---
+layout: default
+title: Appendix A - Glossary
+nav_order: 9
+---
+
 # Glossary
 - **Credentials** - Authentication material such as username and password, public and private keys, API keys, or certificates.  
 - **Cryptographic material** -   All material, including documents, devices, or equipment that contains cryptographic information and is essential to the encryption, decryption, or authentication of communications.

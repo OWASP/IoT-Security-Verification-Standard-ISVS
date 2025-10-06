@@ -1,14 +1,20 @@
+---
+layout: default
+title: V3 - Software Platform Requirements
+nav_order: 6
+---
+
 # V3: Software Platform Requirements
 
 ## Control Objective
 
-The bootloader is the first piece of code to run during the device's boot process. The firmware manufacturer is responsible for configuring bootloaders correctly otherwise its vulnerabilities can undermine the security of the entire device, leading to compromise and device hijacking. Controls in this chapter ensure boot trustworthiness by verifying cryptographic signatures on the loaded code, not allowing loading images from external locations, and disallowing memory, shell, and other debug access during boot.
+The bootloader is the first piece of code to run during the device's boot process. The firmware manufacturer is responsible for configuring bootloaders correctly otherwise its vulnerabilities can undermine the security of the entire device, leading to compromise and device hijacking. Controls in this chapter ensure boot trustworthiness by verifying cryptographic signatures on the loaded code, not allowing loading images from external locations, and disallowing memory, shell, and other debug access during boot. For Level 3 devices with operational lifetimes beyond 2030, secure boot implementations must support post-quantum digital signature algorithms to protect against future quantum threats that could compromise boot integrity.
 
 The operating system, and its kernel, in particular, are central for device security, as they run in privileged mode and implement critical device functionality, including many security primitives. This necessitates best security practices for the operating system, kernel configuration, and hardening.
 
 The Linux operating system is one of the most popular in IoT. It has many features from first-line security to defense-in-depth, including the isolation mechanisms supported by namespaces and cgroups, and additional kernel security modules for access controls. Leverage these isolation mechanisms when configuring and deploying third-party applications to run within a container.
 
-Updating and maintaining device software is crucial to product security. Update systems must employ security best practices as part of their design and implementation to ensure devices only run cryptographically signed software free of known vulnerabilities. PPatch and vulnerability management processes ensure the latest available versions deploy new builds with upstream security patches to protect end-users from compromise.
+Updating and maintaining device software is crucial to product security. Update systems must employ security best practices as part of their design and implementation to ensure devices only run cryptographically signed software free of known vulnerabilities. Patch and vulnerability management processes ensure the latest available versions deploy new builds with upstream security patches to protect end-users from compromise. For Level 3 devices expected to operate beyond 2030, firmware update mechanisms must incorporate post-quantum or hybrid digital signatures to maintain long-term authenticity guarantees as quantum computing capabilities advance.
 
 Securely configuring and integrating hardware security chips into software platforms allows devices to use a cryptographically asserted identity burned into the chip at manufacturing time. Security chips add more functionality providing privileged storage locations to store keys or secrets encrypted at rest.  
 
@@ -26,6 +32,7 @@ Securely configuring and integrating hardware security chips into software platf
 | **3.1.6** | Verify that bootloader stages do not contain sensitive information (e.g. private keys or passwords logged to the console) as part of device start-up.  | | ✓ | ✓ |
 | **3.1.7** | Verify that firmware is stored in an encrypted volume at rest. | | ✓ | ✓ |
 | **3.1.8** | Verify that Direct Memory Access (DMA) is not possible during boot. For example, ensure DMA is not possible via PCI connections. | | ✓ | ✓ |
+| **3.1.9** | Verify that secure boot cryptographic verification supports post-quantum digital signature algorithms (e.g., ML-DSA per FIPS 204, SLH-DSA per FIPS 205) or hybrid schemes for devices expected to operate beyond 2030. | | | ✓ |
 
 ### OS Configuration
 
@@ -49,9 +56,9 @@ Securely configuring and integrating hardware security chips into software platf
 | --  | ---------------------- | - | - | - |
 | **3.3.1** | Verify that processes are isolated using Linux kernel namespaces. | | ✓ | ✓ |
 | **3.3.2** | Verify that critical processes are configured to limit resources using control groups (cgroups). | | ✓ | ✓ |
-| **3.3.4** | Verify that Linux kernel capabilities are configured with a minimal set for processes that require elevated access. | | ✓ | ✓ |
-| **3.3.5** | Verify that SECure COMPuting  (seccomp BPF) with filters is used and properly configured to only allow necessary system calls. | | ✓ | ✓ |
-| **3.3.6** | Verify the use of kernel security modules such as SELinux, AppArmor, GRSEC, and alike. | | | ✓ |
+| **3.3.3** | Verify that Linux kernel capabilities are configured with a minimal set for processes that require elevated access. | | ✓ | ✓ |
+| **3.3.4** | Verify that SECure COMPuting  (seccomp BPF) with filters is used and properly configured to only allow necessary system calls. | | ✓ | ✓ |
+| **3.3.5** | Verify the use of kernel security modules such as SELinux, AppArmor, GRSEC, and alike. | | | ✓ |
 
 ### Software Updates
 
@@ -69,6 +76,7 @@ Securely configuring and integrating hardware security chips into software platf
 | **3.4.10** | Verify that the device authenticates to the update server component prior to downloading the update.| ✓ | ✓ | ✓ |
 | **3.4.11** | Verify that firmware updates are stored encrypted server-side. | | ✓ | ✓ |
 | **3.4.12** | Verify that software and firmware updates are transmitted using an encrypted communication channel. | ✓ | ✓ | ✓ |
+| **3.4.13** | Verify that firmware update signing and verification mechanisms support post-quantum digital signatures (ML-DSA, SLH-DSA) or hybrid cryptographic schemes to ensure long-term authenticity for devices expected to operate beyond 2030. | | | ✓ |
 
 ### Security chip integrations
 
@@ -89,7 +97,7 @@ Securely configuring and integrating hardware security chips into software platf
 ## References
 For more information, see also:
 
-- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
+- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot>
 - CIS Benchmarks: <https://www.cisecurity.org/cis-benchmarks/>
 - SCAP: <https://csrc.nist.gov/projects/security-content-automation-protocol/scap-content>
 - TGC Guidance for Secure Update of Software and Firmware on Embedded Systems: <https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf>
@@ -98,3 +106,6 @@ For more information, see also:
 - OWASP Docker Top 10: <https://owasp.org/www-project-docker-top-10/>
 - Linux Containers Security (LXC): <https://linuxcontainers.org/lxc/security/>
 - Linux Containers Security (LXD): <https://linuxcontainers.org/lxd/docs/master/security>
+- NIST FIPS 204 - Module-Lattice-Based Digital Signature Algorithm (ML-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf>
+- NIST FIPS 205 - Stateless Hash-Based Digital Signature Algorithm (SLH-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf>
+- NIST IR 8547 - Transition to Post-Quantum Cryptography Standards: <https://csrc.nist.gov/pubs/ir/8547/ipd>

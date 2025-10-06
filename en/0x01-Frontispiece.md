@@ -1,3 +1,9 @@
+---
+layout: default
+title: Frontispiece
+nav_order: 2
+---
+
 # Frontispiece
 
 ## About the Standard
@@ -8,11 +14,11 @@ The OWASP Internet of Things Security Verification Standard (ISVS) is a communit
 
 ![license](./images/license.png)
 
-Copyright © 2021 The OWASP Foundation.
+Copyright © 2025 The OWASP Foundation.
 
 This document is released under the [Creative Commons Attribution ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/). For any reuse or distribution, you must make clear to others the license terms of this work.
 
-Version 1.0, 22 January 2021
+Version 1.0, October 2025
 
 ## Project Leads
 

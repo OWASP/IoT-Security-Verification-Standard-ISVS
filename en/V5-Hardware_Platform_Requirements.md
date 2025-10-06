@@ -1,3 +1,9 @@
+---
+layout: default
+title: V5 - Hardware Platform Requirements
+nav_order: 8
+---
+
 # V5: Hardware Platform Requirements
 
 ## Control Objective
@@ -6,7 +12,7 @@ Hardware is more difficult and costly to compromise and subvert than software. T
 
 The purpose of the controls listed in this chapter is to ensure that as long as hardware is available for secure configuration, it is been configured in the most secure way possible. This includes disabling or securing debug interfaces, setting up all existing alarms and sensor mechanisms to combat tampering, using anti-cloning hardware protection such as OTP fuses, and the use of the MMU (Memory Management Unit) for secure process isolation.
 
-This chapter provides requirements for the hardware platform to guarantee secure configuration and provide layered controls to encourage resiliency. For example, 3.1.4 discusses correctly configuring Secure Boot, 5.1.2 requires the platform to support this. 5.1.1 requires that the platform supports disabling debug interfaces, 1.2.4 requires that this is applied in production. 5.1.8 requires MMU platform support, 3.2.8 requires memory protections to be configured and enforced.
+This chapter provides requirements for the hardware platform to guarantee secure configuration and provide layered controls to encourage resiliency. For example, 3.1.4 discusses correctly configuring Secure Boot, 5.1.2 requires the platform to support this. 5.1.1 requires that the platform supports disabling debug interfaces, 1.2.4 requires that this is applied in production. 5.1.8 requires MMU platform support, 3.2.8 requires memory protections to be configured and enforced. For Level 3 devices with operational lifetimes beyond 2030, hardware platforms must support post-quantum cryptographic algorithms through dedicated accelerators or provide sufficient performance for software-based implementations to ensure quantum-resistant security operations.
 
 ## Security Verification Requirements
 
@@ -26,13 +32,18 @@ This chapter provides requirements for the hardware platform to guarantee secure
 | **5.1.10** | Verify that descriptive silkscreens are removed from PCBs. | | | ✓ |
 | **5.1.11** | Verify that debug paths and traces are depopulated from production PCBs. | | | ✓ |
 | **5.1.12** | Verify that FPGA bitstreams are encrypted using strong, secure algorithms. | | | ✓ |
+| **5.1.13** | Verify that cryptographic accelerators support post-quantum algorithms (ML-KEM, ML-DSA, SLH-DSA) or provide sufficient performance for software-based PQC implementations on resource-constrained devices expected to operate beyond 2030. | | | ✓ |
 
 ## References
 For more information, see also:
 
 - Common Weakness Enumeration (CWE) Hardware Design: <https://cwe.mitre.org/data/definitions/1194.html>
 - IoT Security - Physical and Hardware Security: <https://www.embedded.com/iot-security-physical-and-hardware-security/>
-- IETF RFC 8576 - IoT Security: State of the Art and Challenges (5.10 Reverse Engineering Considerations): <https://tools.ietf.org/html/rfc8576>
-- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
+- IETF RFC 8576 - IoT Security: State of the Art and Challenges (5.10 Reverse Engineering Considerations): <https://datatracker.ietf.org/doc/html/rfc8576>
+- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot>
 - GSMA - IoT Security Guidelines for Endpoint Systems: <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
 - NSA Hardware and Firmware Security Guidance: <https://github.com/nsacyber/Hardware-and-Firmware-Security-Guidance>
+- NIST FIPS 203 - Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.203.pdf>
+- NIST FIPS 204 - Module-Lattice-Based Digital Signature Algorithm (ML-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf>
+- NIST FIPS 205 - Stateless Hash-Based Digital Signature Algorithm (SLH-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf>
+- NIST SP 800-232 - Ascon-Based Lightweight Cryptography Standards for Constrained Devices: <https://csrc.nist.gov/pubs/sp/800/232/final>
