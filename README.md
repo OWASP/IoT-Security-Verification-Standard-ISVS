@@ -1,7 +1,10 @@
 # IoT Security Verification Standard (ISVS)
 
+![Version 1.0](https://img.shields.io/badge/version-1.0-blue.svg)
+[![Release Date](https://img.shields.io/badge/release%20date-October%202025-green.svg)](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/releases)
 [![Creative Commons License](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/ "CC BY-SA 4.0")
 [![Document Build Status](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/workflows/Document%20Build/badge.svg)](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/actions?workflow%3A"Document+Build")
+[![GitHub Pages](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://owasp.org/IoT-Security-Verification-Standard-ISVS/)
 [![Slack](https://img.shields.io/badge/chat%20on-slack-46BC99.svg)](https://owasp.slack.com/messages/project-isvs)
 
 

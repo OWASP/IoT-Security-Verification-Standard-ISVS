@@ -6,7 +6,7 @@ _site/
 vendor/
 
 # Ruby/Bundler
-Gemfile.lock
+# Gemfile.lock is committed for GitHub Actions reproducibility
 .bundle/
 
 # GitBook (deprecated)
