@@ -33,7 +33,7 @@ Many controls in this chapter are implemented through cryptography. Therefore, a
 | **2.1.9** | Verify that authentication credentials for users, devices, or services are not hardcoded in firmware or ecosystem applications. | ✓ | ✓ | ✓ |
 | **2.1.10** | Verify that provisioned credentials for device authentication are unique per device. | ✓ | ✓ | ✓ |
 | **2.1.11** | Verify that authentication schemes are designed to revoke credentials of compromised or decommissioned devices. | | | ✓ |
-| **2.1.12** | Verify that authentication mechanisms have sufficient protection against brute force attacks (e.g., account lockout, rate limiting, exponential backoff, or CAPTCHA). | ✓ | ✓ | ✓ |
+| **2.1.12** | Verify that authentication mechanisms have sufficient protection against brute force attacks (e.g., account lockout, rate limiting, or exponential backoff). | ✓ | ✓ | ✓ |
 | **2.1.13** | Verify that reauthentication of users and devices is required at regular intervals appropriate to the security criticality of the application or functionality. | | ✓ | ✓ |
 
 ### Authorization
