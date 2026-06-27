@@ -14,3 +14,4 @@
 ## Appendix
 
 - [Appendix A - Glossary](Appendix_A-Glossary.md)
+- [Appendix B - Compliance Mapping](Appendix_B-Compliance_Mapping.md)
