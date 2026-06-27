@@ -20,6 +20,8 @@ System configuration changes must employ appropriate logging and monitoring capa
 
 Incident response planning is essential for IoT ecosystems to effectively detect, respond to, and recover from security compromises. Organizations must establish processes for handling device credential compromises and provide mechanisms for users to validate the legitimacy of connected devices.
 
+A defined and openly communicated support lifecycle is equally important. By establishing a minimum security update period, providing security patches free of charge, and notifying users ahead of end-of-life, manufacturers enable users to make informed risk decisions and avoid operating devices that no longer receive security maintenance.
+
 ## Security Verification Requirements
 
 ### Application and Ecosystem Design
@@ -87,6 +89,15 @@ Incident response planning is essential for IoT ecosystems to effectively detect
 | **1.5.2** | Verify that an appropriate response strategy is in place for when device credentials (especially root keys or cryptographic material that cannot be remotely updated) are compromised. | | ✓ | ✓ |
 | **1.5.3** | Verify that users or administrators can obtain an overview of connected and paired devices to validate their legitimacy (e.g., by comparing identifiers such as MAC addresses or serial numbers). | | ✓ | ✓ |
 
+### End-of-Life and Update Support Policy
+
+| # | Description | L1 | L2 | L3 |
+| -- | ---------------------- | - | - | - |
+| **1.6.1** | Verify that the manufacturer has defined and publicly disclosed a minimum security update support period for the product, including the end date of that period, and that this information is communicated to users in plain language at or before the point of purchase. | ✓ | ✓ | ✓ |
+| **1.6.2** | Verify that users are notified when a product reaches the end of its security update support period, and that the notification states the date after which security updates will cease. Where technically feasible, this notification is provided in advance of that date and identifies any available migration paths or compensating controls. | ✓ | ✓ | ✓ |
+| **1.6.3** | Verify that security updates are provided to users at no additional cost throughout the declared support period. | ✓ | ✓ | ✓ |
+| **1.6.4** | Verify that security updates addressing critical and high-severity vulnerabilities can be delivered independently of feature or functional updates, so that users can apply security fixes without being required to accept unrelated changes. | | ✓ | ✓ |
+
 ## References
 For more information, see also:
 
@@ -101,3 +112,6 @@ For more information, see also:
 - OWASP Embedded Application Security: <https://owasp.org/www-project-embedded-application-security/>
 - Banned C Functions (Safe Strings library): <https://github.com/intel/safestringlib/wiki/SDL-List-of-Banned-Functions>
 - NIST Draft NISTIR 8259D: <https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8259D-draft.pdf>
+- EU Cyber Resilience Act (Regulation (EU) 2024/2847), Article 13: <https://eur-lex.europa.eu/eli/reg/2024/2847/oj>
+- UK Product Security and Telecommunications Infrastructure (PSTI) Act 2022: <https://www.legislation.gov.uk/ukpga/2022/46>
+- ETSI EN 303 645 (Cyber Security for Consumer IoT): <https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf>
