@@ -50,8 +50,17 @@ class ISVS:
         for file in os.listdir(target):
 
             if re.match("V\d{1,}", file):
+                # Tracks the most recent "### " subsection heading within the file
+                # so each requirement can be tagged with its subsection.
+                current_subsection = ""
                 for line in open(os.path.join(target, file)):
-                    # group 1: (\d\.\d+\.*\d*) ID 
+                    # Capture subsection headings (e.g. "### Supply Chain")
+                    heading = re.match(r'###\s+(.*)', line)
+                    if heading:
+                        current_subsection = heading.group(1).strip()
+                        continue
+
+                    # group 1: (\d\.\d+\.*\d*) ID
                     # group 2:  (.*?) Description
                     # group 3 : (.*?) L1
                     # group 4 : (.*?) L2
@@ -66,8 +75,11 @@ class ISVS:
                         req = {}
 
                         req['ID'] = match.group(1).strip()
+                        # category is derived from the leading chapter number of the
+                        # ID (e.g. "1.6.1" -> "V1"), matching the V1-V5 chapter scheme.
+                        req['category'] = "V" + match.group(1).split(".")[0]
+                        req['subsection'] = current_subsection
                         req['Description'] = match.group(2).strip()
-                        #req['category'] = match.group(2).replace(u"\u2011", "-")
                         req['L1'] = len(match.group(3).strip()) > 0
                         req['L2'] = len(match.group(4).strip()) > 0
                         # [:-1] removes the last "|" from the match

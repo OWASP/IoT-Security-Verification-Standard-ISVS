@@ -1,9 +1,32 @@
 # ISVS Interactive Web Tool - Technical Specification
 
-**Version**: 1.0
-**Date**: October 2025
-**Status**: Proposal
+**Version**: 1.1
+**Date**: October 2025 (reviewed June 2026)
+**Status**: Proposal — under review, implementation deferred until after the ISVS 1.1 release
 **Branch**: `isvs-tool`
+
+> **Note:** See [Spec Review Status & Remaining Work](#spec-review-status--remaining-work) below for the authoritative MVP scope, what has been fixed, and the open decisions to resolve before implementation begins.
+
+---
+
+## Spec Review Status & Remaining Work
+
+This section records the outcome of the June 2026 spec review (issue #94). It is the authoritative source where it conflicts with older prose further down the document.
+
+### Done
+- **Data layer unblocked.** `tools/isvs.py` now emits a `category` field (e.g. `"V1"`, derived from the requirement ID) and a `subsection` field (the `###` heading, e.g. `"Supply Chain"`) in JSON output. Verified: all requirements carry both fields; CSV and XML output are unchanged (additive change, backward compatible with the existing `OWASP_ISVS-SNAPSHOT.json` artifact).
+
+### Open decisions (resolve at implementation time, post-release)
+1. **JSON key casing.** `export.py` emits capitalized keys (`ID`, `Description`, `L1`, `L2`, `L3`); the app interfaces in this spec assume lowercase (`id`, `description`, `l1`, `l2`, `l3`). Decision deferred because changing `to_json()` casing would also change the published `OWASP_ISVS-SNAPSHOT.json` artifact. Resolve by either (a) mapping keys in the app, or (b) emitting lowercase from a tool-specific export path.
+2. **Deployment.** Replace the third-party `peaceiris/actions-gh-pages@v3` (§5.2) with the official `actions/upload-pages-artifact` + `actions/deploy-pages`. Confirm coexistence with the existing Jekyll GitHub Pages setup (the repo currently serves via `_config.yaml` / `.github/workflows/pages.yml`, not a `docs/` folder). A `webapp/package-lock.json` must exist before `cache: npm` will work.
+3. **Deployment URL.** The `https://owasp.org/IoT-...` URL in §5 is likely incorrect; the GitHub Pages URL is probably `https://owasp.github.io/IoT-Security-Verification-Standard-ISVS/isvs-tool/` (or a configured custom domain). Confirm before publishing.
+
+### Corrections to older prose in this document
+- **MVP scope is authoritative per issue #94:** F1 (checklist + localStorage), F2 (filtering), F3 (progress dashboard), **F4 — CSV export only**, and CI/CD. Everything else is Phase 2, including: F4 JSON export and print/compliance-certificate view, **F5 deep-linking/sharing** (and therefore the React Router dependency in §2.1), F6 notes, F7 team sync, F8 templates. Where §3.1 lists F5 or F4 JSON/print as "Core (MVP)", treat this section as authoritative instead.
+- **Logo "blocker" is invalid.** Issue #94 states `en/images/owasp_logo.png` does not exist; it does exist. No fix needed.
+- **Bundle-size target** is inconsistently stated (issue: "<200 KB uncompressed"; §2.1: "<500 KB gzipped"; diagram: "~155 KB"). Standardize on one figure during implementation.
+- **Requirement counts are auto-derived** from the markdown; hardcoded counts ("165") in prose/use-cases are illustrative and will drift (the figure becomes 169 once the V1.6 requirements merge). Do not hardcode.
+- **Use-case Example 3** ("teams share URLs; CISO views progress in real-time") is not achievable with the localStorage-only, no-backend architecture. Reword to reflect exported-report sharing, not live multi-team viewing.
 
 ---
 
