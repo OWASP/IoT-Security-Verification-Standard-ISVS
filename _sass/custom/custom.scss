@@ -1,0 +1,15 @@
+// Custom style overrides for the OWASP ISVS documentation site.
+// just-the-docs imports this file (_sass/custom/custom.scss) after the theme,
+// so rules here override the theme defaults.
+
+// Widen the main content area on large screens.
+// The just-the-docs default caps `.main` at 50rem (~800px), which leaves a
+// large empty band on wide displays and cramps the wide compliance-mapping
+// tables in Appendix B. 64rem (~1024px) uses more of the viewport while
+// keeping prose line-lengths readable. Adjust this single value to taste
+// (e.g. 72rem / 80rem for wider, or `none` for full-width).
+@media (min-width: 50rem) {
+  .main {
+    max-width: 64rem;
+  }
+}
