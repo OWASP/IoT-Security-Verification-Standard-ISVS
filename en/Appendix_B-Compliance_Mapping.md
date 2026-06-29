@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Appendix B - Compliance Mapping
-nav_order: 7
+nav_order: 10
 ---
 
 # Appendix B: Compliance Mapping
