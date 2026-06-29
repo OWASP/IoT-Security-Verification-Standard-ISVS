@@ -1,6 +1,6 @@
 title: OWASP IoT Security Verification Standard
 description: The OWASP ISVS provides comprehensive security requirements for IoT ecosystems and their components
-remote_theme: just-the-docs/just-the-docs@v0.8.2
+theme: just-the-docs
 
 # GitHub Pages settings
 baseurl: "/IoT-Security-Verification-Standard-ISVS"
