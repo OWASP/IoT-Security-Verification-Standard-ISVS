@@ -17,6 +17,10 @@ The OWASP ISVS provides comprehensive security requirements for Internet of Thin
 
 ---
 
+> ⚠️ **Release Candidate — `1.0.0-RC2`.** This documentation is a **release candidate under community review** and may change before the final release. It is **not yet a finalized standard**. Please review the content and share feedback via [GitHub Discussions](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/discussions).
+
+---
+
 ## Version 1.0 - Official Release
 
 This is the official 1.0 release of the OWASP ISVS, providing **156 security requirements** across five verification categories.

@@ -7,6 +7,7 @@
 [![GitHub Pages](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://owasp.org/IoT-Security-Verification-Standard-ISVS/)
 [![Slack](https://img.shields.io/badge/chat%20on-slack-46BC99.svg)](https://owasp.slack.com/messages/project-isvs)
 
+> ⚠️ **Release Candidate — `1.0.0-RC2`.** This is a release candidate under community review and may change before the final release. It is **not yet a finalized standard**. Please review and share feedback via [GitHub Discussions](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/discussions).
 
 The OWASP Internet of Things Security Verification Standard (ISVS) is a community effort to establish an open standard of security requirements for Internet of Things (IoT) ecosystems. The requirements provided by the ISVS can be used at many stages during the Development Life Cycle including design, development, and testing of IoT ecosystems.
 
@@ -14,8 +15,8 @@ IoT ecosystems are often complex collections of many interconnected systems. Som
 
 The ISVS focuses on providing security requirements for IoT systems and their components: IoT hardware, software, embedded applications and communication protocols. It also provides some general requirements for the IoT ecosystems in which IoT systems reside, while referring to existing industry-accepted standards as much as possible.
 
-## Official Release
-The OWASP ISVS version 1.0 is now officially released! This standard provides comprehensive security requirements for IoT ecosystems and their components.
+## Release Candidate (1.0.0-RC2)
+The OWASP ISVS is preparing its first official release. The current content is a **release candidate (`1.0.0-RC2`)** under community review and may change before the final release. It provides comprehensive security requirements for IoT ecosystems and their components — please help us finalize it by reviewing and sharing feedback via [GitHub Discussions](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/discussions).
 
 ### Documentation
 **[Official Documentation](https://owasp.org/IoT-Security-Verification-Standard-ISVS/)** - Read the standard online with full search capabilities
