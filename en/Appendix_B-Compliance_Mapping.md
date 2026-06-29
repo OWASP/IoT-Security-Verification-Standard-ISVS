@@ -1,5 +1,5 @@
 ---
-layout: col-document
+layout: default
 title: Appendix B - Compliance Mapping
 nav_order: 7
 ---
