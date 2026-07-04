@@ -77,6 +77,9 @@ Securely configuring and integrating hardware security chips into software platf
 | **3.4.11** | Verify that firmware updates are stored encrypted server-side. | | ✓ | ✓ |
 | **3.4.12** | Verify that software and firmware updates are transmitted using an encrypted communication channel. | ✓ | ✓ | ✓ |
 | **3.4.13** | Verify that firmware update signing and verification mechanisms support post-quantum digital signatures (ML-DSA, SLH-DSA) or hybrid cryptographic schemes to ensure long-term authenticity for devices expected to operate beyond 2030. | | | ✓ |
+| **3.4.14** | Verify that update metadata is authenticated, versioned, and freshness-bounded (for example, signatures, monotonic version counters, and expiration), and that clients reject update metadata when it is expired, has a lower version than previously trusted metadata, or conflicts with other signed update metadata and target descriptors. | ✓ | ✓ | ✓ |
+| **3.4.15** | Verify that clients validate update artifacts against trusted metadata before installation, including artifact identity, cryptographic integrity, and declared size constraints. | ✓ | ✓ | ✓ |
+| **3.4.16** | Verify that the update mechanism supports secure key rotation and revocation, and that clients accept update signatures only from active, authorized, and non-revoked keys defined by trusted key metadata. | ✓ | ✓ | ✓ |
 
 ### Security chip integrations
 

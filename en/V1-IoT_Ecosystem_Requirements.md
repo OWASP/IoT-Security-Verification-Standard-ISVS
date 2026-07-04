@@ -89,6 +89,7 @@ A defined and openly communicated support lifecycle is equally important. By est
 | **1.5.1** | Verify that an incident response plan is established that addresses potential security compromises of IoT devices, including procedures for identifying, containing, and recovering from security incidents. | | ✓ | ✓ |
 | **1.5.2** | Verify that an appropriate response strategy is in place for when device credentials (especially root keys or cryptographic material that cannot be remotely updated) are compromised. | | ✓ | ✓ |
 | **1.5.3** | Verify that users or administrators can obtain an overview of connected and paired devices to validate their legitimacy (e.g., by comparing identifiers such as MAC addresses or serial numbers). | | ✓ | ✓ |
+| **1.5.4** | Verify that documented and tested procedures exist to recover update trust after signing-key compromise, including key revocation, key replacement, and secure transition of deployed devices to new trusted keys. | | ✓ | ✓ |
 
 ### End-of-Life and Update Support Policy
 
