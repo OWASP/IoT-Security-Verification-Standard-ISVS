@@ -46,7 +46,6 @@ Securely configuring and integrating hardware security chips into software platf
 | **3.2.6** | Verify that applications running on the device use the security features of the underlying operating system or kernel. This includes cryptography, key storage, random number generation, authentication and authorization, logging, and communications security. | | ✓ | ✓ |
 | **3.2.7** | Verify that memory protection controls such as Address Space Layout Randomization (ASLR) and Data Execution Prevention (DEP) are enabled by the embedded operating system. | | ✓ | ✓ |
 | **3.2.8** | Verify that hardware level memory protection is used and privilege levels are enforced. | | | ✓ |
-| **3.2.9** | Verify that the embedded OS provides protection against unauthorized access to RAM (e.g. RAM scrambling). | | | ✓ |
 | **3.2.10** | Verify that an Integrity Measurement Architecture (IMA) or similar integrity subsystem is used and appropriately configured. | | | ✓ |
 | **3.2.11** | Verify that third-party applications are configured to execute within a containerized runtime environment (e.g. Linux containers, Docker, etc.) that is hardened to ensure proper isolation from the host operating system. | | | ✓ |
 
