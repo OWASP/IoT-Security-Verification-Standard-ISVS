@@ -104,6 +104,9 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **1.4.5** Verify logs can be securely retrieved from devices | 2(l) | — | Partial | — | — | CS (AUP) | 5.10-1 |
 | **1.4.6** Verify logs retained per policy and safely deleted when retention expires | 2(g), 2(m) | — | — | Partial | — | CS (LSR) | 5.8-1, 5.11-1 |
 | **1.4.7** Verify confidentiality, integrity and authenticity of logs is protected | 2(e), 2(f), 2(l) | — | — | — | — | CS (AUP), DP (CRY) | — |
+| **1.5.1** Verify an incident response plan addresses security compromises (identify, contain, recover) | — | — | — | — | — | CS (EVR) | — |
+| **1.5.2** Verify a response strategy exists for compromised device credentials or non-updatable root keys| 2(d)**(P)** | — | Partial | — | — | DP (KEY) | — |
+| **1.5.3** Verify users can obtain an overview of connected/paired devices to validate legitimacy | 2(i)**(P)** | — | Partial | — | — | DI (AID) | — |
 | **V2 — User Space Application Requirements** | | | | | | | |
 | **2.1.1** Verify all users and accounts can be uniquely identified | 2(d) | — | Partial | Partial | — | DI (IMS) | — |
 | **2.1.2** Verify all connected devices can be uniquely identified | 2(d) | — | Partial | — | — | DI (IMS), DI (AID) | — |
@@ -116,6 +119,8 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **2.1.9** Verify authentication credentials are not hardcoded in firmware or applications | 2(a), 2(d) | — | Partial | — | — | DP (KEY), DC (AUT) | 5.1-2, 5.4-1 |
 | **2.1.10** Verify provisioned device authentication credentials are unique per device | 2(d) | — | Partial | — | — | DI (DAS), DP (KEY) | 5.1-2 |
 | **2.1.11** Verify authentication schemes can revoke credentials of compromised or decommissioned devices | 2(d) | — | Partial | — | — | LA (ACF), DI (DAS) | — |
+| **2.1.12** Verify authentication has brute force protection (lockout, rate limiting, backoff) | 2(d) | — | Partial | — | — | LA (ACF) | — |
+| **2.1.13** Verify re-authentication is required at intervals appropriate to security criticality | 2(d) | — | Partial | — | — | LA (AUN) | — |
 | **2.2.1** Verify IoT system accounts share a common authorization framework | 2(d) | — | — | — | — | LA (AUZ), LA (ROL) | — |
 | **2.2.2** Verify least privilege is enforced; applications not run as root/admin unnecessarily | 2(d), 2(j) | — | Partial | — | — | LA (ROL), DS (OPS) | 5.6-3 |
 | **2.2.3** Verify ownership is validated upon registration and decommissioning | 2(d), 2(m) | — | — | — | — | LA (AUZ), DI (AID) | 5.11-1 |
@@ -130,6 +135,8 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **2.4.4** Verify cryptographic secrets stored securely using dedicated security chip functionality | 2(e), 2(f) | — | — | Partial | — | DP (KEY), DP (STO) | 5.4-1 |
 | **2.4.5** Verify cryptographic primitives are provided by dedicated security chips | 2(e), 2(k) | — | — | — | — | DP (CRY) | — |
 | **2.4.6** Verify cryptographic libraries are certified to a recognized standard | 2(e) | — | — | — | — | DP (CRY) | — |
+| **2.4.7** Verify cryptography supports migration to post-quantum algorithms for devices operating beyond 2030 | 2(e)**(P)** | — | Partial | — | — | DP (CRY) | 5.5-1**(P)** |
+| **2.4.8** Verify quantum-resistant/hybrid cryptography is validated against recognized PQC validation programs | 2(e)**(P)** | — | Partial | — | — | DP (CRY) | 5.5-1**(P)** |
 | **V3 — Software Platform Requirements** | | | | | | | |
 | **3.1.1** Verify bootloader does not allow code loaded from arbitrary local or network locations | 2(f), 2(j), 2(k) | — | Partial | — | — | DS (EXE), DS (DIN) | 5.7-1 |
 | **3.1.2** Verify bootloader configurations are immutable in production | 2(b), 2(f) | — | Partial | — | — | DS (DIN), DC (CTL) | 5.7-1 |
@@ -139,6 +146,7 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **3.1.6** Verify bootloader stages do not expose sensitive information during start-up | 2(e), 2(g) | — | — | Partial | — | DP (STO) | 5.4-1 |
 | **3.1.7** Verify firmware stored in encrypted volume at rest | 2(e) | — | — | Partial | — | DP (STO) | 5.8-1 |
 | **3.1.8** Verify Direct Memory Access (DMA) is not possible during boot | 2(f), 2(k) | — | — | — | — | DS (RSC), DS (EXE) | — |
+| **3.1.9** Verify secure boot cryptographic verification supports post-quantum signature algorithms for devices beyond 2030 | 2(f)**(P)**, 2(k)**(P)** | — | Partial | — | — | DS (DIN), DP (CRY) | 5.7-1**(P)** |
 | **3.2.1** Verify embedded OS configured per industry best practices and uses secure defaults | 2(b) | — | Partial | — | — | DC (CTL) | — |
 | **3.2.2** Verify only necessary network services are exposed on each interface | 2(j) | — | Partial | — | — | LA (IFC), DS (COM) | 5.6-1 |
 | **3.2.3** Verify device does not use legacy or insecure protocols (Telnet, FTP) | 2(a), 2(j) | — | Partial | — | — | DS (COM), LA (IFC) | 5.5-1, 5.6-4 |
@@ -152,9 +160,9 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **3.2.11** Verify third-party applications run in a hardened containerized runtime environment | 2(j), 2(k) | — | — | — | — | DS (EXE), LA (IFC) | 5.6-3 |
 | **3.3.1** Verify processes are isolated using Linux kernel namespaces | 2(j), 2(k) | — | — | — | — | DS (EXE), DS (RSC) | — |
 | **3.3.2** Verify critical processes limit resources using cgroups | 2(h) | — | Partial | — | — | DS (RSC), DS (OPS) | 5.9-1 |
-| **3.3.4** Verify Linux kernel capabilities configured with minimal set for elevated access | 2(j), 2(k) | — | — | — | — | DS (EXE), LA (ROL) | 5.6-3 |
-| **3.3.5** Verify seccomp BPF with filters is used and configured to allow only necessary syscalls | 2(j), 2(k) | — | — | — | — | DS (EXE) | 5.6-3 |
-| **3.3.6** Verify use of kernel security modules (SELinux, AppArmor, GRSEC, or equivalent) | 2(j), 2(k) | — | — | — | — | DS (EXE), LA (AUZ) | 5.6-3 |
+| **3.3.3** Verify Linux kernel capabilities configured with minimal set for elevated access | 2(j), 2(k) | — | — | — | — | DS (EXE), LA (ROL) | 5.6-3 |
+| **3.3.4** Verify seccomp BPF with filters is used and configured to allow only necessary syscalls | 2(j), 2(k) | — | — | — | — | DS (EXE) | 5.6-3 |
+| **3.3.5** Verify use of kernel security modules (SELinux, AppArmor, GRSEC, or equivalent) | 2(j), 2(k) | — | — | — | — | DS (EXE), LA (AUZ) | 5.6-3 |
 | **3.4.1** Verify packages and user space apps support OTA updates decoupled from firmware | 2(c) | — | — | — | — | SU (UPD), SU (APP) | 5.3-2 |
 | **3.4.2** Verify devices can be updated automatically on a pre-defined schedule | 2(c) | — | — | — | — | SU (APP) | 5.3-3 |
 | **3.4.3** Verify updates are cryptographically signed by a trusted source and verified before execution | 2(c), 2(f) | — | Partial | — | — | SU (UPD), DP (CRY) | 5.3-4, 5.7-1 |
@@ -167,6 +175,7 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **3.4.10** Verify device authenticates to the update server before downloading the update | 2(d), 2(f) | — | Partial | — | — | LA (AUN), SU (UPD) | 5.3-4 |
 | **3.4.11** Verify firmware updates are stored encrypted server-side | 2(e) | — | — | — | — | DP (STO) | — |
 | **3.4.12** Verify software and firmware updates transmitted over an encrypted communication channel | 2(c), 2(e) | — | Partial | — | — | DP (STX), SU (UPD) | 5.3-4, 5.5-1 |
+| **3.4.13** Verify firmware update signing and verification supports post-quantum or hybrid signatures | 2(c)**(P)**, 2(f)**(P)** | — | Partial | — | — | SU (UPD), DP (CRY) | 5.3-4**(P)**, 5.7-1**(P)** |
 | **3.5.1** Verify encryption is used on the bus between security chip and other hardware components | 2(e), 2(f) | — | — | — | — | DP (STX), DP (CRY) | — |
 | **3.5.2** Verify keys used to enable security chip bus encryption are properly secured on the host | 2(e) | — | — | — | — | DP (KEY) | 5.4-1 |
 | **3.5.3** Verify any default vendor keys used in bus encryption are replaced in production | 2(b), 2(e) | — | — | — | — | DP (KEY), DC (AUT) | 5.4-1 |
@@ -178,8 +187,10 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **4.1.2** Verify only strong cipher suites are enabled, with strongest set as preferred | 2(e) | — | Partial | Partial | Partial | DP (CRY), DS (COM) | 5.5-1 |
 | **4.1.3** Verify TLS implementation cryptographically verifies X.509 certificates | 2(d), 2(e), 2(f) | — | Partial | Partial | — | DP (STX), LA (AUN) | 5.5-1 |
 | **4.1.4** Verify jamming protection or detection is provided for availability-critical applications | 2(h) | — | Partial | — | — | DS (OPS), CS (EIM) | 5.9-1 |
-| **4.1.6** Verify TLS implementation uses its own certificate store and pins to endpoint certificate or key | 2(d), 2(e), 2(f) | — | Partial | — | — | DP (STX), LA (AUN) | 5.5-1 |
-| **4.1.7** Verify inter-chip communication is encrypted | 2(e), 2(f) | — | — | — | — | DP (STX) | — |
+| **4.1.5** Verify TLS implementation uses its own certificate store and pins to endpoint certificate or key | 2(d), 2(e), 2(f) | — | Partial | — | — | DP (STX), LA (AUN) | 5.5-1 |
+| **4.1.6** Verify inter-chip communication is encrypted | 2(e), 2(f) | — | — | — | — | DP (STX) | — |
+| **4.1.7** Verify TLS implementations for devices beyond 2030 support post-quantum key exchange or hybrid key exchange | 2(e)**(P)**, 2(f)**(P)** | — | Partial | — | — | DP (CRY), DP (STX) | 5.5-1**(P)** |
+| **4.1.8** Verify X.509 certificates used for authentication support post-quantum or hybrid signature algorithms | 2(d)**(P)**, 2(e)**(P)**, 2(f)**(P)** | — | Partial | — | — | DP (CRY), LA (AUN) | 5.5-1**(P)** |
 | **4.2.1** Verify unencrypted communication is limited to non-sensitive data and instructions | 2(e) | — | Partial | Partial | — | DP (STX) | 5.5-1 |
 | **4.2.2** Verify MQTT brokers only allow authorized devices to subscribe and publish | 2(d) | — | Partial | — | — | LA (AUN), LA (AUZ) | — |
 | **4.2.3** Verify certificates are favored over username/password for MQTT authentication | 2(d), 2(e) | — | Partial | — | — | LA (AUN), DP (STX) | 5.5-1 |
@@ -190,10 +201,14 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **4.3.5** Verify Bluetooth encryption keys are maximum size the device supports | 2(e) | — | Partial | — | — | DP (CRY) | 5.5-1 |
 | **4.3.6** Verify the most secure Bluetooth pairing method available is used (OOB, Numeric Comparison, or Passkey) | 2(d), 2(e) | — | Partial | — | — | DI (DAS), LA (AUN) | 5.5-1 |
 | **4.3.7** Verify strongest Bluetooth Security Mode and Level supported by the device is used | 2(d), 2(e) | — | Partial | — | — | LA (IFC), DP (CRY) | 5.5-1 |
+| **4.3.8** Verify Bluetooth 5.3+ with LE Secure Connections enforces a minimum 128-bit encryption key and rejects weaker negotiation | 2(d)**(P)**, 2(e)**(P)** | — | Partial | — | — | DP (CRY), LA (AUN) | 5.5-1**(P)** |
+| **4.3.9** Verify Encrypted Advertising Data is enabled for broadcast communications (BT 5.4+) to prevent pre-connection tracking | 2(e)**(P)** | — | — | Partial | — | DP (CRY) | 5.8-1**(P)** |
+| **4.3.10** Verify adaptive frequency hopping and channel classification mitigate interference-based attacks | 2(h) | — | Partial | — | — | DS (OPS), CS (EIM) | 5.9-1**(P)** |
 | **4.4.1** Verify Wi-Fi is disabled unless required as part of device functionality | 2(j) | — | Partial | — | — | LA (IFC) | 5.6-1 |
 | **4.4.2** Verify WPA2 or higher is used to protect Wi-Fi communications | 2(e) | — | Partial | — | — | DP (CRY), DS (COM) | 5.5-1 |
 | **4.4.3** Verify WPA uses AES encryption (CCMP mode) when applicable | 2(e) | — | Partial | — | — | DP (CRY) | 5.5-1 |
 | **4.4.4** Verify Wi-Fi Protected Setup (WPS) is not used | 2(d), 2(j) | — | Partial | — | — | LA (IFC) | 5.6-4 |
+| **4.4.5** Verify WPA3 is used for Wi-Fi communications on devices requiring the highest level of security | 2(e)**(P)** | — | Partial | — | — | DP (CRY), DS (COM) | 5.5-1**(P)** |
 | **4.5.1** Verify Zigbee version 3.0 is used for new applications | 2(a), 2(e) | — | Partial | — | — | DS (COM), DP (CRY) | 5.5-1 |
 | **4.5.2** Verify a suitable Zigbee security architecture is selected per the application's security requirements | 2(d), 2(e) | — | Partial | — | — | DS (COM) | — |
 | **4.5.3** Verify the most secure Zigbee network join method is used per security architecture | 2(d), 2(e) | — | Partial | — | — | DI (DAS), DS (ONB) | 5.5-1 |
@@ -220,6 +235,7 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **5.1.10** Verify descriptive silkscreens are removed from PCBs | 2(j) | — | — | — | — | DS (OPS) | — |
 | **5.1.11** Verify debug paths and traces are depopulated from production PCBs | 2(j) | — | — | — | — | LA (IFC) | 5.6-2 |
 | **5.1.12** Verify FPGA bitstreams are encrypted using strong, secure algorithms | 2(e), 2(f) | — | — | — | — | DP (CRY), DP (STO) | — |
+| **5.1.13** Verify cryptographic accelerators support post-quantum algorithms or sufficient performance for software-based PQC | 2(e)**(P)**, 2(k)**(P)** | — | — | — | — | DP (CRY) | — |
 
 ---
 
@@ -233,15 +249,15 @@ This table provides a reverse lookup. For each framework clause, it identifies t
 |---------------------------|--------------------|-------------------|
 | 2(a) | No known exploitable vulnerabilities at market placement | 1.2.3, 1.2.8**(P)**, 1.3.3**(P)**, 2.1.9, 3.2.3**(P)**, 3.2.4, 3.4.6, 4.5.1**(P)**, 4.6.1**(P)**, 5.1.7 |
 | 2(b) | Secure default configuration; factory reset capability | 1.2.3, 1.3.12, 2.1.6, 2.1.8, 3.1.2, 3.2.1, 3.4.5, 3.4.8, 3.5.3, 4.5.4**(P)**, 4.6.2**(P)**, 5.1.5 |
-| 2(c) | Security updates; automatic installation with opt-out; 10-year minimum | 1.2.9, 3.4.1, 3.4.2, 3.4.3**(P)**, 3.4.4, 3.4.5, 3.4.6, 3.4.7, 3.4.10**(P)**, 3.4.12 |
-| 2(d) | Authentication and access control; prevent unauthorized access | 2.1.1, 2.1.2, 2.1.3, 2.1.4, 2.1.5, 2.1.6, 2.1.7, 2.1.8, 2.1.9, 2.1.10, 2.1.11, 2.2.1, 2.2.2**(P)**, 2.2.3, 2.2.4, 3.4.10, 4.1.3, 4.1.6, 4.2.2, 4.2.3**(P)**, 4.3.2, 4.3.3, 4.3.4, 4.3.6, 4.4.4**(P)**, 4.5.2**(P)**, 4.5.3**(P)**, 4.5.4**(P)**, 4.5.5, 4.5.8, 4.6.4 |
-| 2(e) | Data confidentiality; encryption in transit and at rest | 1.3.14**(P)**, 2.3.1, 2.3.4, 2.4.1, 2.4.2, 2.4.3**(P)**, 2.4.4, 2.4.5**(P)**, 2.4.6**(P)**, 3.1.6**(P)**, 3.1.7, 3.2.5, 3.4.9, 3.4.11, 3.4.12, 3.5.1, 3.5.2, 3.5.3**(P)**, 3.5.4, 4.1.1, 4.1.2, 4.1.3, 4.1.6, 4.2.1, 4.2.3, 4.3.5, 4.3.6, 4.3.7, 4.4.2, 4.4.3, 4.5.2, 4.5.3, 4.5.6, 4.6.1**(P)**, 4.6.3, 4.6.4, 5.1.3**(P)**, 5.1.4, 5.1.12 |
+| 2(c) | Security updates; automatic installation with opt-out; 10-year minimum | 1.2.9, 3.4.1, 3.4.2, 3.4.3**(P)**, 3.4.4, 3.4.5, 3.4.6, 3.4.7, 3.4.10**(P)**, 3.4.12, 3.4.13**(P)** |
+| 2(d) | Authentication and access control; prevent unauthorized access | 2.1.1, 2.1.2, 2.1.3, 2.1.4, 2.1.5, 2.1.6, 2.1.7, 2.1.8, 2.1.9, 2.1.10, 2.1.11, 2.2.1, 2.2.2**(P)**, 2.2.3, 2.2.4, 3.4.10, 4.1.3, 4.1.5, 4.2.2, 4.2.3**(P)**, 4.3.2, 4.3.3, 4.3.4, 4.3.6, 4.4.4**(P)**, 4.5.2**(P)**, 4.5.3**(P)**, 4.5.4**(P)**, 4.5.5, 4.5.8, 4.6.4, 1.5.2**(P)**, 2.1.12, 2.1.13, 4.1.8**(P)**, 4.3.8**(P)** |
+| 2(e) | Data confidentiality; encryption in transit and at rest | 1.2.6, 1.2.7, 1.3.13, 1.4.7, 2.4.1, 2.4.2**(P)**, 3.1.1, 3.1.2, 3.1.4, 3.1.5, 3.1.8, 3.2.8, 3.2.9, 3.2.10, 3.4.3, 3.4.8, 3.4.9, 3.5.1, 4.1.1, 4.1.3, 4.1.5, 4.6.3, 4.6.5, 5.1.2, 5.1.5, 5.1.8, 5.1.12, 3.1.9**(P)**, 3.4.13**(P)**, 4.1.7**(P)**, 4.1.8**(P)** |
 | 2(f) | Data integrity; protection against unauthorized modification | 1.2.6, 1.2.7, 1.3.13, 1.4.7, 2.4.1, 2.4.2**(P)**, 3.1.1, 3.1.2, 3.1.4, 3.1.5, 3.1.8, 3.2.8, 3.2.9, 3.2.10, 3.4.3, 3.4.8, 3.4.9, 3.5.1, 4.1.1, 4.1.3, 4.1.6, 4.6.3, 4.6.5, 5.1.2, 5.1.5, 5.1.8, 5.1.12 |
 | 2(g) | Data minimization; collect only necessary data | 1.3.14, 1.4.4, 1.4.6**(P)**, 2.3.4 |
-| 2(h) | Availability and DoS resilience | 3.3.2, 3.4.7**(P)**, 4.1.4 |
-| 2(i) | Network protection; minimize negative impact on connected devices | — |
+| 2(h) | Availability and DoS resilience | 3.3.2, 3.4.7**(P)**, 4.1.4, 4.3.10  |
+| 2(i) | Network protection; minimize negative impact on connected devices | 1.5.3 **(P)** |
 | 2(j) | Attack surface reduction; minimize external interfaces | 1.1.2, 1.2.4, 1.2.5, 1.3.12**(P)**, 2.2.2, 3.1.1, 3.1.3, 3.2.2, 3.2.3**(P)**, 3.2.11, 3.3.1, 3.3.4, 3.3.5, 3.3.6, 3.6.2, 4.3.1, 4.4.1, 4.4.4**(P)**, 4.5.5, 5.1.1, 5.1.6, 5.1.7, 5.1.10, 5.1.11 |
-| 2(k) | Exploitation mitigation (ASLR, DEP, code signing, stack canaries) | 1.2.6**(P)**, 1.2.7, 1.3.3, 1.3.7, 1.3.8, 1.3.9, 1.3.10, 1.3.11, 1.3.15**(P)**, 2.4.3**(P)**, 2.4.5**(P)**, 3.1.1**(P)**, 3.1.4, 3.1.5, 3.1.8, 3.2.6**(P)**, 3.2.7, 3.2.8, 3.2.9, 3.2.10, 3.3.4**(P)**, 3.3.5, 3.3.6, 3.6.1, 5.1.2, 5.1.8, 5.1.9 |
+| 2(k) | Exploitation mitigation (ASLR, DEP, code signing, stack canaries) | 1.2.6**(P)**, 1.2.7, 1.3.3, 1.3.7, 1.3.8, 1.3.9, 1.3.10, 1.3.11, 1.3.15**(P)**, 2.4.3**(P)**, 2.4.5**(P)**, 3.1.1**(P)**, 3.1.4, 3.1.5, 3.1.8, 3.2.6**(P)**, 3.2.7, 3.2.8, 3.2.9, 3.2.10, 3.3.3**(P)**, 3.3.4, 3.3.5, 3.6.1, 5.1.2, 5.1.8, 5.1.9, 3.1.9**(P)**, 5.1.13**(P)** |
 | 2(l) | Security monitoring and logging; user opt-out capability | 1.4.1, 1.4.2, 1.4.3, 1.4.4**(P)**, 1.4.5, 1.4.6**(P)**, 1.4.7**(P)**, 2.2.4 |
 | 2(m) | Secure data removal and transfer | 1.4.6**(P)**, 2.2.3**(P)**, 2.3.2, 2.3.3**(P)** |
 
@@ -258,19 +274,19 @@ This table provides a reverse lookup. For each framework clause, it identifies t
 
 | RED 3.3(d) / EN 18031-1 Control Area | ISVS Requirements |
 |--------------------------------------|-------------------|
-| Secure boot and bootloader integrity | 1.2.6**(P)**, 1.2.7, 3.1.1, 3.1.2, 3.1.3, 3.1.4, 3.1.5, 3.4.3**(P)**, 3.4.8, 5.1.2 |
-| Access control before network access | 2.1.1**(P)**, 2.1.2**(P)**, 2.1.3**(P)**, 2.1.4**(P)**, 2.1.7**(P)**, 2.1.8**(P)**, 2.1.9**(P)**, 2.1.10**(P)**, 2.2.2**(P)**, 4.2.2**(P)** |
+| Secure boot and bootloader integrity | 1.2.6**(P)**, 1.2.7, 3.1.1, 3.1.2, 3.1.3, 3.1.4, 3.1.5, 3.4.3**(P)**, 3.4.8, 5.1.2, 3.1.9**(P)**, 3.4.13**(P)** |
+| Access control before network access | 2.1.1**(P)**, 2.1.2**(P)**, 2.1.3**(P)**, 2.1.4**(P)**, 2.1.7**(P)**, 2.1.8**(P)**, 2.1.9**(P)**, 2.1.10**(P)**, 2.2.2**(P)**, 4.2.2**(P)**, 1.5.2**(P)**, 2.1.12**(P)**, 2.1.13**(P)** |
 | Network interface hardening and attack surface minimization | 1.1.2**(P)**, 3.2.1**(P)**, 3.2.2, 3.2.3**(P)**, 3.3.2**(P)**, 4.4.1, 4.4.4**(P)** |
-| Traffic monitoring and logging | 1.4.1**(P)**, 1.4.2**(P)**, 1.4.5**(P)** |
-| DoS prevention and resilience | 3.3.2**(P)**, 4.1.4 |
-| Strong cipher suites and secure communication channels | 2.4.2**(P)**, 3.4.10**(P)**, 3.4.12**(P)**, 3.5.4**(P)**, 4.1.1**(P)**, 4.1.2**(P)**, 4.1.3**(P)**, 4.3.5**(P)**, 4.3.7**(P)**, 4.4.2**(P)**, 4.4.3**(P)**, 4.5.1**(P)**, 4.5.2**(P)**, 4.5.3**(P)**, 4.5.5**(P)**, 4.6.2**(P)**, 4.6.3**(P)** |
+| Traffic monitoring and logging | 1.4.1 **(P)**, 1.4.2 **(P)**, 1.4.5 **(P)**, 1.5.3 **(P)** |
+| DoS prevention and resilience | 3.3.2**(P)**, 4.1.4, 4.3.10**(P)** |
+| Strong cipher suites and secure communication channels | 2.4.2**(P)**, 3.4.10**(P)**, 3.4.12**(P)**, 3.5.4**(P)**, 4.1.1**(P)**, 4.1.2**(P)**, 4.1.3**(P)**, 4.3.5**(P)**, 4.3.7**(P)**, 4.4.2**(P)**, 4.4.3**(P)**, 4.5.1**(P)**, 4.5.2**(P)**, 4.5.3**(P)**, 4.5.5**(P)**, 4.6.2**(P)**, 4.6.3**(P)**, 2.4.7**(P)**, 2.4.8**(P)**, 4.1.7**(P)**, 4.1.8**(P)**, 4.3.8**(P)**, 4.4.5**(P)**  |
 | Integrity measurement and runtime protection | 3.2.10**(P)**, 3.6.1**(P)**, 5.1.5**(P)** |
 
 ### EU Radio Equipment Directive — Article 3.3(e) / EN 18031-2 (Personal Data and Privacy)
 
 | RED 3.3(e) / EN 18031-2 Control Area | ISVS Requirements |
 |--------------------------------------|-------------------|
-| Encryption of personal, traffic, and location data | 2.3.1**(P)**, 2.4.4**(P)**, 3.1.7**(P)**, 3.2.5**(P)**, 5.1.4**(P)** |
+| Encryption of personal, traffic, and location data | 2.3.1**(P)**, 2.4.4**(P)**, 3.1.7**(P)**, 3.2.5**(P)**, 5.1.4**(P)**, 4.3.9**(P)** |
 | Data minimization | 1.3.14**(P)**, 1.4.4**(P)**, 2.3.4**(P)** |
 | Third-party and unauthorized access control | 2.1.3**(P)**, 2.1.4**(P)** |
 | Secure deletion and data removal | 1.4.6**(P)**, 2.3.2**(P)** |
@@ -294,7 +310,7 @@ This table provides a reverse lookup. For each framework clause, it identifies t
 |---------------------------|-------------|-------------------|
 | **Device Identification (DI)** | | |
 | DI (IMS) | Identifier Management Support — unique logical device IDs | 1.1.2, 2.1.1, 2.1.2 |
-| DI (AID) | Actions Based on Device Identity — access control and monitoring by device identity | 1.1.2, 2.2.3, 2.3.3, 4.5.8 |
+| DI (AID) | Actions Based on Device Identity — access control and monitoring by device identity | 1.1.2, 2.2.3, 2.3.3, 4.5.8, 1.5.3 |
 | DI (DAS) | Device Authentication Support — authenticate device identity | 2.1.3, 2.1.10, 2.1.11, 4.3.2, 4.3.6, 4.6.4 |
 | DI (PID) | Physical Identifiers — unique physical identifiers | — |
 | **Device Configuration (DC)** | | |
@@ -303,13 +319,13 @@ This table provides a reverse lookup. For each framework clause, it identifies t
 | DC (INT) | Interface Configuration | — |
 | DC (CTL) | Device Configuration Control — settings, baseline restoration, update control | 1.2.3, 1.3.12, 3.1.2, 3.2.1, 3.4.5, 4.6.2, 5.1.5 |
 | **Data Protection (DP)** | | |
-| DP (CRY) | Cryptography Capabilities and Support — algorithms, signing, hashing, encryption | 1.3.13, 1.4.7, 2.4.2, 2.4.3, 2.4.5, 2.4.6, 3.1.5, 3.2.6, 3.4.3, 3.4.9, 3.5.1, 3.5.4, 3.6.1, 4.1.2, 4.3.5, 4.3.7, 4.4.2, 4.4.3, 4.5.1, 4.6.1, 5.1.3, 5.1.12 |
-| DP (KEY) | Cryptographic Key Management — key generation, storage, rotation | 2.1.9, 2.1.10, 2.4.1, 2.4.3, 2.4.4, 3.5.2, 3.5.3, 4.5.4, 4.5.6, 4.5.7, 4.6.4, 5.1.4 |
+| DP (CRY) | Cryptography Capabilities and Support — algorithms, signing, hashing, encryption | 1.3.13, 1.4.7, 2.4.2, 2.4.3, 2.4.5, 2.4.6, 3.1.5, 3.2.6, 3.4.3, 3.4.9, 3.5.1, 3.5.4, 3.6.1, 4.1.2, 4.3.5, 4.3.7, 4.4.2, 4.4.3, 4.5.1, 4.6.1, 5.1.3, 5.1.12, 2.4.7, 2.4.8, 3.1.9, 3.4.13, 4.1.7, 4.1.8, 4.3.8, 4.3.9, 4.4.5, 5.1.13 |
+| DP (KEY) | Cryptographic Key Management — key generation, storage, rotation | 2.1.9, 2.1.10, 2.4.1, 2.4.3, 2.4.4, 3.5.2, 3.5.3, 4.5.4, 4.5.6, 4.5.7, 4.6.4, 5.1.4, 1.5.2 |
 | DP (STO) | Secure Storage — data at rest encryption, sanitization/purging | 1.3.14, 1.4.4, 2.3.1, 2.3.2, 2.3.4, 2.4.4, 3.1.6, 3.1.7, 3.2.5, 3.4.11, 5.1.4, 5.1.12 |
-| DP (STX) | Secure Transmission — cryptographic algorithms for data in transit, integrity | 1.1.4, 3.4.12, 3.5.1, 4.1.1, 4.1.3, 4.1.6, 4.1.7, 4.2.1, 4.2.3, 4.6.3, 4.6.5 |
+| DP (STX) | Secure Transmission — cryptographic algorithms for data in transit, integrity | 1.1.4, 3.4.12, 3.5.1, 4.1.1, 4.1.3, 4.1.5, 4.1.6, 4.2.1, 4.2.3, 4.6.3, 4.6.5, 4.1.7|
 | **Logical Access to Interfaces (LA)** | | |
-| LA (AUN) | Authentication Support — require auth before connecting | 2.1.3, 2.1.4, 3.4.10, 4.1.3, 4.1.6, 4.2.2, 4.2.3, 4.3.6 |
-| LA (ACF) | Authentication Configuration — lockout, password policies, account management | 2.1.5, 2.1.6, 2.1.7, 2.1.8, 2.1.11, 4.3.2, 4.3.3, 4.3.4 |
+| LA (AUN) | Authentication Support — require auth before connecting | 2.1.3, 2.1.4, 3.4.10, 4.1.3, 4.1.5, 4.2.2, 4.2.3, 4.3.6, 2.1.13, 4.1.8, 4.3.8 |
+| LA (ACF) | Authentication Configuration — lockout, password policies, account management | 2.1.5, 2.1.6, 2.1.7, 2.1.8, 2.1.11, 4.3.2, 4.3.3, 4.3.4, 2.1.12 |
 | LA (USE) | System Use Notification Support | — |
 | LA (AUZ) | Authorization Support — authorized users and processes | 1.1.4, 2.2.1, 2.2.3, 3.3.6, 4.2.2 |
 | LA (AIM) | Authentication and Identity Management | — |
@@ -318,12 +334,12 @@ This table provides a reverse lookup. For each framework clause, it identifies t
 | LA (XCN) | External Connections — third-party system interaction | 4.1.3**(P)**, 4.1.6**(P)**, 4.2.2**(P)**, 4.2.3**(P)** |
 | LA (IFC) | Interface Control — ports, wireless config, remote access, disable unused interfaces | 1.2.4, 1.2.5, 1.3.12, 3.1.3, 3.2.2, 3.2.3, 3.2.11, 3.6.2, 4.3.1, 4.3.7, 4.4.1, 4.4.4, 4.5.5, 5.1.1, 5.1.6, 5.1.11 |
 | **Software Update (SU)** | | |
-| SU (UPD) | Update Capabilities — authorized updates, signature/checksum verification, source verification | 1.2.9, 1.3.4, 1.3.13, 3.1.4, 3.2.4, 3.4.1, 3.4.3, 3.4.4, 3.4.6, 3.4.8, 3.4.9, 3.4.10, 3.4.12 |
+| SU (UPD) | Update Capabilities — authorized updates, signature/checksum verification, source verification | 1.2.9, 1.3.4, 1.3.13, 3.1.4, 3.2.4, 3.4.1, 3.4.3, 3.4.4, 3.4.6, 3.4.8, 3.4.9, 3.4.10, 3.4.12, 3.4.13 |
 | SU (APP) | Update Application Support — remote/local delivery, automatic verification | 3.4.1, 3.4.2, 3.4.5, 3.4.7 |
 | **Cybersecurity State Awareness (CS)** | | |
 | CS (AEI) | Access to Event Information — access to device cybersecurity state | 1.4.5**(P)** |
-| CS (EIM) | Event Identification and Monitoring — detect events, monitor traffic, config changes | 1.4.1, 2.2.4, 4.1.4, 4.5.8 |
-| CS (EVR) | Event Response — alerts, responses to security events | — |
+| CS (EIM) | Event Identification and Monitoring — detect events, monitor traffic, config changes | 1.4.1, 2.2.4, 4.1.4, 4.5.8, 4.3.10 |
+| CS (EVR) | Event Response — alerts, responses to security events | 1.5.1|
 | CS (LCT) | Logging Capture and Trigger Support — audit log generation | 1.4.1, 2.3.3 |
 | CS (RDL) | Support of Required Data Logging — user interactions, event type/time/source/outcome | 1.4.2, 1.4.4 |
 | CS (LSR) | Audit Log Storage and Retention — persistent storage, retention, deletion policies | 1.4.6 |
@@ -331,11 +347,11 @@ This table provides a reverse lookup. For each framework clause, it identifies t
 | CS (AUP) | Audit Support and Protection — log reporting, protection, integrity | 1.4.5, 1.4.7 |
 | **Device Security (DS)** | | |
 | DS (EXE) | Secure Execution — execution policies, isolated environments, separation of domains | 1.2.6, 1.3.3, 1.3.7, 1.3.8, 1.3.9, 1.3.10, 1.3.11, 1.3.15, 3.1.1, 3.1.8, 3.2.6, 3.2.7, 3.2.11, 3.3.1, 3.3.4, 3.3.5, 3.3.6, 3.6.2 |
-| DS (COM) | Secure Communication — traffic flow, standardized protocols, session management | 3.2.2, 3.2.3, 4.1.1, 4.1.2, 4.5.1, 4.5.2, 4.6.1, 4.6.2, 4.6.3, 4.6.5 |
+| DS (COM) | Secure Communication — traffic flow, standardized protocols, session management | 3.2.2, 3.2.3, 4.1.1, 4.1.2, 4.5.1, 4.5.2, 4.6.1, 4.6.2, 4.6.3, 4.6.5, 4.4.5 |
 | DS (RSC) | Secure Resource Usage — memory management, shared resources, disk quotas | 2.3.4, 3.1.8, 3.2.7, 3.2.8, 3.2.9, 3.3.1, 3.3.2, 5.1.8 |
-| DS (DIN) | Device Integrity — security compliance checks, unauthorized component detection | 1.1.2, 1.2.2, 1.2.6, 1.2.7, 1.3.6, 3.1.1, 3.1.2, 3.1.4, 3.1.5, 3.2.10, 3.4.6, 3.4.8, 3.6.1, 5.1.2, 5.1.5, 5.1.7, 5.1.9 |
+| DS (DIN) | Device Integrity — security compliance checks, unauthorized component detection | 1.1.2, 1.2.2, 1.2.6, 1.2.7, 1.3.6, 3.1.1, 3.1.2, 3.1.4, 3.1.5, 3.2.10, 3.4.6, 3.4.8, 3.6.1, 5.1.2, 5.1.5, 5.1.7, 5.1.9, 3.1.9 |
 | DS (ONB) | Secure Network Onboarding Support | 4.5.3, 4.5.5 |
-| DS (OPS) | Secure Device Operation — operational states, fail-secure, time, restrictive modes | 1.2.4, 2.2.2, 2.3.2, 3.1.3, 3.3.2, 3.4.7, 4.1.4, 5.1.1, 5.1.7, 5.1.9, 5.1.10 |
+| DS (OPS) | Secure Device Operation — operational states, fail-secure, time, restrictive modes | 1.2.4, 2.2.2, 2.3.2, 3.1.3, 3.3.2, 3.4.7, 4.1.4, 5.1.1, 5.1.7, 5.1.9, 5.1.10, 4.3.10 |
 | **Non-Technical Supporting Capabilities** | | |
 | Non-tech (DOC) | Documentation | 1.2.1, 1.2.2, 1.2.8, 1.3.1, 1.3.2, 1.3.5 |
 | Non-tech (BUG) | Vulnerability/cybersecurity information reception | 1.1.5 |
@@ -347,13 +363,13 @@ This table provides a reverse lookup. For each framework clause, it identifies t
 |---------------------|-----------------|-------------------|
 | 5.1 (Provision 1) | No universal default passwords | 2.1.5, 2.1.6, 2.1.7, 2.1.8, 2.1.9, 2.1.10, 4.3.2, 4.3.3, 4.3.4, 4.5.4 |
 | 5.2 (Provision 2) | Implement means to manage vulnerability reports | 1.1.5, 1.1.6 |
-| 5.3 (Provision 3) | Keep software updated | 1.2.9, 3.2.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.4.5**(P)**, 3.4.6, 3.4.7 |
+| 5.3 (Provision 3) | Keep software updated | 1.2.9, 3.2.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.4.5**(P)**, 3.4.6, 3.4.7, 3.4.13**(P)** |
 | 5.4 (Provision 4) | Securely store sensitive security parameters | 2.4.1, 2.4.4, 3.1.6**(P)**, 3.5.2, 3.5.3, 4.5.6, 4.6.4**(P)**, 5.1.4 |
-| 5.5 (Provision 5) | Communicate securely | 2.4.2**(P)**, 3.4.12, 3.5.4**(P)**, 4.1.1, 4.1.2, 4.1.3, 4.1.6, 4.2.3, 4.3.5, 4.3.6, 4.3.7, 4.4.2, 4.4.3, 4.5.1**(P)**, 4.5.3**(P)**, 4.6.1**(P)**, 4.6.3 |
+| 5.5 (Provision 5) | Communicate securely | 2.4.2**(P)**, 3.4.12, 3.5.4**(P)**, 4.1.1, 4.1.2, 4.1.3, 4.1.5, 4.2.3, 4.3.5, 4.3.6, 4.3.7, 4.4.2, 4.4.3, 4.5.1**(P)**, 4.5.3**(P)**, 4.6.1**(P)**, 4.6.3, 2.4.7**(P)**, 2.4.8**(P)**, 4.1.7**(P)**, 4.1.8**(P)**, 4.3.8**(P)**, 4.4.5**(P)** |
 | 5.6 (Provision 6) | Minimize exposed attack surfaces | 1.1.2, 1.2.4, 1.2.5, 1.3.12**(P)**, 2.2.2, 2.2.4, 3.1.3, 3.2.2, 3.2.3**(P)**, 3.2.11, 3.3.4, 3.3.5, 3.3.6, 3.6.2, 4.3.1, 4.4.1, 4.4.4, 4.5.5, 5.1.1, 5.1.6, 5.1.7, 5.1.10, 5.1.11 |
-| 5.7 (Provision 7) | Ensure software integrity | 1.2.6, 1.2.7, 1.3.13, 3.1.1, 3.1.2, 3.1.4, 3.1.5, 3.2.10**(P)**, 3.4.3, 3.4.8, 3.6.1, 5.1.2 |
-| 5.8 (Provision 8) | Ensure personal data is secure | 1.3.14, 1.4.4, 1.4.6**(P)**, 2.3.1, 2.3.4, 3.1.7, 3.2.5 |
-| 5.9 (Provision 9) | Make systems resilient to outages | 3.3.2, 3.4.7**(P)**, 4.1.4 |
+| 5.7 (Provision 7) | Ensure software integrity | 1.2.6, 1.2.7, 1.3.13, 3.1.1, 3.1.2, 3.1.4, 3.1.5, 3.2.10**(P)**, 3.4.3, 3.4.8, 3.6.1, 5.1.2, 3.1.9**(P)**, 3.4.13**(P)**  |
+| 5.8 (Provision 8) | Ensure personal data is secure |  1.3.14, 1.4.4, 1.4.6**(P)**, 2.3.1, 2.3.4, 3.1.7, 3.2.5, 4.3.9**(P)** |
+| 5.9 (Provision 9) | Make systems resilient to outages | 3.3.2, 3.4.7**(P)**, 4.1.4, 4.3.10**(P)** |
 | 5.10 (Provision 10) | Examine system telemetry data | 1.4.1, 1.4.2, 1.4.5 |
 | 5.11 (Provision 11) | Make it easy for users to delete personal data | 1.4.6**(P)**, 2.2.3**(P)**, 2.3.2, 2.3.3**(P)** |
 | 5.12 (Provision 12) | Make installation and maintenance of devices easy | 3.4.5**(P)** |
