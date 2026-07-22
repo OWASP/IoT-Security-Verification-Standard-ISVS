@@ -1,0 +1,64 @@
+{
+  "_comment": "Registry of valid clause identifiers per framework, used by cross_check_tables.py, plus authoritative source URLs for semantic verification. If a framework is amended, update this file for the run and cite the source of the change in the decision log. known_max_subprovision values for ETSI are best-known values for EN 303 645 v2.1.1 - treat overruns as 'verify against the ETSI PDF', not as automatic errors.",
+  "cra_part1": {
+    "name": "EU Cyber Resilience Act, Annex I Part I (Regulation (EU) 2024/2847)",
+    "clauses": ["1", "2(a)", "2(b)", "2(c)", "2(d)", "2(e)", "2(f)", "2(g)", "2(h)", "2(i)", "2(j)", "2(k)", "2(l)", "2(m)"],
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402847"
+  },
+  "cra_part2": {
+    "name": "EU CRA Annex I Part II (vulnerability handling)",
+    "obligations_free_text": true,
+    "expected_topics": ["SBOM", "vulnerability remediation", "coordinated vulnerability disclosure", "secure development / supply chain", "security update distribution"],
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402847"
+  },
+  "red_d": {
+    "name": "RED Art. 3.3(d) / EN 18031-1 (network protection)",
+    "qualifier_column": true,
+    "allowed_values": ["Partial", "Direct", "\u2014"],
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R0030",
+    "note": "Full EN 18031-1 text is paywalled; decisions above qualifier level must be routed to human review unless the user provides the standard."
+  },
+  "red_e": {
+    "name": "RED Art. 3.3(e) / EN 18031-2 (privacy)",
+    "qualifier_column": true,
+    "allowed_values": ["Partial", "Direct", "\u2014"],
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R0030",
+    "note": "Same paywall caveat as EN 18031-1."
+  },
+  "red_f": {
+    "name": "RED Art. 3.3(f) / EN 18031-3 (fraud prevention)",
+    "qualifier_column": true,
+    "allowed_values": ["Partial", "Direct", "\u2014"],
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R0030",
+    "note": "Applies to payment-capable equipment only. Same paywall caveat."
+  },
+  "nist": {
+    "name": "NIST SP 800-213A IoT Device Cybersecurity Requirements Catalog",
+    "source": "https://doi.org/10.6028/NIST.SP.800-213A",
+    "subcapabilities": [
+      "DI (IMS)", "DI (AID)", "DI (DAS)", "DI (PID)",
+      "DC (PRV)", "DC (AUT)", "DC (INT)", "DC (CTL)",
+      "DP (CRY)", "DP (KEY)", "DP (STO)", "DP (STX)",
+      "LA (AUN)", "LA (ACF)", "LA (USE)", "LA (AUZ)", "LA (AIM)", "LA (ROL)", "LA (LDU)", "LA (XCN)", "LA (IFC)",
+      "SU (UPD)", "SU (APP)",
+      "CS (AEI)", "CS (EIM)", "CS (EVR)", "CS (LCT)", "CS (RDL)", "CS (LSR)", "CS (SRT)", "CS (AUP)",
+      "DS (EXE)", "DS (COM)", "DS (RSC)", "DS (DIN)", "DS (ONB)", "DS (OPS)",
+      "Non-tech (DOC)", "Non-tech (BUG)", "Non-tech (VNT)"
+    ]
+  },
+  "etsi": {
+    "name": "ETSI EN 303 645 v2.1.1",
+    "source": "https://www.etsi.org/deliver/etsi_en/303600_303699/303645/02.01.01_60/en_303645v020101p.pdf",
+    "provisions": ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10", "5.11", "5.12", "5.13"],
+    "known_max_subprovision": {
+      "5.1": 5, "5.2": 3, "5.3": 16, "5.4": 4, "5.5": 8, "5.6": 9,
+      "5.7": 2, "5.8": 3, "5.9": 3, "5.10": 1, "5.11": 4, "5.12": 3, "5.13": 1
+    }
+  },
+  "isvs": {
+    "name": "OWASP IoT Security Verification Standard",
+    "repo": "https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS",
+    "raw_base": "https://raw.githubusercontent.com/OWASP/IoT-Security-Verification-Standard-ISVS/{ref}/en/",
+    "published": "https://owasp.org/IoT-Security-Verification-Standard-ISVS/"
+  }
+}
