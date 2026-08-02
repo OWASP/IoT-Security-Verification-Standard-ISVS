@@ -1,10 +1,12 @@
 % IMPORTANT NOTE this file requires latex-header.tex
 % cover.jpg is in the root folder (owasp-masvs/)
 % Version text is written at (X,Y), where (0, 0) is the lower left corner of the page.
+% The version node is right-anchored (anchor=east) so that longer version strings
+% (e.g. "1.0.0-RC2") grow leftwards and cannot overflow the right page edge.
 
 \thispagestyle{empty} % remove page numbers
 
 % https://tex.stackexchange.com/questions/136900/insert-a-full-page-image
 \incgraph[documentpaper, 
-    overlay={\node[white] at (page.center) {\huge {{ISVS-LANGUAGE}}};\node[white] at (18.3,11.7) {\Huge Version {{ISVS-VERSION}}};}]
+    overlay={\node[white] at (page.center) {\huge {{ISVS-LANGUAGE}}};\node[white, anchor=east] at (20,11.7) {\Huge Version {{ISVS-VERSION}}};}]
     [width=\paperwidth,height=\paperheight]{./en/images/cover.jpg}

@@ -1,6 +1,13 @@
 name: Document Build
 
-on: [push]
+# `pull_request` is required so that the `build` status check also runs for pull
+# requests opened from forks. With `push` alone the workflow only ever runs in the
+# contributor's own repository, so the check never reports against the upstream PR
+# and branch protection blocks the merge indefinitely.
+on:
+  push:
+    branches: [master]
+  pull_request:
 
 jobs:
   build:
@@ -40,7 +47,11 @@ jobs:
         path: tools/OWASP_ISVS-SNAPSHOT.xml
 
     - name: Generate English PDF
-      run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc owaspisvs/isvs-docgenerator:latest '/pandoc_makedocs.sh en SNAPSHOT'
+      # Invoke the in-repo copy of the script rather than the one baked into the image
+      # (`ADD pandoc_makedocs.sh /` in tools/docker/Dockerfile). The published image
+      # dates from 2020, so edits to tools/docker/pandoc_makedocs.sh otherwise have no
+      # effect until the image is rebuilt and pushed to Docker Hub.
+      run: docker run --rm -u `id -u`:`id -g` -v ${PWD}:/pandoc owaspisvs/isvs-docgenerator:latest 'bash tools/docker/pandoc_makedocs.sh en SNAPSHOT'
     - name: Upload English PDF
       uses: actions/upload-artifact@v4
       with:

@@ -19,7 +19,7 @@ OUTPUT_BASE_NAME="OWASP_ISVS-${VERSION}"
 #CHAPTERS="${FOLDER}/V*.md ${FOLDER}/CHANGELOG.md"
 #CHAPTERS="${FOLDER}/V*.md"
 # Hack below to have V10 after V9
-CHAPTERS="${FOLDER}/0x01-Frontispiece.md ${FOLDER}/Using_ISVS.md $(ls ${FOLDER}/V*.md | sort -V) ${FOLDER}/Appendix_A-Glossary.md"
+CHAPTERS="${FOLDER}/0x01-Frontispiece.md ${FOLDER}/Using_ISVS.md $(ls ${FOLDER}/V*.md | sort -V) ${FOLDER}/Appendix_A-Glossary.md ${FOLDER}/Appendix_B-Compliance_Mapping.md"
 echo $CHAPTERS
 
 # Use per-language tmp files for the cover and the first page

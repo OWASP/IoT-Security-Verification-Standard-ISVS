@@ -65,7 +65,7 @@ ETSI EN 303 645 is the leading international baseline security standard for cons
 The table below maps each ISVS requirement to the most relevant clauses in each covered framework. Requirements are grouped by chapter (V1–V5).
 
 | ISVS Req | CRA Annex I Part I | CRA Annex I Part II | RED 3.3(d) EN 18031-1 | RED 3.3(e) EN 18031-2 | RED 3.3(f) EN 18031-3 | NIST SP 800-213A | ETSI EN 303 645 |
-|----------|-------------------|--------------------|-----------------------|-----------------------|-----------------------|------------------|-----------------|
+|------------------------------------------------------------------------------------------|---------|---------|---------|---------|---------|---------|---------|
 | **V1 — IoT Ecosystem Requirements** | | | | | | | |
 | **1.1.1** Verify IoT system security level matches capabilities and deployment risk | — | — | — | — | — | — | — |
 | **1.1.2** Verify all components and channels are identified; unnecessary ones removed | 2(j) | — | Partial | — | — | DI (IMS), DS (DIN) | 5.6-1, 5.6-5 |
