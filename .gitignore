@@ -31,3 +31,13 @@ __pycache__/
 # Temporary files
 *.tmp
 *.bak
+
+# Local document build output (tools/docker/run_docker_isvs_generation_on_local.sh)
+OWASP_ISVS-*.pdf
+OWASP_ISVS-*.epub
+OWASP_ISVS-*.docx
+OWASP_ISVS-*.csv
+OWASP_ISVS-*.json
+OWASP_ISVS-*.xml
+en-temp/
+tmp_*.tex
