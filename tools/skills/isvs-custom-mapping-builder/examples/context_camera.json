@@ -1,0 +1,11 @@
+{
+  "product_name": "Example consumer Wi-Fi camera",
+  "device_type": "consumer_camera",
+  "connectivity": ["wifi"],
+  "handles_personal_data": true,
+  "payment_capable": false,
+  "target_markets": ["EU"],
+  "safety_critical": false,
+  "update_mechanism": "ota",
+  "notes": "Video and audio, cloud storage, mobile app onboarding"
+}

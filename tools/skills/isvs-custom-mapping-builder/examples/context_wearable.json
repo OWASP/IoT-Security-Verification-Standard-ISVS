@@ -1,0 +1,11 @@
+{
+  "product_name": "Example BLE wearable",
+  "device_type": "ble_wearable",
+  "connectivity": ["ble"],
+  "handles_personal_data": true,
+  "payment_capable": null,
+  "target_markets": ["Global"],
+  "safety_critical": false,
+  "update_mechanism": null,
+  "notes": "Health-adjacent data over BLE, update path not yet confirmed"
+}
